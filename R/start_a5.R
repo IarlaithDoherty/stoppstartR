@@ -14,9 +14,7 @@ start_a5 <- function(df) {
 
   extras_cond1 <- df$Age < 85
 
-  comorbs_set1 <- c("I20", "I21", "I22", "I24", "I25")
-  comorbs_set1_paste <- paste(comorbs_set1, collapse = "|")
-
+  comorbs_set1 <- "I20|I21|I22|I24|I25"
   comorbs_check1 <- lapply(X = df[, comorbs_cols],
                            FUN = function(x){
                              grepl(x, pattern = comorbs_set1)
@@ -24,6 +22,7 @@ start_a5 <- function(df) {
                            )
   comorbs_cond1 <- Reduce(x = comorbs_check1, f = "|")
 
+  drugs_set1 <- "C10AA"
   drugs_check1 <- lapply(X = df[, drugs_cols],
                          FUN = function(x){
                            !grepl(x, pattern = drugs_set1)
