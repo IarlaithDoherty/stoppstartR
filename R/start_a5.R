@@ -3,11 +3,14 @@
 #' @param df Dataframe of patient information.
 #'
 #' @return List with two elements:
-#' `bool` is a logical vector indicating whether each patient has triggered START-A5,
-#' `text` is a character vector of the same length whose entries are either blank
-#' or contain the instruction message for START-A5.
+#'
+#' `bool`: logical vector indicating whether each patient has triggered START-A5.
+#'
+#' `text`: character vector containing "START-A5" or "" for each patient.
+#'
 #' @export
 #'
+#' @examples start_a5(mock_patients)
 start_a5 <- function(df) {
 
   # names of comorbidity and drug columns / variables to allow those
