@@ -13,10 +13,9 @@
 #' @examples start_a5(mock_patients)
 start_a5 <- function(df) {
 
-  # names of comorbidity and drug columns / variables to allow those
-  # columns / variables to be called by name in the for loops
-  comorbs_cols <- paste0("Comorbidity_", 1:20)
-  drugs_cols <- paste0("Drug_", 1:30)
+  # Numbers of comorbidity and drug columns used later to subset the dataframe..
+  comorbs_cols <- grep(colnames(df), pattern = "Comorbidity_")
+  drugs_cols   <- grep(colnames(df), pattern = "Drug_")
 
   # extras_cond1 is a logical vector with one entry per patient.
   extras_cond1 <- df$Age < 85
