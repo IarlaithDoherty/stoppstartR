@@ -1,0 +1,27 @@
+#' Prototype Data Collection File V4 + Mock Patient Details.
+#'
+#' Mock patient information.
+#'
+#' @format ## `prototype`
+#' A data frame with 94 rows and 7 columns:
+#' \describe{
+#'   \item{Patient Identifier}{Patient Identifier.}
+#'   \item{Gender}{Patient gender.}
+#'   \item{Age}{Patient age.}
+#'   \item{Weight}{Pateint weight (kg).}
+#'   \item{Height}{Patient height (cm).}
+#'   \item{BMI}{Patient body mass index.}
+#'   \item{HASBLED 1: Hypertension Uncontrolled, >160 mmHg systolic}{}
+#'   ...
+#' \item{HASBLED 9: Alcohol use ≥8 drinks/week}{}
+#' \item{HASBLED Total Score}{}
+#' \item{CHA2DS-VASc 1: Age <65 0, 65-74 +1, ≥75 +2}{}
+#' ...
+#' \item{CHA2DS-VASc 7: Diabetes history}{}
+#' \item{CHA2DS-VASc Total Score}{}
+#' \item{Lab Values: Hb}{}
+#' ...
+#' \item{Lab Values: FEV1}{}
+#'   ...
+#' }
+"prototype"
