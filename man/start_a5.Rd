@@ -11,10 +11,14 @@ start_a5(df)
 }
 \value{
 List with two elements:
-\code{bool} is a logical vector indicating whether each patient has triggered START-A5,
-\code{text} is a character vector of the same length whose entries are either blank
-or contain the instruction message for START-A5.
+
+\code{bool}: logical vector indicating whether each patient has triggered START-A5.
+
+\code{text}: character vector containing "START-A5" or "" for each patient.
 }
 \description{
 Function to implement START-A5 rule.
+}
+\examples{
+start_a5(mock_patients)
 }

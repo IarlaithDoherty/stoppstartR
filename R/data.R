@@ -2,7 +2,7 @@
 #'
 #' Mock patient information.
 #'
-#' @format ## `prototype`
+#' @format ## `mock_patient`
 #' A data frame with 94 rows and 7 columns:
 #' \describe{
 #'   \item{Patient Identifier}{Patient Identifier.}
@@ -24,4 +24,4 @@
 #' \item{Lab Values: FEV1}{}
 #'   ...
 #' }
-"prototype"
+"mock_patients"
