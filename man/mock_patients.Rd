@@ -5,16 +5,16 @@
 \alias{mock_patients}
 \title{Prototype Data Collection File V4 + Mock Patient Details.}
 \format{
-\subsection{\code{mock_patient}}{
+\subsection{\code{mock_patients}}{
 
 A data frame with 94 rows and 7 columns:
 \describe{
-\item{Patient Identifier}{Patient Identifier.}
-\item{Gender}{Patient gender.}
-\item{Age}{Patient age.}
-\item{Weight}{Pateint weight (kg).}
-\item{Height}{Patient height (cm).}
-\item{BMI}{Patient body mass index.}
+\item{Patient Identifier}{}
+\item{Gender}{}
+\item{Age}{}
+\item{Weight}{kg}
+\item{Height}{cm}
+\item{BMI}{Body mass index.}
 \item{HASBLED 1: Hypertension Uncontrolled, >160 mmHg systolic}{}
 ...
 \item{HASBLED 9: Alcohol use ≥8 drinks/week}{}
