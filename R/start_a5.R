@@ -10,7 +10,7 @@
 #'
 start_a5 <- function(df) {
   comorbs_cols <- paste0("Comorbidity_", 1:20)
-  drugs_cols <- paste0("Drug_", 1:20)
+  drugs_cols <- paste0("Drug_", 1:30)
 
   extras_cond1 <- df$Age < 85
 
