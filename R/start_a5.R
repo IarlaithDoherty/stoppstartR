@@ -14,8 +14,6 @@
 start_a5 <- function(df) {
 
   # Numbers of comorbidity and drug columns used later to subset the dataframe..
-  comorbs_cols <- grep(colnames(df), pattern = "Comorbidity_")
-  drugs_cols   <- grep(colnames(df), pattern = "Drug_")
 
   # Create empty lists to fill later.
   extras_tests <- list()
@@ -36,6 +34,7 @@ start_a5 <- function(df) {
   # TRUE if that patient does have any of these comorbidities in that column.
   # comorbs_tests[[i]] is a logical vector with one entry per patient.
   # TRUE if that patient does have any of these comorbidities in any column.
+  comorbs_cols <- grep(colnames(df), pattern = "Comorbidity_")
   for(i in 1:length(comorbs_sets)) {
     comorbs_checks[[i]] <- lapply(X = df[, comorbs_cols],
                                   FUN = function(x){
@@ -56,13 +55,14 @@ start_a5 <- function(df) {
   # TRUE if that patient does not have any of these drugs in that column.
   # drugs_tests[[i]] is a logical vector with one entry per patient.
   # TRUE if that patient does not have any of these drugs in any column.
+  drugs_cols   <- grep(colnames(df), pattern = "Drug_")
   for(i in 1:length(drugs_sets)) {
     drugs_checks[[i]] <- lapply(X = df[, drugs_cols],
                                 FUN = function(x){
                                   !grepl(x, pattern = drugs_sets[[i]])
                                 }
     )
-    drugs_tests[[i]] <- Reduce(x = drugs_checks[[1]], f = "&")
+    drugs_tests[[i]] <- Reduce(x = drugs_checks[[i]], f = "&")
   }
 
   # bool is a logical vector with one entry per patient.
