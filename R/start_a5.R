@@ -17,16 +17,18 @@ start_a5 <- function(df) {
   comorbs_set1 <- c("I20", "I21", "I22", "I24", "I25")
   comorbs_set1_paste <- paste(comorbs_set1, collapse = "|")
 
-  comorbs_check1 <- list()
-  for (i in 1:20) {
-    comorbs_check1[[i]] <- grepl(x = df[[comorbs_cols[i]]], pattern = comorbs_set1_paste)
-  }
+  comorbs_check1 <- lapply(X = df[, comorbs_cols],
+                           FUN = function(x){
+                             grepl(x, pattern = comorbs_set1)
+                             }
+                           )
   comorbs_cond1 <- Reduce(x = comorbs_check1, f = "|")
 
-  drugs_check1 <- list()
-  for (i in 1:30) {
-    drugs_check1[[i]] <- !grepl(x = df[[drugs_cols[i]]], pattern = "C10AA")
-  }
+  drugs_check1 <- lapply(X = df[, drugs_cols],
+                         FUN = function(x){
+                           !grepl(x, pattern = drugs_set1)
+                           }
+                         )
   drugs_cond1 <- Reduce(x = drugs_check1, f = "&")
 
   bool <- Reduce(x = list(extras_cond1, comorbs_cond1, drugs_cond1), f = "&")
