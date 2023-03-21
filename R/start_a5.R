@@ -18,11 +18,11 @@ start_a5 <- function(df) {
   comorbs_cols <- paste0("Comorbidity_", 1:20)
   drugs_cols <- paste0("Drug_", 1:30)
 
-  # logical vector with one entry per patient
+  # extras_cond1 is a logical vector with one entry per patient.
   extras_cond1 <- df$Age < 85
 
   # comorbs_set1 is a character string of comorbidity codes separated by "|" (or).
-  # This allows `grepl` to check for matches with any of these codes.
+  # This allows grepl to check for matches with any of these codes.
   comorbs_set1 <- "I20|I21|I22|I24|I25"
   # comorbs_check1 is a list with one element per comorbidity column.
   # Each list element is a logical vector with one element per patient.
@@ -60,7 +60,10 @@ start_a5 <- function(df) {
   # text is a character vector with one entry per patient.
   # "START A5" if that patient is TRUE for every condition, "" (blank) otherwise.
   text <- ifelse(bool, yes = "START A5", no = "")
+  # output is a named list consisting of bool and text.
+  output <- list(bool = bool,
+                 text = text)
 
-  # Return a named list consisting of bool and text.
-  return(list(bool = bool, text = text))
+  # This function will return the list called output.
+  return(output)
 }
