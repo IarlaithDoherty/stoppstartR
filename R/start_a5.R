@@ -1,4 +1,8 @@
-#' Function to implement START-A5 rule.
+#' @title Function to implement START-A5 rule.
+#'
+#' @description
+#' Determine which patients triggered the conditions defining START-A5.
+#'
 #' \itemize{
 #' \item Age less than 85 years.
 #' \item Any of the following comorbidities: I20, I21, I22, I24, or I25.
@@ -17,10 +21,10 @@
 #' @return List with two elements:
 #'
 #' `all_checks`: logical vector,
-#'               TRUE if a patient has triggered START-A5, FALSE otherwise.
+#'               TRUE if START-A5 is triggered, FALSE otherwise.
 #'
 #' `instruction`: character vector,
-#'                "START-A5" if a patient has triggered START-A5, "" otherwise.
+#'                "START-A5" if START-A5 is triggered, "" otherwise.
 #'
 #' @export
 #'
@@ -34,14 +38,18 @@ start_a5 <- function(df) {
   checks_list$extras1 <- df$Age < 85
 
   # 'comorbs1' is TRUE if the patient has any of the listed comorbidities.
-  checks_list$comorbs1 <- check_any_match(df,
-                                          column_string = "Comorbidity_",
-                                          code_set = "I20|I21|I22|I24|I25")
+  checks_list$comorbs1 <- check_any_match(
+                            df,
+                            column_string = "Comorbidity",
+                            code_string = "I20|I21|I22|I24|I25"
+                            )
 
   # 'drugs1' is TRUE if the patient is not on the listed drug.
-  checks_list$drugs1 <- !check_any_match(df,
-                                         column_string = "Drug_",
-                                         code_set = "C10AA")
+  checks_list$drugs1 <- !check_any_match(
+                          df,
+                          column_string = "Drug_",
+                          code_string = "C10AA"
+                          )
 
   output <- list()
   # 'all_checks' is a logical vector with one entry per patient.

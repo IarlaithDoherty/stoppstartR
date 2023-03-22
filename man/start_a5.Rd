@@ -7,7 +7,8 @@
 start_a5(df)
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{Dataframe of patient information.
+
 \itemize{
 \item Name of patient age column / variable must be "Age".
 \item Names of comorbidities columns / variables must contain "Comorbidity_".
@@ -20,13 +21,14 @@ start_a5(df)
 List with two elements:
 
 \code{all_checks}: logical vector,
-TRUE if a patient has triggered START-A5, FALSE otherwise.
+TRUE if START-A5 is triggered, FALSE otherwise.
 
 \code{instruction}: character vector,
-"START-A5" if a patient has triggered START-A5, "" otherwise.
+"START-A5" if START-A5 is triggered, "" otherwise.
 }
 \description{
-Function to implement START-A5 rule.
+Determine which patients triggered the conditions defining START-A5.
+
 \itemize{
 \item Age less than 85 years.
 \item Any of the following comorbidities: I20, I21, I22, I24, or I25.
