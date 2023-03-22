@@ -2,29 +2,28 @@
 % Please edit documentation in R/check_any_match.R
 \name{check_any_match}
 \alias{check_any_match}
-\title{Check which rows of \code{df} contain any codes in \code{code_set} in the columns
-starting with \code{column_string}.}
+\title{Check which patients contain code strings in specified columns.}
 \usage{
-check_any_match(df, column_string, code_set)
+check_any_match(df, column_string, code_string)
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
 
 \item{column_string}{Only columns with names containing this string will be checked.}
 
-\item{code_set}{A character string of codes to check matches for, separated by "|".}
+\item{code_string}{A character string of codes to check matches for, separated by "|".}
 }
 \value{
 A logical vector indicating which rows / patients from \code{df} had an
-entry containing one of the codes in \code{code_set} in any of the columns
-with names containing \code{column_string}.
+entry containing one of the codes in \code{code_string} in any of the
+columns with names containing \code{column_string}.
 }
 \description{
-Check which rows of \code{df} contain any codes in \code{code_set} in the columns
+Check which rows of \code{df} contain any codes in \code{code_string} in the columns
 starting with \code{column_string}.
 }
 \examples{
 check_any_match(mock_patients,
                           column_string = "Drug_",
-                          code_set = "C10AA")
+                          code_string = "C10AA")
 }
