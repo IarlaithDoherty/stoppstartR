@@ -13,7 +13,8 @@
 #' I74, G45, Z95.1, Z95.5, or Z95.8.
 #' \item None of the following drugs:
 #'
-#' C10AA.}
+#' C10AA.
+#' }
 #'
 #' @param df Dataframe of patient information.
 #'
@@ -27,11 +28,12 @@
 #'
 #' @return List with two elements:
 #'
-#' `all_checks`: logical vector,
-#'               TRUE if START-A5 is triggered, FALSE otherwise.
-#'
-#' `instruction`: character vector,
-#'                "START-A5" if START-A5 is triggered, "" otherwise.
+#'\itemize{
+#' \item `all_checks`: logical vector,
+#'                     `TRUE` if START-A5 is triggered, `FALSE` otherwise.
+#' \item `instruction`: character vector,
+#'                      "START-A5" if `all_checks` is `TRUE`, "" otherwise.
+#'}
 #'
 #' @export
 #'
@@ -57,7 +59,7 @@ start_a5 <- function(df) {
 
   # 'codes_list$drugs1' is a character vector of drug codes to check.
   codes_list$drugs1 <- c("C10AA")
-  # 'checks_list$drugs1' is TRUE if the patient is not on the listed drug.
+  # 'checks_list$drugs1' is TRUE if the patient is not on any listed drugs.
   checks_list$drugs1 <- !check_any_match(df,
                                          column_string = "Drug_",
                                          codes = codes_list$drugs1
