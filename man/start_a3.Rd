@@ -22,9 +22,11 @@ List with two elements:
 
 \itemize{
 \item \code{all_checks}: logical vector,
-\code{TRUE} if START-A3 is triggered, \code{FALSE} otherwise.
+
+\code{TRUE} if this STOPP/START criterion is satisfied, \code{FALSE} otherwise.
 \item \code{instruction}: character vector,
-"START-A3" if \code{all_checks} is \code{TRUE}, "" otherwise.
+
+the STOPP/START criterion's name if \code{all_checks} is \code{TRUE}, blank otherwise.
 }
 }
 \description{

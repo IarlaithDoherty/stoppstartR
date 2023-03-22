@@ -22,9 +22,11 @@
 #'
 #' \itemize{
 #' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A1 is triggered, `FALSE` otherwise.
+#'
+#' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
 #' \item `instruction`: character vector,
-#'                      "START-A1" if `all_checks` is `TRUE`, "" otherwise.
+#'
+#' the STOPP/START criterion's name if `all_checks` is `TRUE`, blank otherwise.
 #' }
 #'
 #' @export
@@ -47,14 +49,7 @@ start_a1 <- function(df) {
 #'
 #' @inheritParams start_a1
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A2 is triggered, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'                      "START-A2" if `all_checks` is `TRUE`, "" otherwise.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 #'
@@ -76,14 +71,7 @@ start_a2 <- function(df) {
 #'
 #' @inheritParams start_a1
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A3 is triggered, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'                      "START-A3" if `all_checks` is `TRUE`, "" otherwise.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 #'
@@ -105,14 +93,7 @@ start_a3 <- function(df) {
 #'
 #' @inheritParams start_a1
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A4 is triggered, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'                      "START-A4" if `all_checks` is `TRUE`, "" otherwise.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 #'
@@ -142,14 +123,7 @@ start_a4 <- function(df) {
 #'
 #' @inheritParams start_a1
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A5 is triggered, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'                      "START-A5" if `all_checks` is `TRUE`, "" otherwise.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 #'
@@ -205,14 +179,7 @@ start_a5 <- function(df) {
 #'
 #' @inheritParams start_a1
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A6 is triggered, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'                      "START-A6" if `all_checks` is `TRUE`, "" otherwise.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 #'
@@ -234,14 +201,7 @@ start_a6 <- function(df) {
 #'
 #' @inheritParams start_a1
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A7 is triggered, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'                      "START-A7" if `all_checks` is `TRUE`, "" otherwise.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 #'
@@ -263,14 +223,7 @@ start_a7 <- function(df) {
 #'
 #' @inheritParams start_a1
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'                     `TRUE` if START-A8 is triggered, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'                      "START-A8" if `all_checks` is `TRUE`, "" otherwise.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 #'
