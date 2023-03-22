@@ -30,8 +30,6 @@
 #' }
 #'
 #' @export
-#'
-#' @examples start_a1(mock_patients)
 start_a1 <- function(df) {
 
 }
@@ -52,8 +50,6 @@ start_a1 <- function(df) {
 #' @inherit start_a1 return
 #'
 #' @export
-#'
-#' @examples start_a2(mock_patients)
 start_a2 <- function(df) {
 
 }
@@ -74,8 +70,6 @@ start_a2 <- function(df) {
 #' @inherit start_a1 return
 #'
 #' @export
-#'
-#' @examples start_a3(mock_patients)
 start_a3 <- function(df) {
 
 }
@@ -96,8 +90,6 @@ start_a3 <- function(df) {
 #' @inherit start_a1 return
 #'
 #' @export
-#'
-#' @examples start_a4(mock_patients)
 start_a4 <- function(df) {
 
 }
@@ -126,8 +118,6 @@ start_a4 <- function(df) {
 #' @inherit start_a1 return
 #'
 #' @export
-#'
-#' @examples start_a5(mock_patients)
 start_a5 <- function(df) {
 
   # 'checks_list' is a list of logical vectors, each has one entry per patient.
@@ -182,8 +172,6 @@ start_a5 <- function(df) {
 #' @inherit start_a1 return
 #'
 #' @export
-#'
-#' @examples start_a6(mock_patients)
 start_a6 <- function(df) {
 
 }
@@ -204,8 +192,6 @@ start_a6 <- function(df) {
 #' @inherit start_a1 return
 #'
 #' @export
-#'
-#' @examples start_a7(mock_patients)
 start_a7 <- function(df) {
 
 }
@@ -226,8 +212,6 @@ start_a7 <- function(df) {
 #' @inherit start_a1 return
 #'
 #' @export
-#'
-#' @examples start_a8(mock_patients)
 start_a8 <- function(df) {
 
 }

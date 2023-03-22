@@ -37,6 +37,3 @@ START-A6 requires all of the following conditions to be satisfied:
 \item
 }
 }
-\examples{
-start_a6(mock_patients)
-}

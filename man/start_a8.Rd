@@ -37,6 +37,3 @@ START-A8 requires all of the following conditions to be satisfied:
 \item
 }
 }
-\examples{
-start_a8(mock_patients)
-}

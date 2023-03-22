@@ -37,6 +37,3 @@ START-A2 requires all of the following conditions to be satisfied:
 \item
 }
 }
-\examples{
-start_a2(mock_patients)
-}

@@ -45,6 +45,3 @@ I74, G45, Z95.1, Z95.5, or Z95.8.
 C10AA.
 }
 }
-\examples{
-start_a5(mock_patients)
-}
