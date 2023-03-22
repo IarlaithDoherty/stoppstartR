@@ -20,6 +20,10 @@ TRUE if a patient has triggered START-A5, FALSE otherwise.
 }
 \description{
 Function to implement START-A5 rule.
+\itemize{
+\item Age less than 85 years.
+\item Any of the following comorbidities: I20, I21, I22, I24, or I25.
+\item None of the following drugs: C10AA.}
 }
 \examples{
 start_a5(mock_patients)
