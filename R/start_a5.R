@@ -38,7 +38,7 @@
 #' @export
 #'
 #' @examples start_a5(mock_patients)
-start_a5 <- function(df) {
+start_a5_2 <- function(df) {
 
   # 'checks_list' is a list of logical vectors, each has one entry per patient.
   checks_list <- list()
