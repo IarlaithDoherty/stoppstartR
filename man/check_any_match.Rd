@@ -24,8 +24,3 @@ columns with names containing \code{column_string}.
 Check which rows of \code{df} contain any codes in \code{codes} in the columns
 starting with \code{column_string}.
 }
-\examples{
-check_any_match(mock_patients,
-                          column_string = "Drug_",
-                          codes = "C10AA")
-}

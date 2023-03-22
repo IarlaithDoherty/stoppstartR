@@ -16,10 +16,6 @@
 #'         entry containing one of the codes in `codes` in any of the
 #'         columns with names containing `column_string`.
 #' @export
-#'
-#' @examples check_any_match(mock_patients,
-#'                           column_string = "Drug_",
-#'                           codes = "C10AA")
 check_any_match <- function(df, column_string, codes, no_matches = FALSE) {
 
   # 'columns' is an integer vector.
