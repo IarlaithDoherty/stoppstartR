@@ -44,5 +44,7 @@ check_matches <- function(df, column_string, codes, match = "any") {
     return(combined_check)
   } else if (match == "none") {
     return(!combined_check)
-  } else (warning("match must be either 'any' or 'none'."))
+  } else {
+    warning("match must be either 'any' or 'none'.")
+  }
 }

@@ -134,17 +134,17 @@ start_a5 <- function(df) {
                            "I74", "G45", "Z95.1", "Z95.5", "Z95.8")
   # 'checks_list$comorbs1' is TRUE if the patient has any listed comorbidities.
   checks_list$comorbs1 <- check_matches(df,
-                                          column_string = "Comorbidity_",
-                                          codes = codes_list$comorbs1,
-                                          match = "any")
+                                        column_string = "Comorbidity_",
+                                        codes = codes_list$comorbs1,
+                                        match = "any")
 
   # 'codes_list$drugs1' is a character vector of drug codes to check.
   codes_list$drugs1 <- c("C10AA")
   # 'checks_list$drugs1' is TRUE if the patient is not on any listed drugs.
   checks_list$drugs1 <- check_matches(df,
-                                        column_string = "Drug_",
-                                        codes = codes_list$drugs1,
-                                        match = "none")
+                                      column_string = "Drug_",
+                                      codes = codes_list$drugs1,
+                                      match = "none")
 
   # 'output$all_checks' is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'checks_list'.
