@@ -6,6 +6,14 @@
 #'
 #' @param df Dataframe of patient information.
 #'
+#' \itemize{
+#' \item Name of patient age column / variable must be "Age".
+#' \item Names of comorbidities columns / variables must contain "Comorbidity_".
+#' \item Other column / variable names must not contain "Comorbidity_".
+#' \item Names of drugs columns / variables must contain "Drug_".
+#' \item Other column / variable names must not contain "Drug_".
+#' }
+#'
 #' @return List with two elements:
 #'
 #' `all_checks`: logical vector,
