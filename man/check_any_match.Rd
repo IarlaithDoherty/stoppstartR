@@ -10,17 +10,21 @@ check_any_match(df, column_string, code_set)
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{column_string}{Only columns whose names contain this string will be checked.}
+\item{column_string}{Only columns with names containing this string will be checked.}
 
 \item{code_set}{A character string of codes to check matches for, separated by "|".}
 }
 \value{
-A logical vector indicating which rows / patients had a match in any column.
+A logical vector indicating which rows / patients from \code{df} had an
+entry containing one of the codes in \code{code_set} in any of the columns
+with names containing \code{column_string}.
 }
 \description{
 Check which rows of \code{df} contain any codes in \code{code_set} in the columns
 starting with \code{column_string}.
 }
 \examples{
-check_any_match(mock_patients, column_string = "Drug_", code_set = "C10AA")
+check_any_match(mock_patients,
+                          column_string = "Drug_",
+                          code_set = "C10AA")
 }
