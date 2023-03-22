@@ -3,10 +3,17 @@
 #' @description
 #' Determine which patients triggered the conditions defining START-A5.
 #'
+#' START-A5 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Age less than 85 years.
-#' \item Any of the following comorbidities: I20, I21, I22, I24, or I25.
-#' \item None of the following drugs: C10AA.}
+#' \item Any of the following comorbidities:
+#'
+#' I20, I21, I22, I24, I25,
+#' I63, I64, I65, I66, I73.9,
+#' I74, G45, Z95.1, Z95.5, or Z95.8.
+#' \item None of the following drugs:
+#'
+#' C10AA.}
 #'
 #' @param df Dataframe of patient information.
 #'
