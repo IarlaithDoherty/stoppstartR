@@ -23,11 +23,12 @@
 #' }
 #' @export
 combine_checks <- function(checks_list, criterion_name) {
-  # 'output$all_checks' is a logical vector with one entry per patient.
+
+  # 'all_checks' is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'checks_list'.
   all_checks <- Reduce(x = checks_list, f = "&")
-  # 'output$instruction' is a character vector with one entry per patient.
-  # "START A5" if the patient is TRUE for 'output$all_checks', "" otherwise.
+  # 'instruction' is a character vector with one entry per patient.
+  # criterion_name if the patient is TRUE for 'all_checks', "" otherwise.
   instruction <- ifelse(all_checks, yes = criterion_name, no = "")
 
   return(list(all_checks = all_checks,
