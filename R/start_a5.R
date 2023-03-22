@@ -40,7 +40,7 @@ start_a5 <- function(df) {
   # 'comorbs1' is TRUE if the patient has any of the listed comorbidities.
   checks_list$comorbs1 <- check_any_match(
                             df,
-                            column_string = "Comorbidity",
+                            column_string = "Comorbidity_",
                             code_string = "I20|I21|I22|I24|I25"
                             )
 
