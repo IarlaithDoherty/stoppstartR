@@ -4,26 +4,26 @@
 \alias{check_any_match}
 \title{Check which patients contain code strings in specified columns.}
 \usage{
-check_any_match(df, column_string, code_string)
+check_any_match(df, column_string, codes)
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
 
 \item{column_string}{Only columns with names containing this string will be checked.}
 
-\item{code_string}{A character string of codes to check matches for, separated by "|".}
+\item{codes}{A character vector of codes to search for.}
 }
 \value{
 A logical vector indicating which rows / patients from \code{df} had an
-entry containing one of the codes in \code{code_string} in any of the
+entry containing one of the codes in \code{codes} in any of the
 columns with names containing \code{column_string}.
 }
 \description{
-Check which rows of \code{df} contain any codes in \code{code_string} in the columns
+Check which rows of \code{df} contain any codes in \code{codes} in the columns
 starting with \code{column_string}.
 }
 \examples{
 check_any_match(mock_patients,
                           column_string = "Drug_",
-                          code_string = "C10AA")
+                          codes = "C10AA")
 }
