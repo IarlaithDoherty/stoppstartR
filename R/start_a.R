@@ -1,4 +1,4 @@
-#' @title Function to implement START-A1 rule.
+#' @title Function to implement START-A1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A1.
@@ -37,7 +37,7 @@ start_a1 <- function(df) {
 }
 
 
-#' @title Function to implement START-A2 rule.
+#' @title Function to implement START-A2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A2.
@@ -59,7 +59,7 @@ start_a2 <- function(df) {
 }
 
 
-#' @title Function to implement START-A3 rule.
+#' @title Function to implement START-A3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A3.
@@ -81,7 +81,7 @@ start_a3 <- function(df) {
 }
 
 
-#' @title Function to implement START-A4 rule.
+#' @title Function to implement START-A4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A4.
@@ -103,7 +103,7 @@ start_a4 <- function(df) {
 }
 
 
-#' @title Function to implement START-A5 rule.
+#' @title Function to implement START-A5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A5.
@@ -167,7 +167,7 @@ start_a5 <- function(df) {
 }
 
 
-#' @title Function to implement START-A6 rule.
+#' @title Function to implement START-A6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A6.
@@ -189,7 +189,7 @@ start_a6 <- function(df) {
 }
 
 
-#' @title Function to implement START-A7 rule.
+#' @title Function to implement START-A7 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A7.
@@ -211,7 +211,7 @@ start_a7 <- function(df) {
 }
 
 
-#' @title Function to implement START-A8 rule.
+#' @title Function to implement START-A8 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A8.

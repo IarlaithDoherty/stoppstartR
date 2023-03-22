@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a6}
 \alias{start_a6}
-\title{Function to implement START-A6 rule.}
+\title{Function to implement START-A6 criterion.}
 \usage{
 start_a6(df)
 }
