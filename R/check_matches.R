@@ -31,9 +31,9 @@ check_matches <- function(df, column_string, codes, match = "any") {
   # Each vector has one TRUE / FALSE value per patient.
   # TRUE if that patient has any of the codes from 'codes' in that column.
   column_checks <- lapply(X = df[, columns],
-                                  FUN = function(x) {
-                                    grepl(x, pattern = codes_string)
-                                  }
+                          FUN = function(x) {
+                            grepl(x, pattern = codes_string)
+                            }
                           )
 
   # 'combined_check' is a logical vector with a TRUE / FALSE value per patient.
