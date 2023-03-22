@@ -17,7 +17,7 @@
 #'         entry containing one of the codes in `codes` in any of the
 #'         columns with names containing `column_string`.
 #' @export
-check_any_match <- function(df, column_string, codes, match = "any") {
+check_matches <- function(df, column_string, codes, match = "any") {
 
   # 'columns' is an integer vector.
   # These are the numbers of columns with names containing 'column_string'.
