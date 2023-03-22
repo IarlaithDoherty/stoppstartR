@@ -123,7 +123,7 @@ start_a5 <- function(df) {
   # 'checks_list' is a list of logical vectors, each has one entry per patient.
   checks_list <- list()
   # 'codes_list' is a list of character vectors, each containing codes to check.
-  codes_list  <- list()
+  codes_list <- list()
 
   # 'check_list$extras1' is TRUE if the patient's age is less than 85 years.
   checks_list$extras1 <- df$Age < 85

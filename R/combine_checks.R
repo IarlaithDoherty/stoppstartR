@@ -2,9 +2,9 @@
 #'
 #' @description
 #' Combine `checks_list`, a list of logical vectors of the same length, into one
-#' logical vector called `all_checks` using AND. Also create a character vector, called
-#' `instruction` whose entries are `criterion_name` when `all_checks` is `TRUE`
-#' and "" (blank) when `all_checks` is `FALSE`.
+#' logical vector called `all_checks` using AND. Also create a character vector,
+#' called `instruction` whose entries are `criterion_name` when `all_checks` is
+#' `TRUE` and "" (blank) when `all_checks` is `FALSE`.
 #'
 #' @param checks_list A list of logical vectors of equal length.
 #' @param criterion_name A character string giving a message for when all
@@ -15,7 +15,8 @@
 #' \itemize{
 #' \item `all_checks`: logical vector,
 #'
-#' `TRUE` if all corresponding entries of `checks_list` are `TRUE`, `FALSE` otherwise.
+#' `TRUE` if all corresponding entries of `checks_list` are `TRUE`,
+#' `FALSE` otherwise.
 #' \item `instruction`: character vector,
 #'
 #' `criterion_name` if `all_checks` is `TRUE`, blank otherwise.
