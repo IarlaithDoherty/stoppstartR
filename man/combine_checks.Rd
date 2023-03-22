@@ -18,7 +18,8 @@ List with two elements:
 \itemize{
 \item \code{all_checks}: logical vector,
 
-\code{TRUE} if all corresponding entries of \code{checks_list} are \code{TRUE}, \code{FALSE} otherwise.
+\code{TRUE} if all corresponding entries of \code{checks_list} are \code{TRUE},
+\code{FALSE} otherwise.
 \item \code{instruction}: character vector,
 
 \code{criterion_name} if \code{all_checks} is \code{TRUE}, blank otherwise.
@@ -26,7 +27,7 @@ List with two elements:
 }
 \description{
 Combine \code{checks_list}, a list of logical vectors of the same length, into one
-logical vector called \code{all_checks} using AND. Also create a character vector, called
-\code{instruction} whose entries are \code{criterion_name} when \code{all_checks} is \code{TRUE}
-and "" (blank) when \code{all_checks} is \code{FALSE}.
+logical vector called \code{all_checks} using AND. Also create a character vector,
+called \code{instruction} whose entries are \code{criterion_name} when \code{all_checks} is
+\code{TRUE} and "" (blank) when \code{all_checks} is \code{FALSE}.
 }
