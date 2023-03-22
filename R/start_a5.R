@@ -4,78 +4,40 @@
 #'
 #' @return List with two elements:
 #'
-#' `bool`: logical vector indicating whether each patient has triggered START-A5.
+#' `all_checks`: logical vector,
+#'               TRUE if a patient has triggered START-A5, FALSE otherwise.
 #'
-#' `text`: character vector containing "START-A5" or "" for each patient.
+#' `instruction`: character vector,
+#'                "START-A5" if a patient has triggered START-A5, "" otherwise.
 #'
 #' @export
 #'
 #' @examples start_a5(mock_patients)
 start_a5 <- function(df) {
 
-  # Numbers of comorbidity and drug columns used later to subset the dataframe..
+  # 'checks_list' is a list of logical vectors, each has one entry per patient.
+  checks_list <- list()
 
-  # Create empty lists to fill later.
-  extras_tests <- list()
-  comorbs_sets <- comorbs_checks <- comorbs_tests <- list()
-  drugs_sets   <- drugs_checks   <- drugs_tests   <- list()
+  # 'extras1' is TRUE if the patient's age is less than 85 years.
+  checks_list$extras1 <- df$Age < 85
 
-  # extras_tests[1] is a logical vector with one entry per patient.
-  extras_tests[[1]] <- df$Age < 85
+  # 'comorbs1' is TRUE if the patient has any of the listed comorbidities.
+  checks_list$comorbs1 <- check_any_match(df,
+                                          column_string = "Comorbidity_",
+                                          code_set = "I20|I21|I22|I24|I25")
 
-  # comorbs_sets is a list of character strings.
-  # Each character string consists of comorbidity codes separated by "|" (or).
-  # This allows grepl to check for matches with any of these codes.
-  comorbs_sets[[1]] <- "I20|I21|I22|I24|I25"
+  # 'drugs1' is TRUE if the patient is not on the listed drug.
+  checks_list$drugs1 <- !check_any_match(df,
+                                         column_string = "Drug_",
+                                         code_set = "C10AA")
 
-  # comorbs_checks[[i]] is a list with one element per comorbidity column.
-  # Each list element is a logical vector with one element per patient.
-  # comorbs_checks[[i]] has 1 logical value per patient / column combination.
-  # TRUE if that patient does have any of these comorbidities in that column.
-  # comorbs_tests[[i]] is a logical vector with one entry per patient.
-  # TRUE if that patient does have any of these comorbidities in any column.
-  comorbs_cols <- grep(colnames(df), pattern = "Comorbidity_")
-  for(i in 1:length(comorbs_sets)) {
-    comorbs_checks[[i]] <- lapply(X = df[, comorbs_cols],
-                                  FUN = function(x){
-                                    grepl(x, pattern = comorbs_sets[[i]])
-                                  }
-    )
-    comorbs_tests[[i]] <- Reduce(x = comorbs_checks[[i]], f = "|")
-  }
+  output <- list()
+  # 'all_checks' is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'checks_list'.
+  output$all_checks <- Reduce(x = checks_list, f = "&")
+  # 'instruction' is a character vector with one entry per patient.
+  # "START A5" if the patient is TRUE for 'bool', "" (blank) otherwise.
+  output$instruction <- ifelse(output$all_checks, yes = "START A5", no = "")
 
-  # drugs_sets is a list of character strings.
-  # Each character string consists of drug codes separated by "|" (or).
-  # This allows grepl to check for matches with any of these codes.
-  drugs_sets[[1]] <- "C10AA"
-
-  # drugs_checks[[i]] is a list with one element per drug column.
-  # Each list element is a logical vector with one element per patient.
-  # drugs_checks[[i]] has 1 logical value per patient / column combination.
-  # TRUE if that patient does not have any of these drugs in that column.
-  # drugs_tests[[i]] is a logical vector with one entry per patient.
-  # TRUE if that patient does not have any of these drugs in any column.
-  drugs_cols   <- grep(colnames(df), pattern = "Drug_")
-  for(i in 1:length(drugs_sets)) {
-    drugs_checks[[i]] <- lapply(X = df[, drugs_cols],
-                                FUN = function(x){
-                                  !grepl(x, pattern = drugs_sets[[i]])
-                                }
-    )
-    drugs_tests[[i]] <- Reduce(x = drugs_checks[[i]], f = "&")
-  }
-
-  # bool is a logical vector with one entry per patient.
-  # TRUE if that patient is TRUE for every condition.
-  bool <- Reduce(x = c(extras_tests, comorbs_tests, drugs_tests),
-                 f = "&")
-  # text is a character vector with one entry per patient.
-  # "START A5" if that patient is TRUE for every condition, "" (blank) otherwise.
-  text <- ifelse(bool, yes = "START A5", no = "")
-  # output is a named list consisting of bool and text.
-  output <- list(bool = bool,
-                 text = text)
-
-  # This function will return the list called output.
   return(output)
 }
