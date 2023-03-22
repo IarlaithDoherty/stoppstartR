@@ -4,38 +4,40 @@
 #'
 #' @return List with two elements:
 #'
-#' `bool`: logical vector indicating whether each patient has triggered START-A5.
+#' `all_checks`: logical vector,
+#'               TRUE if a patient has triggered START-A5, FALSE otherwise.
 #'
-#' `text`: character vector containing "START-A5" or "" for each patient.
+#' `instruction`: character vector,
+#'                "START-A5" if a patient has triggered START-A5, "" otherwise.
 #'
 #' @export
 #'
 #' @examples start_a5(mock_patients)
 start_a5_2 <- function(df) {
 
-  # extras_tests[1] is a logical vector with one entry per patient.
-  extras_check1 <- df$Age < 85
+  # 'checks_list' is a list of logical vectors, each has one entry per patient.
+  checks_list <- list()
 
-  comorbs_check1 <- check_any_match(df,
-                                    column_prefix = "Comorbidity_",
-                                    code_set = "I20|I21|I22|I24|I25")
+  # 'extras1' is TRUE if the patient's age is less than 85 years.
+  checks_list$extras1 <- df$Age < 85
 
-  drugs_check1 <- !check_any_match(df,
-                                  column_prefix = "Drug_",
-                                  code_set = "C10AA")
+  # 'comorbs1' is TRUE if the patient has any of the listed comorbidities.
+  checks_list$comorbs1 <- check_any_match(df,
+                                          column_string = "Comorbidity_",
+                                          code_set = "I20|I21|I22|I24|I25")
 
+  # 'drugs1' is TRUE if the patient is not on the listed drug.
+  checks_list$drugs1 <- !check_any_match(df,
+                                         column_string = "Drug_",
+                                         code_set = "C10AA")
 
-  # bool is a logical vector with one entry per patient.
-  # TRUE if that patient is TRUE for every condition.
-  bool <- Reduce(x = list(extras_check1, comorbs_check1, drugs_check1),
-                 f = "&")
-  # text is a character vector with one entry per patient.
-  # "START A5" if that patient is TRUE for every condition, "" (blank) otherwise.
-  text <- ifelse(bool, yes = "START A5", no = "")
-  # output is a named list consisting of bool and text.
-  output <- list(bool = bool,
-                 text = text)
+  output <- list()
+  # 'all_checks' is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'checks_list'.
+  output$all_checks <- Reduce(x = checks_list, f = "&")
+  # 'instruction' is a character vector with one entry per patient.
+  # "START A5" if the patient is TRUE for 'bool', "" (blank) otherwise.
+  output$instruction <- ifelse(output$all_checks, yes = "START A5", no = "")
 
-  # This function will return the list called output.
   return(output)
 }
