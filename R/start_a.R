@@ -145,13 +145,7 @@ start_a5 <- function(df) {
                                         codes = codes_list$drugs1,
                                         no_matches = TRUE)
 
-  output <- list()
-  # 'output$all_checks' is a logical vector with one entry per patient.
-  # TRUE if the patient is TRUE for each element of 'checks_list'.
-  output$all_checks <- Reduce(x = checks_list, f = "&")
-  # 'output$instruction' is a character vector with one entry per patient.
-  # "START A5" if the patient is TRUE for 'output$all_checks', "" otherwise.
-  output$instruction <- ifelse(output$all_checks, yes = "START A5", no = "")
+  output <- combine_checks(checks_list, criterion_name = "START-A5")
 
   return(output)
 }
