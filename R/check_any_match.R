@@ -9,6 +9,8 @@
 #'        Only columns with names containing this string will be checked.
 #' @param codes
 #'        A character vector of codes to search for.
+#' @param no_matches
+#'        A logical value: FALSE to check for any matches, TRUE for no matches.
 #'
 #' @return A logical vector indicating which rows / patients from `df` had an
 #'         entry containing one of the codes in `codes` in any of the
@@ -18,7 +20,7 @@
 #' @examples check_any_match(mock_patients,
 #'                           column_string = "Drug_",
 #'                           codes = "C10AA")
-check_any_match <- function(df, column_string, codes) {
+check_any_match <- function(df, column_string, codes, no_matches = FALSE) {
 
   # 'columns' is an integer vector.
   # These are the numbers of columns with names containing 'column_string'.
@@ -41,5 +43,9 @@ check_any_match <- function(df, column_string, codes) {
   # TRUE if that patient has any TRUE values in 'column_checks'.
   combined_check <- Reduce(x = column_checks, f = "|")
 
-  return(combined_check)
+  if (no_matches) {
+    return(!combined_check)
+  } else {
+    return(combined_check)
+  }
 }

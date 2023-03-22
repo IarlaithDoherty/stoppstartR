@@ -140,10 +140,10 @@ start_a5 <- function(df) {
   # 'codes_list$drugs1' is a character vector of drug codes to check.
   codes_list$drugs1 <- c("C10AA")
   # 'checks_list$drugs1' is TRUE if the patient is not on any listed drugs.
-  checks_list$drugs1 <- !check_any_match(df,
-                                         column_string = "Drug_",
-                                         codes = codes_list$drugs1
-  )
+  checks_list$drugs1 <- check_any_match(df,
+                                        column_string = "Drug_",
+                                        codes = codes_list$drugs1,
+                                        no_matches = TRUE)
 
   output <- list()
   # 'output$all_checks' is a logical vector with one entry per patient.
