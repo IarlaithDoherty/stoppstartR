@@ -36,7 +36,7 @@ start_a5 <- function(df) {
   # 'codes_list' is a list of character vectors, each containing codes to check.
   codes_list  <- list()
 
-  # 'extras1' is TRUE if the patient's age is less than 85 years.
+  # 'check_list$extras1' is TRUE if the patient's age is less than 85 years.
   checks_list$extras1 <- df$Age < 85
 
   # 'codes_list$comorbs1' is a character vector of comorbidity codes to check.
@@ -57,11 +57,11 @@ start_a5 <- function(df) {
                                          )
 
   output <- list()
-  # 'all_checks' is a logical vector with one entry per patient.
+  # 'output$all_checks' is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'checks_list'.
   output$all_checks <- Reduce(x = checks_list, f = "&")
-  # 'instruction' is a character vector with one entry per patient.
-  # "START A5" if the patient is TRUE for 'bool', "" (blank) otherwise.
+  # 'output$instruction' is a character vector with one entry per patient.
+  # "START A5" if the patient is TRUE for 'output$all_checks', "" otherwise.
   output$instruction <- ifelse(output$all_checks, yes = "START A5", no = "")
 
   return(output)
