@@ -1,9 +1,10 @@
 #' Check which rows of `df` contain any codes in `code_set` in the columns
-#' starting with `column_prefix`.
+#' starting with `column_string`.
 #'
 #' @param df Dataframe of patient information.
-#' @param column_prefix Prefix of columns to be checked.
 #' @param code_set A character string of codes to check matches for, separated by "|".
+#' @param column_string
+#'        Only columns with names containing this string will be checked.
 #'
 #' @return A logical vector indicating which rows / patients had a match in any column.
 #' @export

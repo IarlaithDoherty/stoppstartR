@@ -3,14 +3,14 @@
 \name{check_any_match}
 \alias{check_any_match}
 \title{Check which rows of \code{df} contain any codes in \code{code_set} in the columns
-starting with \code{column_prefix}.}
+starting with \code{column_string}.}
 \usage{
-check_any_match(df, column_prefix, code_set)
+check_any_match(df, column_string, code_set)
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{column_prefix}{Prefix of columns to be checked.}
+\item{column_string}{Only columns whose names contain this string will be checked.}
 
 \item{code_set}{A character string of codes to check matches for, separated by "|".}
 }
@@ -19,8 +19,8 @@ A logical vector indicating which rows / patients had a match in any column.
 }
 \description{
 Check which rows of \code{df} contain any codes in \code{code_set} in the columns
-starting with \code{column_prefix}.
+starting with \code{column_string}.
 }
 \examples{
-check_any_match(mock_patients, column_prefix = "Drug_", code_set = "C10AA")
+check_any_match(mock_patients, column_string = "Drug_", code_set = "C10AA")
 }
