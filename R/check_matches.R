@@ -19,6 +19,17 @@
 #' @export
 check_matches <- function(df, column_string, codes, match = "any") {
 
+  # Ensure that column_string, codes, and match have the correct format.
+  if (!is.character(column_string)) {
+    warning("column_string must be a character string / vector.")
+  }
+  if (!is.character(codes)) {
+    warning("codes must be a character string / vector.")
+  }
+  if (!(match %in% c("any", "none"))) {
+    warning("match must be either 'any' or 'none'.")
+  }
+
   # 'columns' is an integer vector.
   # These are the numbers of columns with names containing 'column_string'.
   columns <- grep(colnames(df), pattern = column_string)
