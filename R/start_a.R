@@ -150,7 +150,7 @@ start_a5 <- function(df) {
   # TRUE if the patient is TRUE for each element of 'checks_list'.
   # 'output$instruction' is a character vector with one entry per patient.
   # "START-A5" if the patient is TRUE for 'output$all_checks', "" otherwise.
-  output <- combine_checks(checks_list, criterion_name = "START-A5")
+  output <- combine_checks(checks_list, true_string = "START-A5")
 
   return(output)
 }
