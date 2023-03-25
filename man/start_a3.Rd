@@ -26,6 +26,16 @@ Determine which patients triggered the conditions defining START-A3.
 
 START-A3 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item None of the following comorbidities:
+
+I48.
+\item Any of the following comorbidities:
+
+I20, I21, I22, I24, I25,
+I63, I64, I65, I66, I73.9,
+I74, G45, Z95.1, Z95.5, or Z95.8.
+\item None of the following drugs:
+
+B01AC.
 }
 }
