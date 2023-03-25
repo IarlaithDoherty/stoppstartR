@@ -18,16 +18,8 @@
 #' \item Other column / variable names must not contain "Drug_".
 #' }
 #'
-#' @return List with two elements:
-#'
-#' \itemize{
-#' \item `all_checks`: logical vector,
-#'
+#' @return  `all_checks`: logical vector,
 #' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
-#' \item `instruction`: character vector,
-#'
-#' the STOPP/START criterion's name if `all_checks` is `TRUE`, blank otherwise.
-#' }
 #'
 #' @export
 start_a1 <- function(df) {

@@ -18,16 +18,8 @@ start_a8(df)
 }}
 }
 \value{
-List with two elements:
-
-\itemize{
-\item \code{all_checks}: logical vector,
-
+\code{all_checks}: logical vector,
 \code{TRUE} if this STOPP/START criterion is satisfied, \code{FALSE} otherwise.
-\item \code{instruction}: character vector,
-
-the STOPP/START criterion's name if \code{all_checks} is \code{TRUE}, blank otherwise.
-}
 }
 \description{
 Determine which patients triggered the conditions defining START-A8.
