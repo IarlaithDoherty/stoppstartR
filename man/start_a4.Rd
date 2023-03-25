@@ -10,7 +10,9 @@ start_a4(df)
 \item{df}{Dataframe of patient information.
 
 \itemize{
-\item Name of patient age column / variable must be "Age".
+\item Patient age column / variable must be named "Age".
+\item Systolic BP column / variable must be named "Systolic_BP".
+\item Diastolic BP column / variable must be named "Diastolic_BP".
 \item Names of comorbidities columns / variables must contain "Comorbidity_".
 \item Other column / variable names must not contain "Comorbidity_".
 \item Names of drugs columns / variables must contain "Drug_".
@@ -26,6 +28,16 @@ Determine which patients triggered the conditions defining START-A4.
 
 START-A4 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item None of the following drugs:
+
+C07, C08, C09, C03A, C03EA.
+\item Any of the following subconditions:
+\itemize{
+\item Systolic_BP > 160
+\item Diastolic_BP >90
+\item Systolic_BP > 140 and any of the following comorbidities:
+
+E10, E11, E12, E13, E14
+}
 }
 }

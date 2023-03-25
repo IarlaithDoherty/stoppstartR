@@ -16,7 +16,9 @@
 #' @param df Dataframe of patient information.
 #'
 #' \itemize{
-#' \item Name of patient age column / variable must be "Age".
+#' \item Patient age column / variable must be named "Age".
+#' \item Systolic BP column / variable must be named "Systolic_BP".
+#' \item Diastolic BP column / variable must be named "Diastolic_BP".
 #' \item Names of comorbidities columns / variables must contain "Comorbidity_".
 #' \item Other column / variable names must not contain "Comorbidity_".
 #' \item Names of drugs columns / variables must contain "Drug_".
@@ -151,7 +153,17 @@ start_a3 <- function(df) {
 #'
 #' START-A4 requires all of the following conditions to be satisfied:
 #' \itemize{
-#' \item
+#' \item None of the following drugs:
+#'
+#' C07, C08, C09, C03A, C03EA.
+#' \item Any of the following subconditions:
+#' \itemize{
+#' \item Systolic_BP > 160
+#' \item Diastolic_BP >90
+#' \item Systolic_BP > 140 and any of the following comorbidities:
+#'
+#' E10, E11, E12, E13, E14
+#' }
 #' }
 #'
 #' @inheritParams start_a1
@@ -161,6 +173,38 @@ start_a3 <- function(df) {
 #' @export
 start_a4 <- function(df) {
 
+  # 'checks_list' is a list of logical vectors, each has one entry per patient.
+  checks_list <- list()
+  # 'codes_list' is a list of character vectors, each containing codes to check.
+  codes_list <- list()
+
+  # 'codes_list$comorbs1' is a character vector of comorbidity codes to check.
+  codes_list$comorbs1 <- c("E10", "E11", "E12", "E13", "E14")
+  # 'checks_list$multis1' is TRUE if the patient has diastolic BP over 90, or
+  # systolic BP over 160, or both systolic BP over 140 and the listed
+  # comorbidities.
+  checks_list$multis1 <- (df$Diastolic > 90 |
+                            df$Systolic > 160 |
+                            (df$Systolic > 140 &
+                               check_matches(df,
+                                             column_string = "Comorbidity_",
+                                             codes = codes_list$comorbs1,
+                                             match = "any"))
+                          )
+
+  # 'codes_list$drugs1' is a character vector of drug codes to check.
+  codes_list$drugs1 <- c("C07", "C08", "C09", "C03A", "C03EA")
+  # 'checks_list$drugs1' is TRUE if the patient is not on any listed drugs.
+  checks_list$drugs1 <- check_matches(df,
+                                      column_string = "Drug_",
+                                      codes = codes_list$drugs1,
+                                      match = "none")
+
+  # 'all_checks' is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'checks_list'.
+  all_checks <- Reduce(x = checks_list, f = "&")
+
+  return(all_checks)
 }
 
 

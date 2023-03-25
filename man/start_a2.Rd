@@ -10,7 +10,9 @@ start_a2(df)
 \item{df}{Dataframe of patient information.
 
 \itemize{
-\item Name of patient age column / variable must be "Age".
+\item Patient age column / variable must be named "Age".
+\item Systolic BP column / variable must be named "Systolic_BP".
+\item Diastolic BP column / variable must be named "Diastolic_BP".
 \item Names of comorbidities columns / variables must contain "Comorbidity_".
 \item Other column / variable names must not contain "Comorbidity_".
 \item Names of drugs columns / variables must contain "Drug_".
