@@ -5,7 +5,12 @@
 #'
 #' START-A1 requires all of the following conditions to be satisfied:
 #' \itemize{
-#' \item
+#' \item Any of the following comorbidities:
+#'
+#' I48.2.
+#' \item None of the following drugs:
+#'
+#' B01AA, B01AE, or B01AF.
 #' }
 #'
 #' @param df Dataframe of patient information.
@@ -24,6 +29,32 @@
 #' @export
 start_a1 <- function(df) {
 
+  # 'checks_list' is a list of logical vectors, each has one entry per patient.
+  checks_list <- list()
+  # 'codes_list' is a list of character vectors, each containing codes to check.
+  codes_list <- list()
+
+  # 'codes_list$comorbs1' is a character vector of comorbidity codes to check.
+  codes_list$comorbs1 <- c("I48.2")
+  # 'checks_list$comorbs1' is TRUE if the patient has any listed comorbidities.
+  checks_list$comorbs1 <- check_matches(df,
+                                        column_string = "Comorbidity_",
+                                        codes = codes_list$comorbs1,
+                                        match = "any")
+
+  # 'codes_list$drugs1' is a character vector of drug codes to check.
+  codes_list$drugs1 <- c("B01AA", "B01AE", "B01AF")
+  # 'checks_list$drugs1' is TRUE if the patient is not on any listed drugs.
+  checks_list$drugs1 <- check_matches(df,
+                                      column_string = "Drug_",
+                                      codes = codes_list$drugs1,
+                                      match = "none")
+
+  # 'all_checks' is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'checks_list'.
+  all_checks <- Reduce(x = checks_list, f = "&")
+
+  return(all_checks)
 }
 
 

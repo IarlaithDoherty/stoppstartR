@@ -26,6 +26,11 @@ Determine which patients triggered the conditions defining START-A1.
 
 START-A1 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+I48.2.
+\item None of the following drugs:
+
+B01AA, B01AE, or B01AF.
 }
 }
