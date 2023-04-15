@@ -30,8 +30,8 @@
 #' \item "Not Relevant" if the conditions are not satisfied.
 #' \item "Appropriate" if the conditions are satisfied but the correct drug has
 #' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the correct
-#' drug has not been prescribed.
+#' \item The name of the criterion if the conditions are satisfied and the
+#' correct drug has not been prescribed.
 #' }
 #'
 #' @export
@@ -209,38 +209,50 @@ start_a3 <- function(df) {
 #' @export
 start_a4 <- function(df) {
 
-  # 'checks_list' is a list of logical vectors, each has one entry per patient.
-  checks_list <- list()
-  # 'codes_list' is a list of character vectors, each containing codes to check.
-  codes_list <- list()
+  # prelim_checks is a list of logical vectors, each has one entry per patient.
+  prelim_checks <- list()
+  # prelim_codes is a list of character vectors, each containing codes to check.
+  prelim_codes <- list()
 
-  # 'codes_list$comorbs1' is a character vector of comorbidity codes to check.
-  codes_list$comorbs1 <- c("E10", "E11", "E12", "E13", "E14")
-  # 'checks_list$multis1' is TRUE if the patient has diastolic BP over 90, or
-  # systolic BP over 160, or both systolic BP over 140 and the listed
-  # comorbidities.
-  checks_list$multis1 <- (df$Diastolic > 90 |
-                            df$Systolic > 160 |
-                            (df$Systolic > 140 &
-                               check_matches(df,
-                                             column_string = "Comorbidity_",
-                                             codes = codes_list$comorbs1,
-                                             match = "any"))
-                          )
+  # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
+  prelim_codes$comorbs1 <- c("E10", "E11", "E12", "E13", "E14")
+  # prelim_checks$multis1 is TRUE if the patient has any listed comorbidities.
+  prelim_checks$multis1 <- (df$Diastolic > 90 |
+                              df$Systolic > 160 |
+                              (df$Systolic > 140 &
+                                 check_matches(df,
+                                               column_string = "Comorbidity_",
+                                               codes = codes_list$comorbs1,
+                                               match = "any")))
 
-  # 'codes_list$drugs1' is a character vector of drug codes to check.
-  codes_list$drugs1 <- c("C07", "C08", "C09", "C03A", "C03EA")
-  # 'checks_list$drugs1' is TRUE if the patient is not on any listed drugs.
-  checks_list$drugs1 <- check_matches(df,
-                                      column_string = "Drug_",
-                                      codes = codes_list$drugs1,
-                                      match = "none")
+  # all_prelims is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'prelim_checks'.
+  all_prelims <- Reduce(x = prelim_checks, f = "&")
 
-  # 'all_checks' is a logical vector with one entry per patient.
-  # TRUE if the patient is TRUE for each element of 'checks_list'.
-  all_checks <- Reduce(x = checks_list, f = "&")
 
-  return(all_checks)
+  # action_checks is a list of logical vectors, each has one entry per patient.
+  action_checks <- list()
+  # action_codes is a list of character vectors, each containing codes to check.
+  action_codes <- list()
+
+  # prelim_codes$drugs1 is a character vector of drug codes to check.
+  action_codes$drugs1 <- c("C07", "C08", "C09", "C03A", "C03EA")
+  # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
+  action_checks$drugs1 <- check_matches(df,
+                                        column_string = "Drug_",
+                                        codes = action_codes$drugs1,
+                                        match = "any")
+
+  # all_actions is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'action_checks'.
+  all_actions <- Reduce(x = action_checks, f = "&")
+
+
+  output <- ifelse(all_prelims,
+                   ifelse(all_actions, "Appropriate", "START-A5"),
+                   "Not Relevant")
+
+  return(output)
 }
 
 

@@ -25,8 +25,8 @@ start_a2(df)
 \item "Not Relevant" if the conditions are not satisfied.
 \item "Appropriate" if the conditions are satisfied but the correct drug has
 already been prescribed.
-\item The name of the criterion if the conditions are satisfied and the correct
-drug has not been prescribed.
+\item The name of the criterion if the conditions are satisfied and the
+correct drug has not been prescribed.
 }
 }
 \description{
