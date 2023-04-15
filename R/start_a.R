@@ -25,8 +25,14 @@
 #' \item Other column / variable names must not contain "Drug_".
 #' }
 #'
-#' @return  `all_checks`: logical vector,
-#' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
+#' @return `output`: character vector,
+#' \itemize{
+#' \item "Not Relevant" if the conditions are not satisfied.
+#' \item "Appropriate" if the conditions are satisfied but the correct drug has
+#' already been prescribed.
+#' \item The name of the criterion if the conditions are satisfied and the correct
+#' drug has not been prescribed.
+#' }
 #'
 #' @export
 start_a1 <- function(df) {
@@ -233,37 +239,52 @@ start_a4 <- function(df) {
 #' @export
 start_a5 <- function(df) {
 
-  # 'checks_list' is a list of logical vectors, each has one entry per patient.
-  checks_list <- list()
-  # 'codes_list' is a list of character vectors, each containing codes to check.
-  codes_list <- list()
+  # prelim_checks is a list of logical vectors, each has one entry per patient.
+  prelim_checks <- list()
+  # prelim_codes is a list of character vectors, each containing codes to check.
+  prelim_codes <- list()
 
-  # 'check_list$extras1' is TRUE if the patient's age is less than 85 years.
-  checks_list$extras1 <- df$Age < 85
+  # prelim_checks$extras1 is TRUE if the patient's age is less than 85 years.
+  prelim_checks$extras1 <- df$Age < 85
 
-  # 'codes_list$comorbs1' is a character vector of comorbidity codes to check.
-  codes_list$comorbs1 <- c("I20", "I21",   "I22",   "I24",   "I25",
-                           "I63", "I64",   "I65",   "I66", "I73.9",
-                           "I74", "G45", "Z95.1", "Z95.5", "Z95.8")
-  # 'checks_list$comorbs1' is TRUE if the patient has any listed comorbidities.
-  checks_list$comorbs1 <- check_matches(df,
-                                        column_string = "Comorbidity_",
-                                        codes = codes_list$comorbs1,
+  # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
+  prelim_codes$comorbs1 <- c("I20", "I21",   "I22",   "I24",   "I25",
+                             "I63", "I64",   "I65",   "I66", "I73.9",
+                             "I74", "G45", "Z95.1", "Z95.5", "Z95.8")
+  # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
+  prelim_checks$comorbs1 <- check_matches(df,
+                                          column_string = "Comorbidity_",
+                                          codes = prelim_codes$comorbs1,
+                                          match = "any")
+
+  # all_prelims is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'prelim_checks'.
+  all_prelims <- Reduce(x = prelim_checks, f = "&")
+
+
+   # action_checks is a list of logical vectors, each has one entry per patient.
+  action_checks <- list()
+  # action_codes is a list of character vectors, each containing codes to check.
+  action_codes <- list()
+
+  # prelim_codes$drugs1 is a character vector of drug codes to check.
+  action_codes$drugs1 <- c("C10AA")
+  # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
+  action_checks$drugs1 <- check_matches(df,
+                                        column_string = "Drug_",
+                                        codes = action_codes$drugs1,
                                         match = "any")
 
-  # 'codes_list$drugs1' is a character vector of drug codes to check.
-  codes_list$drugs1 <- c("C10AA")
-  # 'checks_list$drugs1' is TRUE if the patient is not on any listed drugs.
-  checks_list$drugs1 <- check_matches(df,
-                                      column_string = "Drug_",
-                                      codes = codes_list$drugs1,
-                                      match = "none")
+  # all_actions is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'action_checks'.
+  all_actions <- Reduce(x = action_checks, f = "&")
 
-  # 'all_checks' is a logical vector with one entry per patient.
-  # TRUE if the patient is TRUE for each element of 'checks_list'.
-  all_checks <- Reduce(x = checks_list, f = "&")
 
-  return(all_checks)
+  output <- ifelse(all_prelims,
+                   ifelse(all_actions, "Appropriate", "START-A5"),
+                   "Not Relevant")
+
+  return(output)
 }
 
 
