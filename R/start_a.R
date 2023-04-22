@@ -76,27 +76,6 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
   return(output)
 }
 
-
-#' @title Function to implement START-A2 criterion.
-#'
-#' @description
-#' Determine which patients triggered the conditions defining START-A2.
-#'
-#' START-A2 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item
-#' }
-#'
-#' @inheritParams start_a1
-#'
-#' @inherit start_a1 return
-#'
-#' @export
-start_a2 <- function(df) {
-
-}
-
-
 #' @title Function to implement START-A3 criterion.
 #'
 #' @description

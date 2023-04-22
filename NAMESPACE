@@ -2,7 +2,6 @@
 
 export(check_matches)
 export(start_a1)
-export(start_a2)
 export(start_a3)
 export(start_a4)
 export(start_a5)
