@@ -14,16 +14,11 @@
 #' }
 #'
 #' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
-#' \itemize{
-#' \item Patient age column / variable must be named "Age".
-#' \item Systolic BP column / variable must be named "Systolic_BP".
-#' \item Diastolic BP column / variable must be named "Diastolic_BP".
-#' \item Names of comorbidities columns / variables must contain "Comorbidity_".
-#' \item Other column / variable names must not contain "Comorbidity_".
-#' \item Names of drugs columns / variables must contain "Drug_".
-#' \item Other column / variable names must not contain "Drug_".
-#' }
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -35,7 +30,8 @@
 #' }
 #'
 #' @export
-start_a1 <- function(df) {
+start_a1 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
@@ -46,7 +42,7 @@ start_a1 <- function(df) {
   prelim_codes$comorbs1 <- c("I48.2")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
-                                          column_string = "Comorbidity_",
+                                          column_string = comorb_string,
                                           codes = prelim_codes$comorbs1,
                                           match = "any")
 
@@ -64,7 +60,7 @@ start_a1 <- function(df) {
   action_codes$drugs1 <- c("B01AA", "B01AE", "B01AF")
   # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
   action_checks$drugs1 <- check_matches(df,
-                                        column_string = "Drug_",
+                                        column_string = drug_string,
                                         codes = action_codes$drugs1,
                                         match = "any")
 
@@ -121,12 +117,17 @@ start_a2 <- function(df) {
 #' B01AC.
 #' }
 #'
-#' @inheritParams start_a1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_a1 return
 #'
 #' @export
-start_a3 <- function(df) {
+start_a3 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
@@ -137,7 +138,7 @@ start_a3 <- function(df) {
   prelim_codes$comorbs1 <- c("I48")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
-                                          column_string = "Comorbidity_",
+                                          column_string = comorb_string,
                                           codes = prelim_codes$comorbs1,
                                           match = "none")
 
@@ -147,7 +148,7 @@ start_a3 <- function(df) {
                              "I74", "G45", "Z95.1", "Z95.5", "Z95.8")
   # prelim_checks$comorbs2 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs2 <- check_matches(df,
-                                          column_string = "Comorbidity_",
+                                          column_string = comorb_string,
                                           codes = prelim_codes$comorbs1,
                                           match = "any")
 
@@ -165,7 +166,7 @@ start_a3 <- function(df) {
   action_codes$drugs1 <- c("B01AC")
   # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
   action_checks$drugs1 <- check_matches(df,
-                                        column_string = "Drug_",
+                                        column_string = drug_string,
                                         codes = action_codes$drugs1,
                                         match = "any")
 
@@ -202,12 +203,20 @@ start_a3 <- function(df) {
 #' }
 #' }
 #'
-#' @inheritParams start_a1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
+#' @param systolic_column The name of the systolic column as a character string.
+#' @param diastolic_column The name of the diastolic column as a character string.
 #'
 #' @inherit start_a1 return
 #'
 #' @export
-start_a4 <- function(df) {
+start_a4 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_", systolic_column = "Systolic",
+                     diastolic_column = "Diastolic") {
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
@@ -217,12 +226,12 @@ start_a4 <- function(df) {
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
   prelim_codes$comorbs1 <- c("E10", "E11", "E12", "E13", "E14")
   # prelim_checks$multis1 is TRUE if the patient has any listed comorbidities.
-  prelim_checks$multis1 <- (df$Diastolic > 90 |
-                              df$Systolic > 160 |
-                              (df$Systolic > 140 &
+  prelim_checks$multis1 <- (df[, diastolic_column, drop = TRUE] > 90 |
+                              df[, systolic_column, drop = TRUE] > 160 |
+                              (df[, systolic_column, drop = TRUE] > 140 &
                                  check_matches(df,
-                                               column_string = "Comorbidity_",
-                                               codes = codes_list$comorbs1,
+                                               column_string = comorb_string,
+                                               codes = prelim_codes$comorbs1,
                                                match = "any")))
 
   # all_prelims is a logical vector with one entry per patient.
@@ -239,7 +248,7 @@ start_a4 <- function(df) {
   action_codes$drugs1 <- c("C07", "C08", "C09", "C03A", "C03EA")
   # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
   action_checks$drugs1 <- check_matches(df,
-                                        column_string = "Drug_",
+                                        column_string = drug_string,
                                         codes = action_codes$drugs1,
                                         match = "any")
 

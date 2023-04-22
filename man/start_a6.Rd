@@ -7,17 +7,7 @@
 start_a6(df)
 }
 \arguments{
-\item{df}{Dataframe of patient information.
-
-\itemize{
-\item Patient age column / variable must be named "Age".
-\item Systolic BP column / variable must be named "Systolic_BP".
-\item Diastolic BP column / variable must be named "Diastolic_BP".
-\item Names of comorbidities columns / variables must contain "Comorbidity_".
-\item Other column / variable names must not contain "Comorbidity_".
-\item Names of drugs columns / variables must contain "Drug_".
-\item Other column / variable names must not contain "Drug_".
-}}
+\item{df}{Dataframe of patient information.}
 }
 \value{
 \code{output}: character vector,
