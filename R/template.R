@@ -9,16 +9,10 @@
 #' #' }
 #' #'
 #' #' @param df Dataframe of patient information.
-#' #'
-#' #' \itemize{
-#' #' \item Patient age column / variable must be named "Age".
-#' #' \item Systolic BP column / variable must be named "Systolic_BP".
-#' #' \item Diastolic BP column / variable must be named "Diastolic_BP".
-#' #' \item Names of comorbidities columns / variables must contain "Comorbidity_".
-#' #' \item Other column / variable names must not contain "Comorbidity_".
-#' #' \item Names of drugs columns / variables must contain "Drug_".
-#' #' \item Other column / variable names must not contain "Drug_".
-#' #' }
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @return  `all_checks`: logical vector,
 #' #' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
@@ -39,7 +33,11 @@
 #' #' \item
 #' #' }
 #' #'
-#' #' @inheritParams start_b1
+#' #' @param df Dataframe of patient information.
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @inherit start_b1 return
 #' #'
@@ -59,7 +57,11 @@
 #' #' \item
 #' #' }
 #' #'
-#' #' @inheritParams start_b1
+#' #' @param df Dataframe of patient information.
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @inherit start_b1 return
 #' #'
@@ -83,16 +85,10 @@
 #' #' }
 #' #'
 #' #' @param df Dataframe of patient information.
-#' #'
-#' #' \itemize{
-#' #' \item Patient age column / variable must be named "Age".
-#' #' \item Systolic BP column / variable must be named "Systolic_BP".
-#' #' \item Diastolic BP column / variable must be named "Diastolic_BP".
-#' #' \item Names of comorbidities columns / variables must contain "Comorbidity_".
-#' #' \item Other column / variable names must not contain "Comorbidity_".
-#' #' \item Names of drugs columns / variables must contain "Drug_".
-#' #' \item Other column / variable names must not contain "Drug_".
-#' #' }
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @return  `all_checks`: logical vector,
 #' #' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
@@ -113,7 +109,11 @@
 #' #' \item
 #' #' }
 #' #'
-#' #' @inheritParams start_c1
+#' #' @param df Dataframe of patient information.
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @inherit start_c1 return
 #' #'
@@ -133,7 +133,11 @@
 #' #' \item
 #' #' }
 #' #'
-#' #' @inheritParams start_c1
+#' #' @param df Dataframe of patient information.
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @inherit start_c1 return
 #' #'
@@ -153,7 +157,11 @@
 #' #' \item
 #' #' }
 #' #'
-#' #' @inheritParams start_c1
+#' #' @param df Dataframe of patient information.
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @inherit start_c1 return
 #' #'
@@ -174,7 +182,11 @@
 #' #' \item
 #' #' }
 #' #'
-#' #' @inheritParams start_c1
+#' #' @param df Dataframe of patient information.
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @inherit start_c1 return
 #' #'
@@ -194,7 +206,11 @@
 #' #' \item
 #' #' }
 #' #'
-#' #' @inheritParams start_c1
+#' #' @param df Dataframe of patient information.
+#' #' @param comorb_string Character string contained in the name of each
+#' #'                      comorbidity column which uniquely identifies them.
+#' #' @param drug_string Character string contained in the name of each drug
+#' #'                    column which uniquely identifies them.
 #' #'
 #' #' @inherit start_c1 return
 #' #'
