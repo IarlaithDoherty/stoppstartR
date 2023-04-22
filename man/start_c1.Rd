@@ -16,14 +16,25 @@ comorbidity column which uniquely identifies them.}
 column which uniquely identifies them.}
 }
 \value{
-\code{all_checks}: logical vector,
-\code{TRUE} if this STOPP/START criterion is satisfied, \code{FALSE} otherwise.
+\code{output}: character vector,
+\itemize{
+\item "Not Relevant" if the conditions are not satisfied.
+\item "Appropriate" if the conditions are satisfied but the correct drug has
+already been prescribed.
+\item The name of the criterion if the conditions are satisfied and the
+correct drug has not been prescribed.
+}
 }
 \description{
 Determine which patients triggered the conditions defining START-C1.
 
 START-C1 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+G20
+\item None of the following drugs:
+
+N04B
 }
 }
