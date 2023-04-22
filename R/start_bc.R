@@ -24,8 +24,52 @@
 #' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
 #'
 #' @export
-start_b1 <- function(df) {
+start_b1 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
+  # prelim_checks is a list of logical vectors, each has one entry per patient.
+  prelim_checks <- list()
+  # prelim_codes is a list of character vectors, each containing codes to check.
+  prelim_codes <- list()
+
+  # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
+  prelim_codes$comorbs1 <- c("J40", "J41", "J42", "J43", "J44", "J45", "J46")
+  # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
+  prelim_checks$comorbs1 <- check_matches(df,
+                                          column_string = comorb_string,
+                                          codes = prelim_codes$comorbs1,
+                                          match = "any")
+
+  # all_prelims is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'prelim_checks'.
+  all_prelims <- Reduce(x = prelim_checks, f = "&")
+
+
+  # action_checks is a list of logical vectors, each has one entry per patient.
+  action_checks <- list()
+  # action_codes is a list of character vectors, each containing codes to check.
+  action_codes <- list()
+
+  # prelim_codes$drugs1 is a character vector of drug codes to check.
+  action_codes$drugs1 <- c("R03AK04", "R03AK05", "R03AK06", "R03AK07",
+                           "R03AK08", "R03AK09", "R03AK10", "R03AK11",
+                           "R03AL", "R03AK12", "R03AK13", "R03AC", "R03BB")
+  # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
+  action_checks$drugs1 <- check_matches(df,
+                                        column_string = drug_string,
+                                        codes = action_codes$drugs1,
+                                        match = "any")
+
+  # all_actions is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'action_checks'.
+  all_actions <- Reduce(x = action_checks, f = "&")
+
+
+  output <- ifelse(all_prelims,
+                   ifelse(all_actions, "Appropriate", "START-B1"),
+                   "Not Relevant")
+
+  return(output)
 }
 
 
