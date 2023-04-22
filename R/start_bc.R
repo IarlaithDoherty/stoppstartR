@@ -5,23 +5,29 @@
 #'
 #' START-B1 requires all of the following conditions to be satisfied:
 #' \itemize{
+#' \item Any of the following comorbidities:
 #'
+#' J40, J41, J42, J43, J44, J45, J46
+#' \item None of the following drugs:
+#'
+#' R03AK04, R03AK05, R03AK06, R03AK07, R03AK08, R03AK09, R03AK10, R03AK11,
+#' R03AL, R03AK12, R03AK13, R03AC, or R03BB.
 #' }
 #'
 #' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
+#' @return `output`: character vector,
 #' \itemize{
-#' \item Patient age column / variable must be named "Age".
-#' \item Systolic BP column / variable must be named "Systolic_BP".
-#' \item Diastolic BP column / variable must be named "Diastolic_BP".
-#' \item Names of comorbidities columns / variables must contain "Comorbidity_".
-#' \item Other column / variable names must not contain "Comorbidity_".
-#' \item Names of drugs columns / variables must contain "Drug_".
-#' \item Other column / variable names must not contain "Drug_".
+#' \item "Not Relevant" if the conditions are not satisfied.
+#' \item "Appropriate" if the conditions are satisfied but the correct drug has
+#' already been prescribed.
+#' \item The name of the criterion if the conditions are satisfied and the
+#' correct drug has not been prescribed.
 #' }
-#'
-#' @return  `all_checks`: logical vector,
-#' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
 #'
 #' @export
 start_b1 <- function(df, comorb_string = "Comorbidity_",
@@ -73,6 +79,7 @@ start_b1 <- function(df, comorb_string = "Comorbidity_",
 }
 
 
+
 #' @title Function to implement START-B2 criterion.
 #'
 #' @description
@@ -83,12 +90,17 @@ start_b1 <- function(df, comorb_string = "Comorbidity_",
 #' \item
 #' }
 #'
-#' @inheritParams start_b1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_b1 return
 #'
 #' @export
-start_b2 <- function(df) {
+start_b2 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 }
 
@@ -103,12 +115,17 @@ start_b2 <- function(df) {
 #' \item
 #' }
 #'
-#' @inheritParams start_b1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_b1 return
 #'
 #' @export
-start_b3 <- function(df) {
+start_b3 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 }
 
@@ -127,22 +144,17 @@ start_b3 <- function(df) {
 #' }
 #'
 #' @param df Dataframe of patient information.
-#'
-#' \itemize{
-#' \item Patient age column / variable must be named "Age".
-#' \item Systolic BP column / variable must be named "Systolic_BP".
-#' \item Diastolic BP column / variable must be named "Diastolic_BP".
-#' \item Names of comorbidities columns / variables must contain "Comorbidity_".
-#' \item Other column / variable names must not contain "Comorbidity_".
-#' \item Names of drugs columns / variables must contain "Drug_".
-#' \item Other column / variable names must not contain "Drug_".
-#' }
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @return  `all_checks`: logical vector,
 #' `TRUE` if this STOPP/START criterion is satisfied, `FALSE` otherwise.
 #'
 #' @export
-start_c1 <- function(df) {
+start_c1 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 }
 
@@ -157,12 +169,17 @@ start_c1 <- function(df) {
 #' \item
 #' }
 #'
-#' @inheritParams start_c1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_c1 return
 #'
 #' @export
-start_c2 <- function(df) {
+start_c2 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 }
 
@@ -177,12 +194,17 @@ start_c2 <- function(df) {
 #' \item
 #' }
 #'
-#' @inheritParams start_c1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_c1 return
 #'
 #' @export
-start_c3 <- function(df) {
+start_c3 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 }
 
@@ -197,12 +219,17 @@ start_c3 <- function(df) {
 #' \item
 #' }
 #'
-#' @inheritParams start_c1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_c1 return
 #'
 #' @export
-start_c4 <- function(df) {
+start_c4 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 
 }
@@ -218,12 +245,17 @@ start_c4 <- function(df) {
 #' \item
 #' }
 #'
-#' @inheritParams start_c1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_c1 return
 #'
 #' @export
-start_c5 <- function(df) {
+start_c5 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 }
 
@@ -238,11 +270,16 @@ start_c5 <- function(df) {
 #' \item
 #' }
 #'
-#' @inheritParams start_c1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
 #'
 #' @inherit start_c1 return
 #'
 #' @export
-start_c6 <- function(df) {
+start_c6 <- function(df, comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
 }

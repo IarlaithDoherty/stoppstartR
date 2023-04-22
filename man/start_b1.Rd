@@ -4,30 +4,38 @@
 \alias{start_b1}
 \title{Function to implement START-B1 criterion.}
 \usage{
-start_b1(df)
+start_b1(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }
 \arguments{
-\item{df}{Dataframe of patient information.
+\item{df}{Dataframe of patient information.}
 
-\itemize{
-\item Patient age column / variable must be named "Age".
-\item Systolic BP column / variable must be named "Systolic_BP".
-\item Diastolic BP column / variable must be named "Diastolic_BP".
-\item Names of comorbidities columns / variables must contain "Comorbidity_".
-\item Other column / variable names must not contain "Comorbidity_".
-\item Names of drugs columns / variables must contain "Drug_".
-\item Other column / variable names must not contain "Drug_".
-}}
+\item{comorb_string}{Character string contained in the name of each
+comorbidity column which uniquely identifies them.}
+
+\item{drug_string}{Character string contained in the name of each drug
+column which uniquely identifies them.}
 }
 \value{
-\code{all_checks}: logical vector,
-\code{TRUE} if this STOPP/START criterion is satisfied, \code{FALSE} otherwise.
+\code{output}: character vector,
+\itemize{
+\item "Not Relevant" if the conditions are not satisfied.
+\item "Appropriate" if the conditions are satisfied but the correct drug has
+already been prescribed.
+\item The name of the criterion if the conditions are satisfied and the
+correct drug has not been prescribed.
+}
 }
 \description{
 Determine which patients triggered the conditions defining START-B1.
 
 START-B1 requires all of the following conditions to be satisfied:
 \itemize{
+\item Any of the following comorbidities:
 
+J40, J41, J42, J43, J44, J45, J46
+\item None of the following drugs:
+
+R03AK04, R03AK05, R03AK06, R03AK07, R03AK08, R03AK09, R03AK10, R03AK11,
+R03AL, R03AK12, R03AK13, R03AC, or R03BB.
 }
 }
