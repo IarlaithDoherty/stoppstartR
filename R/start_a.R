@@ -300,11 +300,14 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
-    stop("No column names include comorb_string.")
+    stop(paste0("No column names include ", comorb_string,
+                ". Change comorb_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
-    stop("No column names include drug_string.")
+    stop(paste0("No column names include ", drug_string,
+                ". Change drug_string argument."))
   } else if (!(age_column %in% colnames(df))) {
-    stop("No columns are named age_column.")
+    stop(paste0("No columns are named ", age_column,
+                ". Change age_column argument."))
   }
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
