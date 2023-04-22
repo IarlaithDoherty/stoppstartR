@@ -32,6 +32,14 @@
 #' @export
 start_b1 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
+  if (!any(grepl(colnames(df), pattern = comorb_string))) {
+    stop(paste0("No column names include ", comorb_string,
+                ". Change comorb_string argument."))
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop(paste0("No column names include ", drug_string,
+                ". Change drug_string argument."))
+  }
+
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
@@ -118,6 +126,14 @@ start_b1 <- function(df, comorb_string = "Comorbidity_",
 #' @export
 start_c1 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
+  if (!any(grepl(colnames(df), pattern = comorb_string))) {
+    stop(paste0("No column names include ", comorb_string,
+                ". Change comorb_string argument."))
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop(paste0("No column names include ", drug_string,
+                ". Change drug_string argument."))
+  }
+
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
@@ -184,6 +200,13 @@ start_c1 <- function(df, comorb_string = "Comorbidity_",
 #' @export
 start_c2 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
+  if (!any(grepl(colnames(df), pattern = comorb_string))) {
+    stop(paste0("No column names include ", comorb_string,
+                ". Change comorb_string argument."))
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop(paste0("No column names include ", drug_string,
+                ". Change drug_string argument."))
+  }
 
 }
 
@@ -234,6 +257,7 @@ start_c3 <- function(df, comorb_string = "Comorbidity_",
 #' @export
 start_c4 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
+
 
 
 }
