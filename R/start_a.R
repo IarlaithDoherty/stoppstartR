@@ -33,6 +33,13 @@
 start_a1 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
+  if (!any(grepl(colnames(df), pattern = comorb_string))) {
+    stop("No column names include comorb_string.")
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop("No column names include drug_string.")
+  }
+
+
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
   # prelim_codes is a list of character vectors, each containing codes to check.
@@ -107,6 +114,12 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
 #' @export
 start_a3 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
+
+  if (!any(grepl(colnames(df), pattern = comorb_string))) {
+    stop("No column names include comorb_string.")
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop("No column names include drug_string.")
+  }
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
@@ -196,6 +209,17 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 start_a4 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_", systolic_column = "Systolic",
                      diastolic_column = "Diastolic") {
+
+  if (!any(grepl(colnames(df), pattern = comorb_string))) {
+    stop("No column names include comorb_string.")
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop("No column names include drug_string.")
+  } else if (!(systolic_column %in% colnames(df))) {
+    stop("No columns are named systolic_column.")
+  } else if (!(diastolic_column %in% colnames(df))) {
+    stop("No columns are named diastolic_column.")
+  }
+
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
