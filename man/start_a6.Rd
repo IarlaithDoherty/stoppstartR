@@ -4,10 +4,16 @@
 \alias{start_a6}
 \title{Function to implement START-A6 criterion.}
 \usage{
-start_a6(df)
+start_a6(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
+
+\item{comorb_string}{Character string contained in the name of each
+comorbidity column which uniquely identifies them.}
+
+\item{drug_string}{Character string contained in the name of each drug
+column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,
@@ -24,6 +30,12 @@ Determine which patients triggered the conditions defining START-A6.
 
 START-A6 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+I20, I21, I22, I24, I25,
+Z95.1, or Z95.5.
+\item None of the following drugs:
+
+C09.
 }
 }
