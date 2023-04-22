@@ -4,10 +4,16 @@
 \alias{start_a8}
 \title{Function to implement START-A8 criterion.}
 \usage{
-start_a8(df)
+start_a8(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
+
+\item{comorb_string}{Character string contained in the name of each
+comorbidity column which uniquely identifies them.}
+
+\item{drug_string}{Character string contained in the name of each drug
+column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,
@@ -24,6 +30,12 @@ Determine which patients triggered the conditions defining START-A8.
 
 START-A8 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+I50, I11.0, I13.0, or I13.2.
+\item None of the following drugs:
+
+C07AB07, C07AB12, C07AB02, C07AG02, C07FB07, C07BB07,  C07FB12, C07BB12,
+C07FB02, C07CB02, C07BB02, or C07BB52.
 }
 }
