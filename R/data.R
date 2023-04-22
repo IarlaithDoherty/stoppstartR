@@ -25,3 +25,20 @@
 #'   ...
 #' }
 "mock_patients"
+
+
+
+
+
+
+
+#' Data Collection Session 13.
+#'
+#' Real patient information.
+#'
+#' @format ## `session13`
+#' A data frame with 62 rows and 108 columns:
+#' \describe{
+#'   ...
+#' }
+"session13"
