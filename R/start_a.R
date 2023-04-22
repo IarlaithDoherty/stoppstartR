@@ -258,7 +258,7 @@ start_a4 <- function(df, comorb_string = "Comorbidity_",
 
 
   output <- ifelse(all_prelims,
-                   ifelse(all_actions, "Appropriate", "START-A5"),
+                   ifelse(all_actions, "Appropriate", "START-A4"),
                    "Not Relevant")
 
   return(output)
