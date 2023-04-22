@@ -296,6 +296,14 @@ start_a4 <- function(df, comorb_string = "Comorbidity_",
 start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
+  if (!any(grepl(colnames(df), pattern = comorb_string))) {
+    stop("No column names include comorb_string.")
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop("No column names include drug_string.")
+  } else if (!(age_column %in% colnames(df))) {
+    stop("No columns are named age_column.")
+  }
+
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
   # prelim_codes is a list of character vectors, each containing codes to check.
