@@ -4,20 +4,23 @@
 \alias{start_a5}
 \title{Function to implement START-A5 criterion.}
 \usage{
-start_a5(df)
+start_a5(
+  df,
+  age_column = "Age",
+  comorb_string = "Comorbidity_",
+  drug_string = "Drug_"
+)
 }
 \arguments{
-\item{df}{Dataframe of patient information.
+\item{df}{Dataframe of patient information.}
 
-\itemize{
-\item Patient age column / variable must be named "Age".
-\item Systolic BP column / variable must be named "Systolic_BP".
-\item Diastolic BP column / variable must be named "Diastolic_BP".
-\item Names of comorbidities columns / variables must contain "Comorbidity_".
-\item Other column / variable names must not contain "Comorbidity_".
-\item Names of drugs columns / variables must contain "Drug_".
-\item Other column / variable names must not contain "Drug_".
-}}
+\item{age_column}{The name of the patient age column as a character string.}
+
+\item{comorb_string}{Character string contained in the name of each
+comorbidity column which uniquely identifies them.}
+
+\item{drug_string}{Character string contained in the name of each drug
+column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,

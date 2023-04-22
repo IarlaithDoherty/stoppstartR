@@ -274,12 +274,18 @@ start_a4 <- function(df) {
 #' C10AA.
 #' }
 #'
-#' @inheritParams start_a1
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
+#' @param age_column The name of the patient age column as a character string.
 #'
 #' @inherit start_a1 return
 #'
 #' @export
-start_a5 <- function(df) {
+start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
+                     drug_string = "Drug_") {
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
@@ -287,7 +293,7 @@ start_a5 <- function(df) {
   prelim_codes <- list()
 
   # prelim_checks$extras1 is TRUE if the patient's age is less than 85 years.
-  prelim_checks$extras1 <- df$Age < 85
+  prelim_checks$extras1 <- df[, age_column, drop = TRUE] < 85
 
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
   prelim_codes$comorbs1 <- c("I20", "I21",   "I22",   "I24",   "I25",
@@ -295,14 +301,13 @@ start_a5 <- function(df) {
                              "I74", "G45", "Z95.1", "Z95.5", "Z95.8")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
-                                          column_string = "Comorbidity_",
+                                          column_string = comorb_string,
                                           codes = prelim_codes$comorbs1,
                                           match = "any")
 
   # all_prelims is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.
   all_prelims <- Reduce(x = prelim_checks, f = "&")
-
 
    # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
@@ -313,7 +318,7 @@ start_a5 <- function(df) {
   action_codes$drugs1 <- c("C10AA")
   # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
   action_checks$drugs1 <- check_matches(df,
-                                        column_string = "Drug_",
+                                        column_string = drug_string,
                                         codes = action_codes$drugs1,
                                         match = "any")
 
