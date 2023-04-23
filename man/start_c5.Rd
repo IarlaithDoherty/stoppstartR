@@ -30,6 +30,11 @@ Determine which patients triggered the conditions defining START-C5.
 
 START-C5 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+F40 or F41.
+\item None of the following drugs:
+
+N06AB, N06AX16, N06AX21, N03AX16, or N06CA03.
 }
 }
