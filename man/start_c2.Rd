@@ -30,6 +30,11 @@ Determine which patients triggered the conditions defining START-C2.
 
 START-C2 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+F32 or F33.
+\item None of the following drugs:
+
+N06AB, N06AF, N06AG, N06AX, N06CA03
 }
 }
