@@ -30,6 +30,11 @@ Determine which patients triggered the conditions defining START-C6.
 
 START-C6 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+G25.8 .
+\item None of the following drugs:
+
+N04BC04, N04BC05, or N04BC09.
 }
 }
