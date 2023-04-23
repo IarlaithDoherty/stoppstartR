@@ -30,6 +30,11 @@ Determine which patients triggered the conditions defining START-C4.
 
 START-C4 requires all of the following conditions to be satisfied:
 \itemize{
-\item
+\item Any of the following comorbidities:
+
+H40.1
+\item None of the following drugs:
+
+S01EE or S01ED
 }
 }
