@@ -41,8 +41,6 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
                 ". Change drug_string argument."))
   }
 
-
-
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
   # prelim_codes is a list of character vectors, each containing codes to check.
