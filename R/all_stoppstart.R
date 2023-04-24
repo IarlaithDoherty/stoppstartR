@@ -6,6 +6,7 @@
 #' @param diastolic_column .
 #' @param systolic_column .
 #' @param age_column .
+#' @param gender_column .
 #'
 #' @return Data frame of character vectors.
 #' @export
@@ -15,7 +16,8 @@ all_stoppstart <- function(df, comorb_string = "Comorbidity_",
                            drug_string = "Drug_",
                            diastolic_column = "Diastolic_BP",
                            systolic_column = "Systolic_BP",
-                           age_column = "Age") {
+                           age_column = "Age",
+                           gender_column = "Gender") {
   starts <- data.frame(
     a1 = start_a1(df,
                   comorb_string = comorb_string, drug_string = drug_string),
@@ -57,7 +59,10 @@ all_stoppstart <- function(df, comorb_string = "Comorbidity_",
     e4 = start_e4(df,
                   comorb_string = comorb_string, drug_string = drug_string),
     e6 = start_e6(df,
-                  comorb_string = comorb_string, drug_string = drug_string)
+                  comorb_string = comorb_string, drug_string = drug_string),
+    g1 = start_g1(df,
+                  comorb_string = comorb_string, drug_string = drug_string,
+                  gender_column = gender_column)
   )
 
   return(starts)

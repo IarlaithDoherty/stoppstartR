@@ -10,7 +10,8 @@ all_stoppstart(
   drug_string = "Drug_",
   diastolic_column = "Diastolic_BP",
   systolic_column = "Systolic_BP",
-  age_column = "Age"
+  age_column = "Age",
+  gender_column = "Gender"
 )
 }
 \arguments{
@@ -25,6 +26,8 @@ all_stoppstart(
 \item{systolic_column}{.}
 
 \item{age_column}{.}
+
+\item{gender_column}{.}
 }
 \value{
 Data frame of character vectors.
