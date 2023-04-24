@@ -279,6 +279,120 @@ start_e1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#' @title Function to implement START-E2 criterion.
+#'
+#' @description
+#' Determine which patients triggered the conditions defining START-E2.
+#'
+#' START-E2 requires all of the following conditions to be satisfied:
+#' \itemize{
+#' \item Any of the following drugs:
+#'
+#' H02AB.
+#'
+#' \item None of the following drugs:
+#'
+#' M05BB or M05BA.
+#'
+#' \item None of the following drugs:
+#'
+#' A11GB01, A11AA02, A12AX, M05BB01, M05BB02, M05BB04, M05BB05, M05BB08, or
+#' A12AA.
+#'
+#' \item None of the following drugs:
+#'
+#' A11CB, A12AX, M05BB03, M05BB04, M05BB05, M05BB06, M05BB07, M05BB08, or A11CC.
+#' }
+#'
+#' @param df Dataframe of patient information.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
+#'
+#' @return `output`: character vector,
+#' \itemize{
+#' \item "Not Relevant" if the conditions are not satisfied.
+#' \item "Appropriate" if the conditions are satisfied but the correct drug has
+#' already been prescribed.
+#' \item The name of the criterion if the conditions are satisfied and the
+#' correct drug has not been prescribed.
+#' }
+#'
+#' @export
+start_e2 <- function(df, drug_string = "Drug_") {
+  if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop(paste0("No column names include ", drug_string,
+                ". Change drug_string argument."))
+  }
+
+
+  # prelim_checks is a list of logical vectors, each has one entry per patient.
+  prelim_checks <- list()
+  # prelim_codes is a list of character vectors, each containing codes to check.
+  prelim_codes <- list()
+
+  # prelim_codes$drugs1 is a character vector of drug codes to check.
+  prelim_codes$drugs1 <- c("H02AB")
+  # prelim_checks$drugs1 is TRUE if the patient has any listed drugs.
+  prelim_checks$drugs1 <- check_matches(df,
+                                          column_string = drug_string,
+                                          codes = prelim_codes$drugs1,
+                                          match = "any")
+
+  # all_prelims is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'prelim_checks'.
+  all_prelims <- Reduce(x = prelim_checks, f = "&")
+
+
+  # action_checks is a list of logical vectors, each has one entry per patient.
+  action_checks <- list()
+  # action_codes is a list of character vectors, each containing codes to check.
+  action_codes <- list()
+
+  # action_codes$drugs1 is a character vector of drug codes to check.
+  action_codes$drugs1 <- c("M05BB", "M05BA")
+  # action_checks$drugs1 is TRUE if the patient is on any listed drugs.
+  action_checks$drugs1 <- check_matches(df,
+                                        column_string = drug_string,
+                                        codes = action_codes$drugs1,
+                                        match = "any")
+
+  # action_codes$drugs2 is a character vector of drug codes to check.
+  action_codes$drugs2 <- c("A11GB01", "A11AA02", "A12AX", "M05BB01", "M05BB02",
+                           "M05BB04", "M05BB05", "M05BB08", "A12AA")
+  # action_checks$drugs2 is TRUE if the patient is on any listed drugs.
+  action_checks$drugs2 <- check_matches(df,
+                                        column_string = drug_string,
+                                        codes = action_codes$drugs2,
+                                        match = "any")
+
+  # action_codes$drugs3 is a character vector of drug codes to check.
+  action_codes$drugs3 <- c("A11CB", "A12AX", "M05BB03", "M05BB04", "M05BB05",
+                           "M05BB06", "M05BB07", "M05BB08", "A11CC")
+  # action_checks$drugs3 is TRUE if the patient is on any listed drugs.
+  action_checks$drugs3 <- check_matches(df,
+                                        column_string = drug_string,
+                                        codes = action_codes$drugs3,
+                                        match = "any")
+
+
+  # all_actions is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'action_checks'.
+  all_actions <- Reduce(x = action_checks, f = "&")
+
+
+  output <- ifelse(all_prelims,
+                   ifelse(all_actions, "Appropriate", "START-E2"),
+                   "Not Relevant")
+
+  return(output)
+}
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 #' @title Function to implement START-E4 criterion.
 #'
 #' @description
