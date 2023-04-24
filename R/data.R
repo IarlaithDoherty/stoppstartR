@@ -42,3 +42,18 @@
 #'   ...
 #' }
 "session13"
+
+
+
+
+
+#' Artificial data set where each row triggers one of the START-A functions.
+#'
+#' Real patient information.
+#'
+#' @format ## `trigger_start_a`
+#' A data frame with 7 rows and 6 columns:
+#' \describe{
+#'   ...
+#' }
+"trigger_start_a"
