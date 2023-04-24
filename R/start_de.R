@@ -149,11 +149,11 @@ start_d2 <- function(df, comorb_string = "Comorbidity_",
                                           codes = prelim_codes$comorbs1,
                                           match = "any")
   # prelim_codes$comorbs2 is a character vector of comorbidity codes to check.
-  prelim_codes$comorbs1 <- c("K59.0")
+  prelim_codes$comorbs2 <- c("K59.0")
   # prelim_checks$comorbs2 is TRUE if the patient has any listed comorbidities.
-  prelim_checks$comorbs1 <- check_matches(df,
+  prelim_checks$comorbs2 <- check_matches(df,
                                           column_string = comorb_string,
-                                          codes = prelim_codes$comorbs1,
+                                          codes = prelim_codes$comorbs2,
                                           match = "any")
 
   # all_prelims is a logical vector with one entry per patient.
