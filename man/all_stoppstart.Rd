@@ -12,6 +12,7 @@ all_stoppstart(
   systolic_column = "Systolic_BP",
   age_column = "Age",
   HR_column = "HR_column",
+  K_column = "K_column",
   gender_column = "Gender"
 )
 }
@@ -29,6 +30,8 @@ all_stoppstart(
 \item{age_column}{.}
 
 \item{HR_column}{.}
+
+\item{K_column}{.}
 
 \item{gender_column}{.}
 }
