@@ -66,7 +66,7 @@ stopp_b1 <- function(df, comorb_string = "Comorbidity_",
   # prelim_checks$comorbs2 is TRUE if the patient has none listed comorbidities.
   prelim_checks$comorbs2 <- check_matches(df,
                                           column_string = comorb_string,
-                                          codes = prelim_codes$comorbs1,
+                                          codes = prelim_codes$comorbs2,
                                           match = "none")
 
   # all_prelims is a logical vector with one entry per patient.
