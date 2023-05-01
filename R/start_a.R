@@ -32,7 +32,6 @@
 #' @export
 start_a1 <- function(df, comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
-
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
                 ". Change comorb_string argument."))
