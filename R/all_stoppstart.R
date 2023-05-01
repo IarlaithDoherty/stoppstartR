@@ -98,7 +98,15 @@ all_stoppstart <- function(df, comorb_string = "Comorbidity_",
                     drug_string = drug_string),
     s_b11 = stopp_b11(df,
                     comorb_string = comorb_string, drug_string = drug_string,
-                    K_column = "Lab Values: K")
+                    K_column = "Lab Values: K"),
+    s_c2 = stopp_c2(df,
+                    comorb_string = comorb_string, drug_string = drug_string),
+    s_c5 = stopp_c5(df,
+                    comorb_string = comorb_string, drug_string = drug_string),
+    s_c7 = stopp_c7(df,
+                      drug_string = drug_string),
+    s_c8 = stopp_c8(df,
+                    comorb_string = comorb_string, drug_string = drug_string)
 
   )
 
