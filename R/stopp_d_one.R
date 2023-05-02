@@ -202,12 +202,9 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-stopp_d5 <- function(df, comorb_string = "Comorbidity_",
+stopp_d5 <- function(df,
                      drug_string = "Drug_") {
-  if (!any(grepl(colnames(df), pattern = comorb_string))) {
-    stop(paste0("No column names include ", comorb_string,
-                ". Change comorb_string argument."))
-  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+ if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
   }

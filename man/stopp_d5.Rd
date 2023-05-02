@@ -4,7 +4,7 @@
 \alias{stopp_d5}
 \title{Function to implement STOPP-D5 criterion.}
 \usage{
-stopp_d5(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
+stopp_d5(df, drug_string = "Drug_")
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
