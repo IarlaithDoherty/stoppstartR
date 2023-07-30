@@ -106,7 +106,9 @@ stopp_f1 <- function(df, comorb_string = "Comorbidity_",
 #' N05BB01, N05BB51, N07CA02, N07CA52, G04BD01, G04BD02, G04BD03, G04BD04,
 #' G04BD05, G04BD06, G04BD07, G04BD08, G04BD09, G04BD10, G04BD11, N06AA, A03B,
 #' A03AA, A03AB, A04AD01, M03BX02, N04A, N05AA01, N05AH02, N05AB02, N05AA02,
-#' N05AC02, N05AA04, N05AF04, B03AA, B03AB, B03AD, B03AE
+#' N05AC02, N05AA04, N05AF04, B03AA, B03AB, B03AD, B03AE, B03AA, B03AB,
+#' B03AD, B03AE, N02A, N07BC05, N07BC06, N07BC02, N07BC01, R05DA04, C08DA01,
+#' C08DA51, C09BB10, A02AB
 #' }
 #'
 #' @param df Dataframe of patient information.
@@ -174,7 +176,10 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
                            "A03AA", "A03AB", "A04AD01", "M03BX02", "N04A",
                            "N05AA01", "N05AH02", "N05AB02", "N05AA02",
                            "N05AC02", "N05AA04", "N05AF04", "B03AA", "B03AB",
-                           "B03AD", "B03AE"
+                           "B03AD", "B03AE", "B03AA", "B03AB", "B03AD",
+                           "B03AE", "N02A", "N07BC05", "N07BC06", "N07BC02",
+                           "N07BC01", "R05DA04", "C08DA01", "C08DA51",
+                           "C09BB10", "A02AB"
   )
   # prelim_checks$drugs1 is TRUE if the patient is on none listed drugs.
   action_checks$drugs1 <- check_matches(df,
