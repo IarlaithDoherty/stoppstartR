@@ -154,7 +154,10 @@ all_stoppstart <- function(df, comorb_string = "Comorbidity_",
     s_j2 = stopp_j2(df,
                     comorb_string = comorb_string, drug_string = drug_string),
     s_j4 = stopp_j4(df,
-                    comorb_string = comorb_string, drug_string = drug_string)
+                    comorb_string = comorb_string, drug_string = drug_string),
+    s_j5 = stopp_j5(df,
+                  comorb_string = comorb_string, drug_string = drug_string,
+                  gender_column = gender_column)
 
 
   )
