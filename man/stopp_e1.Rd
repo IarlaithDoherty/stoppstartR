@@ -7,7 +7,7 @@
 stopp_e1(
   df,
   GFR_column = "Lab Values: eGFR",
-  digoxin_column = "digoxin Dose >125mcg",
+  digoxin_column = "Digoxin Dose >125mcg",
   drug_string = "Drug_"
 )
 }
