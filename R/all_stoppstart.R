@@ -135,6 +135,10 @@ all_stoppstart <- function(df, comorb_string = "Comorbidity_",
                     drug_string = drug_string),
     s_d14 = stopp_d14(df,
                     drug_string = drug_string),
+    s_e1 = stopp_e1(df,
+                      drug_string = drug_string, GFR_column =
+                      "Lab Values: eGFR", digoxin_column =
+                      "Digoxin Dose >125mcg"),
     s_f1 = stopp_f1(df,
                     comorb_string = comorb_string, drug_string = drug_string),
     s_f3 = stopp_f3(df,
