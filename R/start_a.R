@@ -198,7 +198,7 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 #' \item Any of the following subconditions:
 #' \itemize{
 #' \item Systolic_BP > 160
-#' \item Diastolic_BP >90
+#' \item Diastolic_BP > 90
 #' \item Systolic_BP > 140 and any of the following comorbidities:
 #'
 #' E10, E11, E12, E13, E14
