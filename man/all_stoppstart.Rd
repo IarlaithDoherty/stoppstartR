@@ -7,7 +7,7 @@
 all_stoppstart(
   df,
   comorb_string = "Comorbidity_",
-  drug_string = "Drug ",
+  drug_string = "Drug_",
   diastolic_column = "Diastolic_BP",
   systolic_column = "Systolic_BP",
   age_column = "Age",
