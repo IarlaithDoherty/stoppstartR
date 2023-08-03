@@ -48,6 +48,8 @@ check_matches2 <- function(df, column_string, codes, match = "any",
                            function(x) grepl(x, pattern = codes_string))
   column_checks_df <- data.frame(column_checks)
 
+  # If exceptions is not NULL, then we check for matches with the exception
+  # codes and switch the corresponding TRUE values in column_checks_df to FALSE.
   if (!is.null(exceptions)) {
     exceptions_string <- paste(exceptions, collapse = "|")
     column_checks2 <- lapply(df[, columns, drop = FALSE],
