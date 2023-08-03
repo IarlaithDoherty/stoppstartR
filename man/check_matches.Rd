@@ -4,7 +4,7 @@
 \alias{check_matches}
 \title{Check which patients contain code strings in specified columns.}
 \usage{
-check_matches(df, column_string, codes, match = "any")
+check_matches(df, column_string, codes, match = "any", exceptions = NULL)
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
@@ -15,6 +15,8 @@ check_matches(df, column_string, codes, match = "any")
 
 \item{match}{A character string:
 "any" to check for any matches, "none" for no matches.}
+
+\item{exceptions}{A character vector of codes to exclude from search.}
 }
 \value{
 A logical vector indicating which rows / patients from \code{df} had an

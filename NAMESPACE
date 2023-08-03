@@ -2,7 +2,6 @@
 
 export(all_stoppstart)
 export(check_matches)
-export(check_matches2)
 export(start_a1)
 export(start_a3)
 export(start_a4)

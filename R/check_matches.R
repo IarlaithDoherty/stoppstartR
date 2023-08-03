@@ -12,12 +12,15 @@
 #' @param match
 #'        A character string:
 #'        "any" to check for any matches, "none" for no matches.
+#' @param exceptions
+#'        A character vector of codes to exclude from search.
 #'
 #' @return A logical vector indicating which rows / patients from `df` had an
 #'         entry containing one of the codes in `codes` in any of the
 #'         columns with names containing `column_string`.
 #' @export
-check_matches <- function(df, column_string, codes, match = "any") {
+check_matches <- function(df, column_string, codes, match = "any",
+                           exceptions = NULL) {
 
   # Ensure that column_string, codes, and match have the correct format.
   if (!is.character(column_string)) {
@@ -41,15 +44,24 @@ check_matches <- function(df, column_string, codes, match = "any") {
   # 'column_checks' is a list of logical vectors, one per column.
   # Each vector has one TRUE / FALSE value per patient.
   # TRUE if that patient has any of the codes from 'codes' in that column.
-  column_checks <- lapply(X = df[, columns, drop = FALSE],
-                          FUN = function(x) {
-                            grepl(x, pattern = codes_string)
-                            }
-                          )
+  column_checks <- lapply(df[, columns, drop = FALSE],
+                          function(x) grepl(x, pattern = codes_string))
+  column_checks_df <- data.frame(column_checks)
+
+  # If exceptions is not NULL, then we check for matches with the exception
+  # codes and switch the corresponding TRUE values in column_checks_df to FALSE.
+  if (!is.null(exceptions)) {
+    exceptions_string <- paste(exceptions, collapse = "|")
+    column_checks2 <- lapply(df[, columns, drop = FALSE],
+                             function(x) grepl(x, pattern = exceptions_string))
+    column_checks2_df <- data.frame(column_checks2)
+
+    column_checks_df <- column_checks_df & !column_checks2_df
+  }
 
   # 'combined_check' is a logical vector with a TRUE / FALSE value per patient.
   # TRUE if that patient has any TRUE values in 'column_checks'.
-  combined_check <- Reduce(x = column_checks, f = "|")
+  combined_check <- apply(column_checks_df, MARGIN = 1, FUN = any)
 
   if (match == "any") {
     return(combined_check)

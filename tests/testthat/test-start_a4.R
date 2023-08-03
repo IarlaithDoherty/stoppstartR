@@ -24,7 +24,6 @@ test_that("start_a4 works", {
 start_a4_comorbs <- c("E10", "E11", "E12", "E13", "E14")
 start_a4_drugs   <- c("C07", "C08", "C09", "C03A", "C03EA")
 
-
 start_a4_trigger <- data.frame(
   Systolic      = c(161, NA, rep(141, length(start_a4_comorbs))),
   Diastolic     = c( NA, 91, rep(NA, length(start_a4_comorbs))),
