@@ -114,6 +114,8 @@ all_stoppstart <- function(df, comorb_string = "Comorbidity_",
     s_b13a = stopp_b13a(df,
                       comorb_string = comorb_string, drug_string = drug_string,
                       systolic_column = systolic_column),
+    s_b13b = stopp_b13b(df,
+                      drug_string = drug_string),
     s_c1 = stopp_c1(df,
                     drug_string = drug_string, asa_column =
                       "Aspirin dose >150mg"),
