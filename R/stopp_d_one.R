@@ -392,15 +392,10 @@ stopp_d6 <- function(df, comorb_string = "Comorbidity_",
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
                                         codes = action_codes$drugs1,
-                                        match = "none")
+                                        match = "none",
+                                        exceptions = c("N05AH04", "N05AH02",
+                                                    "N05AN"))
 
-  # prelim_codes$drugs2 is a character vector of drug codes to check.
-  action_codes$drugs2 <- c("N05AH04", "N05AH02", "N05AN")
-  # prelim_checks$drugs2 is TRUE if the patient is on any listed drugs.
-  action_checks$drugs2 <- check_matches(df,
-                                        column_string = drug_string,
-                                        codes = action_codes$drugs2,
-                                        match = "any")
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.
@@ -410,7 +405,6 @@ stopp_d6 <- function(df, comorb_string = "Comorbidity_",
   output <- ifelse(all_prelims,
                    ifelse(all_actions, "Appropriate", "STOPP-D6"),
                    "Not Relevant")
-#Not correct!!!
   return(output)
 }
 
