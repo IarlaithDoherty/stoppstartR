@@ -768,7 +768,7 @@ start_e6 <- function(df, comorb_string = "Comorbidity_",
 #' \itemize{
 #' \item Any of the following drugs:
 #'
-#' L04AX03.
+#' L04AX03, L01BA01.
 #'
 #' \item None of the following drugs:
 #' B03AD, B03AE02, B03AE01 or B03B.
@@ -802,7 +802,7 @@ start_e7 <- function(df, drug_string = "Drug_") {
   prelim_codes <- list()
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
-  prelim_codes$drugs1 <- c("L04AX03")
+  prelim_codes$drugs1 <- c("L04AX03", "L01BA01")
   # prelim_checks$drugs1 is TRUE if the patient has any listed drugs.
   prelim_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
