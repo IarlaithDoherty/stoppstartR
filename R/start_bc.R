@@ -635,6 +635,9 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #' \item Any of the following comorbidities:
 #'
 #' G25.8 .
+#' \item GFR greater than:
+#'
+#' 30
 #' \item None of the following drugs:
 #'
 #' N04BC04, N04BC05, or N04BC09.
@@ -645,6 +648,7 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #'                      comorbidity column which uniquely identifies them.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
+#' @param GFR_column The name of the patient Na column as a character string.
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -656,7 +660,8 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-start_c6 <- function(df, comorb_string = "Comorbidity_",
+start_c6 <- function(df, GFR_column = "Lab Values: eGFR",
+                     comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
@@ -664,6 +669,9 @@ start_c6 <- function(df, comorb_string = "Comorbidity_",
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
+  } else if (!any(grepl(colnames(df), pattern = GFR_column))) {
+    stop(paste0("No column names include ", GFR_column,
+                ". Change GFR_string argument."))
   }
 
 
@@ -679,6 +687,8 @@ start_c6 <- function(df, comorb_string = "Comorbidity_",
                                           column_string = comorb_string,
                                           codes = prelim_codes$comorbs1,
                                           match = "any")
+  # prelim_checks$extras1 is TRUE if the patient's GFR is greater than 30ml/min.
+  prelim_checks$extras1 <- df[, GFR_column, drop = TRUE] > 30
 
   # all_prelims is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.

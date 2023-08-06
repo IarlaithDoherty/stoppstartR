@@ -4,10 +4,17 @@
 \alias{start_c6}
 \title{Function to implement START-C6 criterion.}
 \usage{
-start_c6(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
+start_c6(
+  df,
+  GFR_column = "Lab Values: eGFR",
+  comorb_string = "Comorbidity_",
+  drug_string = "Drug_"
+)
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
+
+\item{GFR_column}{The name of the patient Na column as a character string.}
 
 \item{comorb_string}{Character string contained in the name of each
 comorbidity column which uniquely identifies them.}
@@ -33,6 +40,9 @@ START-C6 requires all of the following conditions to be satisfied:
 \item Any of the following comorbidities:
 
 G25.8 .
+\item GFR greater than:
+
+30
 \item None of the following drugs:
 
 N04BC04, N04BC05, or N04BC09.
