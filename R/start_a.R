@@ -386,7 +386,7 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
 #' \itemize{
 #' \item Any of the following comorbidities:
 #'
-#' I20, I21, I22, I24, I25,
+#' I50, I11.0, I13.0, I13.2, I20, I21, I22, I24, I25,
 #' Z95.1, or Z95.5.
 #' \item None of the following drugs:
 #'
@@ -421,8 +421,8 @@ start_a6 <- function(df, comorb_string = "Comorbidity_",
   prelim_codes <- list()
 
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
-  prelim_codes$comorbs1 <- c("I20", "I21",   "I22",   "I24",   "I25",
-                              "Z95.1", "Z95.5")
+  prelim_codes$comorbs1 <- c("I50", "I11.0", "I13.0", "I13.2", "I20", "I21",
+                             "I22",   "I24",   "I25", "Z95.1", "Z95.5")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
                                           column_string = comorb_string,

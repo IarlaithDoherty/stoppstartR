@@ -32,7 +32,7 @@ START-A6 requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following comorbidities:
 
-I20, I21, I22, I24, I25,
+I50, I11.0, I13.0, I13.2, I20, I21, I22, I24, I25,
 Z95.1, or Z95.5.
 \item None of the following drugs:
 
