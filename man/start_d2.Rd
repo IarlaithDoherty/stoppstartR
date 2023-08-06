@@ -32,10 +32,7 @@ START-D2 requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following comorbidities:
 
-K57
-\item Any of the following comorbidities:
-
-K59.0
+K57 or K59.0
 \item None of the following drugs:
 
 A06AC
