@@ -512,7 +512,7 @@ stopp_b11 <- function(df, K_column = "Lab Values: K",
 #'
 #' STOPP-B13a requires the following conditions to be satisfied:
 #' \itemize{
-#' \item Systolic_BP > 160
+#' \item Systolic_BP < 90
 #'
 #' \item Any of the following comorbidities:
 #'
