@@ -14,13 +14,15 @@
 #'        "any" to check for any matches, "none" for no matches.
 #' @param exceptions
 #'        A character vector of codes to exclude from search.
+#' @param more_than
+#'        Return TRUE for patients which have more matches than this value.
 #'
 #' @return A logical vector indicating which rows / patients from `df` had an
 #'         entry containing one of the codes in `codes` in any of the
 #'         columns with names containing `column_string`.
 #' @export
 check_matches <- function(df, column_string, codes, match = "any",
-                           exceptions = NULL) {
+                          exceptions = NULL, more_than = 0) {
 
   # Ensure that column_string, codes, and match have the correct format.
   if (!is.character(column_string)) {
@@ -60,8 +62,9 @@ check_matches <- function(df, column_string, codes, match = "any",
   }
 
   # 'combined_check' is a logical vector with a TRUE / FALSE value per patient.
-  # TRUE if that patient has any TRUE values in 'column_checks'.
-  combined_check <- apply(column_checks_df, MARGIN = 1, FUN = any)
+  # TRUE if there are more matches for that patient than the value of more_than.
+  check_sums <- apply(column_checks_df, MARGIN = 1, FUN = sum)
+  combined_check <- check_sums > more_than
 
   if (match == "any") {
     return(combined_check)
