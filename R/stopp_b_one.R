@@ -481,6 +481,9 @@ stopp_b5 <- function(df, comorb_string = "Comorbidity_",
 #' I50, I11.0, I13.0, I13.2
 #' \item None of the following drugs:
 #'
+#' C07, C08, C09, C03A, C03EA
+#' \item Any of the following drugs:
+#'
 #' C03C, C03EB
 #' }
 #'
@@ -532,6 +535,15 @@ stopp_b6 <- function(df, comorb_string = "Comorbidity_",
                                           codes = prelim_codes$comorbs2,
                                           match = "none")
 
+  # prelim_codes$drugs1 is a character vector of drug codes to check.
+  prelim_codes$drugs1 <- c("C07", "C08", "C09", "C03A", "C03EA")
+  # prelim_checks$drugs1 is TRUE if the patient has any listed drugs.
+  prelim_checks$drugs1 <- check_matches(df,
+                                        column_string = drug_string,
+                                        codes = prelim_codes$drugs1,
+                                        match = "none")
+
+
   # all_prelims is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.
   all_prelims <- Reduce(x = prelim_checks, f = "&")
@@ -565,4 +577,3 @@ stopp_b6 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-

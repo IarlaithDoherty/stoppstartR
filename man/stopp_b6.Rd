@@ -38,6 +38,9 @@ I10, I15
 I50, I11.0, I13.0, I13.2
 \item None of the following drugs:
 
+C07, C08, C09, C03A, C03EA
+\item Any of the following drugs:
+
 C03C, C03EB
 }
 }
