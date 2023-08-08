@@ -32,7 +32,7 @@ START-E7 requires all of the following conditions to be satisfied:
 L04AX03, L01BA01.
 
 \item None of the following drugs:
-B03AD, B03AE02, B03AE01 or B03B.
+B03AD, B03AE02, B03AE01 or B03BB.
 
 }
 }
