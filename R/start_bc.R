@@ -648,7 +648,7 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #'                      comorbidity column which uniquely identifies them.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
-#' @param GFR_column The name of the patient Na column as a character string.
+#' @param GFR_column The name of the patient GFR column as a character string.
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -671,7 +671,7 @@ start_c6 <- function(df, GFR_column = "Lab Values: eGFR",
                 ". Change drug_string argument."))
   } else if (!any(grepl(colnames(df), pattern = GFR_column))) {
     stop(paste0("No column names include ", GFR_column,
-                ". Change GFR_string argument."))
+                ". Change GFR_column argument."))
   }
 
 

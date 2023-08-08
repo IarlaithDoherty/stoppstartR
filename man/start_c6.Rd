@@ -14,7 +14,7 @@ start_c6(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{GFR_column}{The name of the patient Na column as a character string.}
+\item{GFR_column}{The name of the patient GFR column as a character string.}
 
 \item{comorb_string}{Character string contained in the name of each
 comorbidity column which uniquely identifies them.}
