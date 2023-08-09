@@ -89,7 +89,7 @@ start_g1 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_
 
 
   output <- ifelse(all_prelims,
-                   ifelse(all_actions, "Appropriate", "START-g1"),
+                   ifelse(all_actions, "Appropriate", "START-G1"),
                    "Not Relevant")
 
   return(output)
@@ -186,7 +186,7 @@ start_g2 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_
 
 
   output <- ifelse(all_prelims,
-                   ifelse(all_actions, "Appropriate", "START-g2"),
+                   ifelse(all_actions, "Appropriate", "START-G2"),
                    "Not Relevant")
 
   return(output)
@@ -283,7 +283,7 @@ start_g3 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_
 
 
   output <- ifelse(all_prelims,
-                   ifelse(all_actions, "Appropriate", "START-g3"),
+                   ifelse(all_actions, "Appropriate", "START-G3"),
                    "Not Relevant")
 
   return(output)
