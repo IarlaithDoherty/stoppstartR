@@ -79,7 +79,7 @@ stopp_b1 <- function(df, comorb_string = "Comorbidity_",
   action_codes <- list()
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
-  action_codes$drugs1 <- c("C01BD01")
+  action_codes$drugs1 <- c("C01AA05")
   # prelim_checks$drugs1 is TRUE if the patient is on none listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
