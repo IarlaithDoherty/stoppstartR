@@ -34,11 +34,11 @@ stopp_b1_appropriate <- data.frame(
 test_that("all triggered", {
   expect_equal(
     stopp_b1(stopp_b1_trigger),
-    rep("STOPP-B1", length(stopp_b1_comorbs1)))
+    rep("STOPP-B1", length(stopp_b1_comorbs1) * length(stopp_b1_drugs)))
 })
 
 test_that("all appropriate", {
   expect_equal(
     stopp_b1(stopp_b1_appropriate),
-    rep("Appropriate", length(stopp_b1_comorbs1) * length(stopp_b1_drugs)))
+    rep("Appropriate", length(stopp_b1_comorbs1)))
 })
