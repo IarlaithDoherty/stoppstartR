@@ -102,7 +102,7 @@ stopp_c1 <- function(df, asa_column = "Aspirin dose >150mg",
 #' \item None of the following drugs:
 #'
 #' A02BC
-#' \item None of the following drugs:
+#' \item Any of the following drugs:
 #'
 #' B01AC06, B01AC08, N02BA01, M01BA03, C10BX01, C10BX02, C10BX04, C10BX05,
 #' C10BX06, C10BX08, N02BA15, N02BA51, N02BA65, N02BA71
@@ -192,7 +192,6 @@ stopp_c2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 #' @title Function to implement STOPP-C5 criterion.
 #'
