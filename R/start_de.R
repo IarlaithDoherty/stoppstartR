@@ -257,7 +257,7 @@ start_e1 <- function(df, comorb_string = "Comorbidity_",
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
   action_codes$drugs1 <- c("L04AX01", "L04AX03", "L04AA13", "L04AD01",
-                           "A07EC01", "P01BA", "M01CB", "M01CC")
+                           "A07EC01", "P01BA", "M01CB", "M01CC", "L01BA01")
   # prelim_checks$drugs1 is TRUE if the patient is on any listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
