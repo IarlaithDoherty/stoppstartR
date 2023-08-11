@@ -354,8 +354,8 @@ stopp_f4 <- function(df, Fe_column = "Elemental Iron >600mg",
   action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's elemental iron dose is
-  # greater than 600mg.
-  action_checks$extras1 <- df[, Fe_column, drop = TRUE] == "Yes"
+  # less than than 600mg.
+  action_checks$extras1 <- df[, Fe_column, drop = TRUE] == "No"
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.
