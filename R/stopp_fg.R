@@ -173,6 +173,7 @@ stopp_f2 <- function(df, ppi_column = "Full Dose PPI",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #' @title Function to implement STOPP-F3 criterion.
 #'
 #' @description
@@ -279,6 +280,90 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
 
   output <- ifelse(all_prelims,
                    ifelse(all_actions, "Appropriate", "STOPP-F3"),
+                   "Not Relevant")
+
+  return(output)
+}
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @title Function to implement STOPP-F4 criterion.
+#'
+#' @description
+#' Determine which patients triggered the conditions defining STOPP-F4.
+#'
+#' STOPP-E1 requires all of the following conditions to be satisfied:
+#' \itemize{
+#' \item Any of the following drugs:
+#'
+#' B03AA02, B03AA07, B03AA03
+#' \item Elemental Iron >600mg >:
+#'
+#' Yes
+#' }
+#'
+#' @param df Dataframe of patient information.
+#' @param Fe_column The name of the patient elemental iron colum as a character
+#' string.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
+#'
+#' @return `output`: character vector,
+#' \itemize{
+#' \item "Not Relevant" if the conditions are not satisfied.
+#' \item "Appropriate" if the conditions are satisfied but the correct drug has
+#' already been prescribed.
+#' \item The name of the criterion if the conditions are satisfied and the
+#' correct drug has not been prescribed.
+#' }
+#'
+#' @export
+stopp_f4 <- function(df, Fe_column = "Elemental Iron >600mg",
+                     drug_string = "Drug_") {
+
+  if (!any(grepl(colnames(df), pattern = Fe_column))) {
+    stop(paste0("No column names include ", Fe_column,
+                ". Change Fe_string argument."))
+  } else if (!any(grepl(colnames(df), pattern = drug_string))) {
+    stop(paste0("No column names include ", drug_string,
+                ". Change drug_string argument."))
+  }
+
+
+  # prelim_checks is a list of logical vectors, each has one entry per patient.
+  prelim_checks <- list()
+  # prelim_codes is a list of character vectors, each containing codes to check.
+  prelim_codes <- list()
+
+  # prelim_codes$drugs1 is a character vector of drug codes to check.
+  prelim_codes$drugs1 <- c("B03AA02", "B03AA07", "B03AA03")
+  # prelim_checks$drugs1 is TRUE if the patient has any listed drugs.
+  prelim_checks$drugs1 <- check_matches(df,
+                                        column_string = drug_string,
+                                        codes = prelim_codes$drugs1,
+                                        match = "any")
+
+  # all_prelims is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'prelim_checks'.
+  all_prelims <- Reduce(x = prelim_checks, f = "&")
+
+
+  # action_checks is a list of logical vectors, each has one entry per patient.
+  action_checks <- list()
+  # action_codes is a list of character vectors, each containing codes to check.
+  action_codes <- list()
+
+  # action_checks$extras1 is TRUE if the patient's elemental iron dose is
+  # greater than 600mg.
+  action_checks$extras1 <- df[, Fe_column, drop = TRUE] == "Yes"
+
+  # all_actions is a logical vector with one entry per patient.
+  # TRUE if the patient is TRUE for each element of 'action_checks'.
+  all_actions <- Reduce(x = action_checks, f = "&")
+
+
+  output <- ifelse(all_prelims,
+                   ifelse(all_actions, "Appropriate", "STOPP-F4"),
                    "Not Relevant")
 
   return(output)
