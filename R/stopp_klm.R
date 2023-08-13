@@ -459,7 +459,7 @@ stopp_l3 <- function(df, drug_string = "Drug_") {
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
                                         codes = action_codes$drugs1,
-                                        match = "none",
+                                        match = "any",
                                         exceptions = c("N02AB03", "N02AE01"))
 
   # all_actions is a logical vector with one entry per patient.
