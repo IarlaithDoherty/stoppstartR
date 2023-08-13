@@ -35,6 +35,9 @@ STOPP-B5 requires all of the following conditions to be satisfied:
 I47.1, I48
 \item None of the following drugs:
 
+C07, C01AA05, C08DA01, C08DB01
+\item Any of the following drugs:
+
 C01BD01
 }
 }

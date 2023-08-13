@@ -388,6 +388,9 @@ stopp_b4 <- function(df, HR_column = "Lab Values: Heart Rate",
 #' I47.1, I48
 #' \item None of the following drugs:
 #'
+#' C07, C01AA05, C08DA01, C08DB01
+#' \item Any of the following drugs:
+#'
 #' C01BD01
 #' }
 #'
@@ -430,6 +433,14 @@ stopp_b5 <- function(df, comorb_string = "Comorbidity_",
                                           column_string = comorb_string,
                                           codes = prelim_codes$comorbs1,
                                           match = "any")
+
+  # prelim_codes$drugs1 is a character vector of drug codes to check.
+  prelim_codes$drugs1 <- c("C07", "C01AA05", "C08DA01", "C08DB01")
+  # prelim_checks$drugs1 is TRUE if the patient has any listed drugs.
+  prelim_checks$drugs1 <- check_matches(df,
+                                        column_string = drug_string,
+                                        codes = prelim_codes$drugs1,
+                                        match = "none")
 
   # all_prelims is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.
