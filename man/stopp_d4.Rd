@@ -31,7 +31,7 @@ STOPP-D4 requires all of the following conditions to be satisfied:
 \itemize{
 \item Serum sodium less than:
 
-135
+130
 \item Any of the following drugs:
 
 N06AB, N06CA03

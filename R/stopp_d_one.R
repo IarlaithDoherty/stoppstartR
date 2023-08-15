@@ -184,7 +184,7 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 #' \itemize{
 #' \item Serum sodium less than:
 #'
-#' 135
+#' 130
 #' \item Any of the following drugs:
 #'
 #' N06AB, N06CA03
@@ -223,8 +223,8 @@ stopp_d4 <- function(df, Na_column = "Lab Values: Na",
   # prelim_codes is a list of character vectors, each containing codes to check.
   prelim_codes <- list()
 
-  # prelim_checks$extras1 is TRUE if the patient's Na is less than 135 mmol/L.
-  prelim_checks$extras1 <- df[, Na_column, drop = TRUE] < 135
+  # prelim_checks$extras1 is TRUE if the patient's Na is less than 130 mmol/L.
+  prelim_checks$extras1 <- df[, Na_column, drop = TRUE] < 130
 
 
   # all_prelims is a logical vector with one entry per patient.
@@ -256,9 +256,11 @@ stopp_d4 <- function(df, Na_column = "Lab Values: Na",
 
   return(output)
 }
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #' @title Function to implement STOPP-D5 criterion.
 #'
 #' @description
@@ -516,7 +518,7 @@ stopp_d7 <- function(df, drug_string = "Drug_") {
 #'  R06AX08, R06AX09, R06AX15, R06AX16, R06AX17, R06AX23, R06AX53, R06AX58,
 #'   N05BB01, N05BB51, N07CA02, N07CA52, G04BD01, G04BD02, G04BD03, G04BD04,
 #'    G04BD05, G04BD06, G04BD07, G04BD08, G04BD09, G04BD10, G04BD11, N06AA,
-#'     A03B, A03AA, A03AB, A04AD01, M03BX02, N04A*, N05AA01, N05AH02, N05AB02,
+#'     A03B, A03AA, A03AB, A04AD01, M03BX02, N04A, N05AA01, N05AH02, N05AB02,
 #'      N05AA02, N05AC02, N05AA04, N05AF04
 #' }
 #'
