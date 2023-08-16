@@ -471,7 +471,7 @@ stopp_g1 <- function(df, drug_string = "Drug_") {
 #' J40, J41, J42, J43, J44
 #' \item None of the following drugs:
 #'
-#' R03BA, R03AK
+#' R03BA, R03AK, R03AL08, R03AL09, R03AL11, R03AL12
 #' \item Any of the following drugs:
 #'
 #' H02AB01, H02AB02, H02AB04, H02AB06, H02AB07, H02AB08, H02AB09, H02BX01
@@ -518,7 +518,8 @@ stopp_g2 <- function(df, comorb_string = "Comorbidity_",
                                           match = "any")
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
-  prelim_codes$drugs1 <- c("R03BA", "R03AK")
+  prelim_codes$drugs1 <- c("R03BA", "R03AK", "R03AK", "R03AL08", "R03AL09",
+  "R03AL11", "R03AL12")
   # prelim_checks$drugs1 is TRUE if the patient has none listed drugs.
   prelim_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
@@ -560,6 +561,7 @@ stopp_g2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #' @title Function to implement STOPP-G4 criterion.
 #'
 #' @description
