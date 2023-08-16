@@ -299,13 +299,13 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
 #' \item Any of the following drugs:
 #'
 #' B03AA02, B03AA07, B03AA03
-#' \item Elemental Iron >600mg >:
+#' \item Elemental Iron >600mg:
 #'
 #' Yes
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param Fe_column The name of the patient elemental iron colum as a character
+#' @param Fe_column The name of the patient elemental iron column as a character
 #' string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
@@ -459,7 +459,6 @@ stopp_g1 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 #' @title Function to implement STOPP-G2 criterion.
 #'
 #' @description
@@ -472,7 +471,7 @@ stopp_g1 <- function(df, drug_string = "Drug_") {
 #' J40, J41, J42, J43, J44
 #' \item None of the following drugs:
 #'
-#' R03BA
+#' R03BA, R03AK
 #' \item Any of the following drugs:
 #'
 #' H02AB01, H02AB02, H02AB04, H02AB06, H02AB07, H02AB08, H02AB09, H02BX01
@@ -519,7 +518,7 @@ stopp_g2 <- function(df, comorb_string = "Comorbidity_",
                                           match = "any")
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
-  prelim_codes$drugs1 <- c("R03BA")
+  prelim_codes$drugs1 <- c("R03BA", "R03AK")
   # prelim_checks$drugs1 is TRUE if the patient has none listed drugs.
   prelim_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,

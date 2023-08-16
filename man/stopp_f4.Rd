@@ -9,7 +9,7 @@ stopp_f4(df, Fe_column = "Elemental Iron >600mg", drug_string = "Drug_")
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{Fe_column}{The name of the patient elemental iron colum as a character
+\item{Fe_column}{The name of the patient elemental iron column as a character
 string.}
 
 \item{drug_string}{Character string contained in the name of each drug
@@ -33,7 +33,7 @@ STOPP-E1 requires all of the following conditions to be satisfied:
 \item Any of the following drugs:
 
 B03AA02, B03AA07, B03AA03
-\item Elemental Iron >600mg >:
+\item Elemental Iron >600mg:
 
 Yes
 }

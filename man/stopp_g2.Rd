@@ -35,7 +35,7 @@ STOPP-G2 requires all of the following conditions to be satisfied:
 J40, J41, J42, J43, J44
 \item None of the following drugs:
 
-R03BA
+R03BA, R03AK
 \item Any of the following drugs:
 
 H02AB01, H02AB02, H02AB04, H02AB06, H02AB07, H02AB08, H02AB09, H02BX01
