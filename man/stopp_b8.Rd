@@ -49,7 +49,7 @@ C03A, C03BA, C03EA01, C03EA02, C03EA13, C03EA07, C09XA52, C09XA54, C07B,
 C07D, C09DX01, C09DX03
 \item Any of the following comorbidities:
 
-M10
+M10, E87.6, E87.1, E83.5
 \item Serum Corrected Calcium > 2.65
 \item Serum Sodium < 130
 \item Serum Potassium < 3.5

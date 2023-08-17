@@ -115,7 +115,7 @@ stopp_b7 <- function(df, comorb_string = "Comorbidity_",
 #' C07D, C09DX01, C09DX03
 #' \item Any of the following comorbidities:
 #'
-#' M10
+#' M10, E87.6, E87.1, E83.5
 #' \item Serum Corrected Calcium > 2.65
 #' \item Serum Sodium < 130
 #' \item Serum Potassium < 3.5
@@ -204,7 +204,7 @@ stopp_b8 <- function(df, K_column = "Lab Values: K",
   action_checks$extras3 <- df[, CCa_column, drop = TRUE] < 2.65
 
   # action_codes$comorb4 is a character vector of drug codes to check.
-  action_codes$comorb4 <- c("M10")
+  action_codes$comorb4 <- c("M10", "E87.6", "E87.1", "E83.5")
   # action_checks$drugs4 is TRUE if the patient has none listed comorbidities.
   action_checks$comorb4 <- check_matches(df,
                                         column_string = comorb_string,
