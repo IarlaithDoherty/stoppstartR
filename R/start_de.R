@@ -202,7 +202,7 @@ start_d2 <- function(df, comorb_string = "Comorbidity_",
 #' M05 or M06.
 #' \item None of the following drugs:
 #'
-#' L04AX01, L04AX03, L04AA13, L04AD01, A07EC01, P01BA, M01CB, or M01CC.
+#' L01BA01, L04AX01, L04AX03, L04AA13, L04AD01, A07EC01, P01BA, M01CB, or M01CC.
 #' }
 #'
 #' @param df Dataframe of patient information.

@@ -35,6 +35,6 @@ START-E1 requires all of the following conditions to be satisfied:
 M05 or M06.
 \item None of the following drugs:
 
-L04AX01, L04AX03, L04AA13, L04AD01, A07EC01, P01BA, M01CB, or M01CC.
+L01BA01, L04AX01, L04AX03, L04AA13, L04AD01, A07EC01, P01BA, M01CB, or M01CC.
 }
 }
