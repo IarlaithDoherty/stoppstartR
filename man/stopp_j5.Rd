@@ -39,7 +39,7 @@ Determine which patients triggered the conditions defining STOPP-J5.
 STOPP-J5 requires all of the following conditions to be satisfied:
 \itemize{
 \item Gender equals Female.
-\item Any of the following comorbidities:
+\item None of the following comorbidities:
 
 Z90.7
 \item None of the following drugs:
