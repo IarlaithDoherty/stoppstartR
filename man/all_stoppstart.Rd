@@ -41,6 +41,3 @@ Data frame of character vectors.
 \description{
 Title
 }
-\examples{
-all_stoppstart(session13)
-}

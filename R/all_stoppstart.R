@@ -12,8 +12,6 @@
 #'
 #' @return Data frame of character vectors.
 #' @export
-#'
-#' @examples all_stoppstart(session13)
 all_stoppstart <- function(df, comorb_string = "Comorbidity_",
                            drug_string = "Drug_",
                            diastolic_column = "Diastolic_BP",
