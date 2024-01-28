@@ -4,7 +4,7 @@
 
 start_b1_df <- data.frame(
   Comorbidity_1 = c("J40",     "J40", NA),
-  Drug_1        = c(   NA, "R03AK04", NA))
+  Drug_1        = c(NA, "R03AK04", NA))
 
 test_that("start_b1 works", {
   expect_equal(
@@ -21,7 +21,7 @@ start_b1_comorbs <- c("J40", "J41", "J42", "J43",
 start_b1_drugs   <- c("R03AK04", "R03AK05", "R03AK06", "R03AK07",
                       "R03AK08", "R03AK09", "R03AK10", "R03AK11",
                       "R03AK12", "R03AK13",
-                      "R03AC", "R03AL","R03BB")
+                      "R03AC", "R03AL", "R03BB")
 
 start_b1_trigger <- data.frame(
   Comorbidity_1 = start_b1_comorbs,
@@ -40,5 +40,5 @@ test_that("all triggered", {
 test_that("all appropriate", {
   expect_equal(
     start_b1(start_b1_appropriate),
-    rep("Appropriate", length(start_b1_comorbs)*length(start_b1_drugs)))
+    rep("Appropriate", length(start_b1_comorbs) * length(start_b1_drugs)))
 })

@@ -3,9 +3,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 start_a5_df <- data.frame(
-  Age           = c(   84,      84,    85, 84),
+  Age           = c(84,      84,    85, 84),
   Comorbidity_1 = c("I20",   "I20", "I20", NA),
-  Drug_1        = c(   NA, "C10AA",    NA, NA))
+  Drug_1        = c(NA, "C10AA",    NA, NA))
 
 test_that("start_a5 works", {
   expect_equal(
@@ -42,5 +42,5 @@ test_that("all triggered", {
 test_that("all appropriate", {
   expect_equal(
     start_a5(start_a5_appropriate),
-    rep("Appropriate", length(start_a5_comorbs)*length(start_a5_drugs)))
+    rep("Appropriate", length(start_a5_comorbs) * length(start_a5_drugs)))
 })

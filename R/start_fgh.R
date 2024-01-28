@@ -36,7 +36,8 @@
 #' }
 #'
 #' @export
-start_g1 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_",
+start_g1 <- function(df, gender_column = "Gender",
+                     comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
@@ -133,7 +134,8 @@ start_g1 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_
 #' }
 #'
 #' @export
-start_g2 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_",
+start_g2 <- function(df, gender_column = "Gender",
+                     comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
@@ -230,7 +232,8 @@ start_g2 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_
 #' }
 #'
 #' @export
-start_g3 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_",
+start_g3 <- function(df, gender_column = "Gender",
+                     comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {

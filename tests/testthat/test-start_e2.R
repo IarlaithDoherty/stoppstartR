@@ -6,7 +6,7 @@ start_e2_df <- data.frame(
   Drug_1 = c("H02AB", "H02AB", "H02AB", "H02AB", NA),
   Drug_2 = c("M05BA", "M05BA",      NA, "M05BA", "M05BA"),
   Drug_3 = c("A12AA",      NA, "A12AA", "A12AA", "A12AA"),
-  Drug_4 = c(     NA, "A11CC", "A11CC", "A11CC", "A11CC"))
+  Drug_4 = c(NA, "A11CC", "A11CC", "A11CC", "A11CC"))
 
 test_that("start_e2 works", {
   expect_equal(

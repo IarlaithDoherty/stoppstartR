@@ -4,7 +4,7 @@
 
 start_e7_df <- data.frame(
   Drug_1 = c("L04AX03", "L04AX03", NA),
-  Drug_2 = c(       NA,   "B03AD", NA))
+  Drug_2 = c(NA,   "B03AD", NA))
 
 test_that("start_e7 works", {
   expect_equal(

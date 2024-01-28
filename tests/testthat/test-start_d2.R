@@ -3,9 +3,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 start_d2_df <- data.frame(
-  Comorbidity_1 = c(  "K57",   "K57", "K57",      NA),
+  Comorbidity_1 = c("K57",   "K57", "K57",      NA),
   Comorbidity_2 = c("K59.0", "K59.0",    NA, "K59.0"),
-  Drug_1        = c(     NA, "A06AC",    NA,      NA))
+  Drug_1        = c(NA, "A06AC",    NA,      NA))
 
 test_that("start_d2 works", {
   expect_equal(

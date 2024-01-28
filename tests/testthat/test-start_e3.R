@@ -3,9 +3,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 start_e3_df <- data.frame(
-  Comorbidity_1 = c(  "M80",   "M80",   "M80", NA),
+  Comorbidity_1 = c("M80",   "M80",   "M80", NA),
   Drug_1        = c("A11CC",      NA, "A11CC", NA),
-  Drug_2        = c(     NA, "A12AA", "A12AA", NA))
+  Drug_2        = c(NA, "A12AA", "A12AA", NA))
 
 test_that("start_e3 works", {
   expect_equal(

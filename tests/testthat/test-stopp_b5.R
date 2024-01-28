@@ -3,7 +3,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 stopp_b5_df <- data.frame(
-  Comorbidity_1 = c(  "I47.1", "I47.1", NA),
+  Comorbidity_1 = c("I47.1", "I47.1", NA),
   Drug_1        = c("C01BD01",      NA, NA))
 
 test_that("stopp_b5 works", {
@@ -38,4 +38,3 @@ test_that("all appropriate", {
     stopp_b5(stopp_b5_appropriate),
     rep("Appropriate", length(stopp_b5_comorbs)))
 })
-

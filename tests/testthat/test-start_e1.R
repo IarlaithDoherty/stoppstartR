@@ -4,7 +4,7 @@
 
 start_e1_df <- data.frame(
   Comorbidity_1 = c("M05",     "M05", NA),
-  Drug_1        = c(   NA, "L04AX01", NA))
+  Drug_1        = c(NA, "L04AX01", NA))
 
 test_that("start_e1 works", {
   expect_equal(
@@ -37,5 +37,5 @@ test_that("all triggered", {
 test_that("all appropriate", {
   expect_equal(
     start_e1(start_e1_appropriate),
-    rep("Appropriate", length(start_e1_comorbs)*length(start_e1_drugs)))
+    rep("Appropriate", length(start_e1_comorbs) * length(start_e1_drugs)))
 })

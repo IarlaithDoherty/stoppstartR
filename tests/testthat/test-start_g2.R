@@ -3,9 +3,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 start_g2_df <- data.frame(
-  Gender        = c(  "M",     "M", "M",   "F",      NA),
+  Gender        = c("M",     "M", "M",   "F",      NA),
   Comorbidity_1 = c("N40",   "N40",  NA, "N40",   "N40"),
-  Drug_1        = c(   NA, "G04CB",  NA,    NA, "G04CB"))
+  Drug_1        = c(NA, "G04CB",  NA,    NA, "G04CB"))
 
 test_that("start_g2 works", {
   expect_equal(

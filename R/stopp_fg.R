@@ -249,7 +249,7 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
   action_codes <- list()
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
-  action_codes$drugs1 <- c("R06AA", "R06AB", "R06AC", "R06AD" , "R06AE01",
+  action_codes$drugs1 <- c("R06AA", "R06AB", "R06AC", "R06AD", "R06AE01",
                            "R06AE03", "R06AE04", "R06AE05", "R06AE06",
                            "R06AE51", "R06AE53", "R06AE55", "R06AX01",
                            "R06AX02", "R06AX03", "R06AX04", "R06AX05",

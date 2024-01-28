@@ -4,7 +4,7 @@
 
 stopp_b3_df <- data.frame(
   Drug_1 = c("C08DA01", "C08DA01", NA),
-  Drug_2 = c(    "C07",        NA, NA))
+  Drug_2 = c("C07",        NA, NA))
 
 test_that("stopp_b3 works", {
   expect_equal(

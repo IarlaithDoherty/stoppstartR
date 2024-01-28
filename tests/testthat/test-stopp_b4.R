@@ -3,9 +3,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 stopp_b4_df <- data.frame(
-  Heart_Rate     = c(     50,    49,      50, 49, 50),
+  Heart_Rate     = c(50,    49,      50, 49, 50),
   Comorbidity_1  = c("I49.5",    NA, "I49.5", NA, NA),
-  Drug_1         = c(  "C07", "C07",      NA, NA, NA))
+  Drug_1         = c("C07", "C07",      NA, NA, NA))
 colnames(stopp_b4_df)[1] <- "Lab Values: Heart Rate"
 
 test_that("stopp_b4 works", {

@@ -3,9 +3,9 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 start_c6_df <- data.frame(
-  GFR = c(     31,        31, 31,      30),
+  GFR = c(31,        31, 31,      30),
   Comorbidity_1      = c("G25.8",   "G25.8", NA, "G25.8"),
-  Drug_1             = c(     NA, "N04BC04", NA,      NA))
+  Drug_1             = c(NA, "N04BC04", NA,      NA))
 colnames(start_c6_df)[1] <- "Lab Values: eGFR"
 
 test_that("start_c6 works", {
@@ -42,5 +42,5 @@ test_that("all triggered", {
 test_that("all appropriate", {
   expect_equal(
     start_c6(start_c6_appropriate),
-    rep("Appropriate", length(start_c6_comorbs)*length(start_c6_drugs)))
+    rep("Appropriate", length(start_c6_comorbs) * length(start_c6_drugs)))
 })

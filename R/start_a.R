@@ -211,7 +211,8 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #' @param systolic_column The name of the systolic column as a character string.
-#' @param diastolic_column The name of the diastolic column as a character string.
+#' @param diastolic_column The name of the diastolic column as a character
+#'                         string.
 #'
 #' @inherit start_a1 return
 #'

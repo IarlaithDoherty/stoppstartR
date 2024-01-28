@@ -476,7 +476,8 @@ stopp_j4 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-stopp_j5 <- function(df, gender_column = "Gender", comorb_string = "Comorbidity_",
+stopp_j5 <- function(df, gender_column = "Gender",
+                     comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {

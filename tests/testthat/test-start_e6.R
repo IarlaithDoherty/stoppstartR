@@ -4,7 +4,7 @@
 
 start_e6_df <- data.frame(
   Comorbidity_1 = c("M10",   "M10", NA),
-  Drug_1        = c(   NA, "M04AA", NA))
+  Drug_1        = c(NA, "M04AA", NA))
 
 test_that("start_e6 works", {
   expect_equal(

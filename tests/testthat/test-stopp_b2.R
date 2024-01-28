@@ -3,7 +3,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 stopp_b2_df <- data.frame(
-  Comorbidity_1 = c(    "I50", "I50", NA),
+  Comorbidity_1 = c("I50", "I50", NA),
   Drug_1        = c("C08DB01",    NA, NA))
 
 test_that("stopp_b2 works", {

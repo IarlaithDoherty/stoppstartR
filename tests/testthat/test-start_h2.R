@@ -4,7 +4,7 @@
 
 start_h2_df <- data.frame(
   Drug_1 = c("N02A", "N02A", NA),
-  Drug_2 = c(    NA, "A06A", NA))
+  Drug_2 = c(NA, "A06A", NA))
 
 test_that("start_h2 works", {
   expect_equal(
