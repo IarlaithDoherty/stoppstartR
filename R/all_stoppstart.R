@@ -1,4 +1,4 @@
-#' Title
+#' Implement all STOPP/START criteria or a subset of them.
 #'
 #' @param df Patient info
 #' @param comorb_string .
@@ -6,46 +6,60 @@
 #' @param diastolic_column .
 #' @param systolic_column .
 #' @param age_column .
+#' @param gender_column .
+#' @param GFR_column .
 #' @param HR_column .
 #' @param K_column .
-#' @param gender_column .
+#' @param Na_column .
+#' @param CCa_column .
+#' @param asa_column .
+#' @param digoxin_column .
+#' @param Fe_column .
+#' @param ppi_column .
 #' @param excluded_criteria .
 #' @param included_criteria .
 #'
 #' @return Data frame of character vectors.
 #' @export
 all_stoppstart <- function(
-    df,
-    comorb_string = "Comorbidity_",
-    drug_string = "Drug_",
-    diastolic_column = "Diastolic_BP",
-    systolic_column = "Systolic_BP",
-    age_column = "Age",
-    HR_column = "HR_column",
-    K_column = "K_column",
-    gender_column = "Gender",
-    excluded_criteria = c(),
-    included_criteria = c(
-      "start_a1",   "start_a3",   "start_a4",   "start_a5",   "start_a6",
-      "start_a7",   "start_a8",   "start_b1",   "start_c1",   "start_c2",
-      "start_c3a",  "start_c3b",  "start_c4",   "start_c5",   "start_c6",
-      "start_d1",   "start_d2",   "start_e1",   "start_e2",   "start_e3",
-      "start_e4",   "start_e5",   "start_e6",   "start_e7",   "start_g1",
-      "start_g2",   "start_g3",   "start_h2",
-      "stopp_b1",   "stopp_b2",   "stopp_b3",   "stopp_b4",   "stopp_b5",
-      "stopp_b6",   "stopp_b7",   "stopp_b8",   "stopp_b9",   "stopp_b10",
-      "stopp_b11",  "stopp_b13a", "stopp_b13b", "stopp_c1",   "stopp_c2",
-      "stopp_c5",   "stopp_c7",   "stopp_c8",   "stopp_c9",   "stopp_c10",
-      "stopp_c11",  "stopp_d1",   "stopp_d3",   "stopp_d4",   "stopp_d5",
-      "stopp_d6",   "stopp_d7",   "stopp_d8",   "stopp_d9",   "stopp_d10",
-      "stopp_d11",  "stopp_d12",  "stopp_d13",  "stopp_d14",  "stopp_e1",
-      "stopp_e2",   "stopp_e3",   "stopp_e4",   "stopp_e5",   "stopp_e6",
-      "stopp_f1",   "stopp_f2",   "stopp_f3",   "stopp_f4",   "stopp_g1",
-      "stopp_g2",   "stopp_g4",   "stopp_h1",   "stopp_h2",   "stopp_h4",
-      "stopp_h5",   "stopp_h6",   "stopp_h7",   "stopp_h8",   "stopp_h9",
-      "stopp_i1",   "stopp_i2",   "stopp_j1",   "stopp_j2",   "stopp_j4",
-      "stopp_j5",   "stopp_j6",   "stopp_k1",   "stopp_k2",   "stopp_k3",
-      "stopp_k4",   "stopp_l2",   "stopp_l3",   "stopp_m1"
+  df,
+  comorb_string = "Comorbidity_",
+  drug_string = "Drug_",
+  diastolic_column = "Diastolic_BP",
+  systolic_column = "Systolic_BP",
+  age_column = "Age",
+  gender_column = "Gender",
+  GFR_column = "Lab Values: eGFR",
+  HR_column = "Lab Values: Heart Rate",
+  K_column = "Lab Values: K",
+  Na_column = "Lab Values: Na",
+  CCa_column = "Lab Values: Corrected Ca",
+  asa_column = "Aspirin dose >150mg",
+  digoxin_column = "Digoxin Dose >125mcg",
+  Fe_column = "Elemental Iron >600mg",
+  ppi_column = "Full Dose PPI",
+  excluded_criteria = c(),
+  included_criteria = c(
+    "start_a1",   "start_a3",   "start_a4",   "start_a5",   "start_a6",
+    "start_a7",   "start_a8",   "start_b1",   "start_c1",   "start_c2",
+    "start_c3a",  "start_c3b",  "start_c4",   "start_c5",   "start_c6",
+    "start_d1",   "start_d2",   "start_e1",   "start_e2",   "start_e3",
+    "start_e4",   "start_e5",   "start_e6",   "start_e7",   "start_g1",
+    "start_g2",   "start_g3",   "start_h2",
+    "stopp_b1",   "stopp_b2",   "stopp_b3",   "stopp_b4",   "stopp_b5",
+    "stopp_b6",   "stopp_b7",   "stopp_b8",   "stopp_b9",   "stopp_b10",
+    "stopp_b11",  "stopp_b13a", "stopp_b13b", "stopp_c1",   "stopp_c2",
+    "stopp_c5",   "stopp_c7",   "stopp_c8",   "stopp_c9",   "stopp_c10",
+    "stopp_c11",  "stopp_d1",   "stopp_d3",   "stopp_d4",   "stopp_d5",
+    "stopp_d6",   "stopp_d7",   "stopp_d8",   "stopp_d9",   "stopp_d10",
+    "stopp_d11",  "stopp_d12",  "stopp_d13",  "stopp_d14",  "stopp_e1",
+    "stopp_e2",   "stopp_e3",   "stopp_e4",   "stopp_e5",   "stopp_e6",
+    "stopp_f1",   "stopp_f2",   "stopp_f3",   "stopp_f4",   "stopp_g1",
+    "stopp_g2",   "stopp_g4",   "stopp_h1",   "stopp_h2",   "stopp_h4",
+    "stopp_h5",   "stopp_h6",   "stopp_h7",   "stopp_h8",   "stopp_h9",
+    "stopp_i1",   "stopp_i2",   "stopp_j1",   "stopp_j2",   "stopp_j4",
+    "stopp_j5",   "stopp_j6",   "stopp_k1",   "stopp_k2",   "stopp_k3",
+    "stopp_k4",   "stopp_l2",   "stopp_l3",   "stopp_m1"
     )
 ) {
 
@@ -143,7 +157,7 @@ all_stoppstart <- function(
   if ("start_c6" %in% included_criteria) {
     output$start_c6 <- start_c6(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      GFR_column = "Lab Values: eGFR"
+      GFR_column = GFR_column
     )
   }
 
@@ -249,7 +263,7 @@ all_stoppstart <- function(
   if ("stopp_b4" %in% included_criteria) {
     output$stopp_b4 <- stopp_b4(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      HR_column = "Lab Values: Heart Rate"
+      HR_column = HR_column
     )
   }
 
@@ -274,9 +288,9 @@ all_stoppstart <- function(
   if ("stopp_b8" %in% included_criteria) {
     output$stopp_b8 <- stopp_b8(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      K_column = "Lab Values: K",
-      Na_column = "Lab Values: Na",
-      CCa_column = "Lab Values: Corrected Ca"
+      K_column = K_column,
+      Na_column = Na_column,
+      CCa_column = CCa_column
     )
   }
 
@@ -295,7 +309,7 @@ all_stoppstart <- function(
   if ("stopp_b11" %in% included_criteria) {
     output$stopp_b11 <- stopp_b11(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      K_column = "Lab Values: K"
+      K_column = K_column
     )
   }
 
@@ -315,7 +329,7 @@ all_stoppstart <- function(
   if ("stopp_c1" %in% included_criteria) {
     output$stopp_c1 <- stopp_c1(
       df, drug_string = drug_string,
-      asa_column = "Aspirin dose >150mg"
+      asa_column = asa_column
     )
   }
 
@@ -376,7 +390,7 @@ all_stoppstart <- function(
   if ("stopp_d4" %in% included_criteria) {
     output$stopp_d4 <- stopp_d4(
       df, drug_string = drug_string,
-      Na_column = "Lab Values: Na"
+      Na_column = Na_column
     )
   }
 
@@ -419,7 +433,7 @@ all_stoppstart <- function(
   if ("stopp_d11" %in% included_criteria) {
     output$stopp_d11 <- stopp_d11(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      HR_column = "Lab Values: Heart Rate"
+      HR_column = HR_column
     )
   }
 
@@ -444,43 +458,43 @@ all_stoppstart <- function(
   if ("stopp_e1" %in% included_criteria) {
     output$stopp_e1 <- stopp_e1(
       df, drug_string = drug_string,
-      GFR_column = "Lab Values: eGFR",
-      digoxin_column = "Digoxin Dose >125mcg"
+      GFR_column = GFR_column,
+      digoxin_column = digoxin_column
     )
   }
 
   if ("stopp_e2" %in% included_criteria) {
     output$stopp_e2 <- stopp_e2(
       df, drug_string = drug_string,
-      GFR_column = "Lab Values: eGFR"
+      GFR_column = GFR_column
     )
   }
 
   if ("stopp_e3" %in% included_criteria) {
     output$stopp_e3 <- stopp_e3(
       df, drug_string = drug_string,
-      GFR_column = "Lab Values: eGFR"
+      GFR_column = GFR_column
     )
   }
 
   if ("stopp_e4" %in% included_criteria) {
     output$stopp_e4 <- stopp_e4(
       df, drug_string = drug_string,
-      GFR_column = "Lab Values: eGFR"
+      GFR_column = GFR_column
     )
   }
 
   if ("stopp_e5" %in% included_criteria) {
     output$stopp_e5 <- stopp_e5(
       df, drug_string = drug_string,
-      GFR_column = "Lab Values: eGFR"
+      GFR_column = GFR_column
     )
   }
 
   if ("stopp_e6" %in% included_criteria) {
     output$stopp_e6 <- stopp_e6(
       df, drug_string = drug_string,
-      GFR_column = "Lab Values: eGFR"
+      GFR_column = GFR_column
     )
   }
 
@@ -493,7 +507,7 @@ all_stoppstart <- function(
   if ("stopp_f2" %in% included_criteria) {
     output$stopp_f2 <- stopp_f2(
       df, drug_string = drug_string,
-      ppi_column = "Full Dose PPI"
+      ppi_column = ppi_column
     )
   }
 
@@ -506,7 +520,7 @@ all_stoppstart <- function(
   if ("stopp_f4" %in% included_criteria) {
     output$stopp_f4 <- stopp_f4(
       df, drug_string = drug_string,
-      Fe_column = "Elemental Iron >600mg"
+      Fe_column = Fe_column
     )
   }
 

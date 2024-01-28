@@ -2,7 +2,7 @@
 % Please edit documentation in R/all_stoppstart.R
 \name{all_stoppstart}
 \alias{all_stoppstart}
-\title{Title}
+\title{Implement all STOPP/START criteria or a subset of them.}
 \usage{
 all_stoppstart(
   df,
@@ -11,9 +11,16 @@ all_stoppstart(
   diastolic_column = "Diastolic_BP",
   systolic_column = "Systolic_BP",
   age_column = "Age",
-  HR_column = "HR_column",
-  K_column = "K_column",
   gender_column = "Gender",
+  GFR_column = "Lab Values: eGFR",
+  HR_column = "Lab Values: Heart Rate",
+  K_column = "Lab Values: K",
+  Na_column = "Lab Values: Na",
+  CCa_column = "Lab Values: Corrected Ca",
+  asa_column = "Aspirin dose >150mg",
+  digoxin_column = "Digoxin Dose >125mcg",
+  Fe_column = "Elemental Iron >600mg",
+  ppi_column = "Full Dose PPI",
   excluded_criteria = c(),
   included_criteria = c("start_a1", "start_a3", "start_a4", "start_a5", "start_a6",
     "start_a7", "start_a8", "start_b1", "start_c1", "start_c2", "start_c3a", "start_c3b",
@@ -47,11 +54,25 @@ all_stoppstart(
 
 \item{age_column}{.}
 
+\item{gender_column}{.}
+
+\item{GFR_column}{.}
+
 \item{HR_column}{.}
 
 \item{K_column}{.}
 
-\item{gender_column}{.}
+\item{Na_column}{.}
+
+\item{CCa_column}{.}
+
+\item{asa_column}{.}
+
+\item{digoxin_column}{.}
+
+\item{Fe_column}{.}
+
+\item{ppi_column}{.}
 
 \item{excluded_criteria}{.}
 
@@ -61,5 +82,5 @@ all_stoppstart(
 Data frame of character vectors.
 }
 \description{
-Title
+Implement all STOPP/START criteria or a subset of them.
 }
