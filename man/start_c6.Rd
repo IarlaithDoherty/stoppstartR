@@ -6,7 +6,7 @@
 \usage{
 start_c6(
   df,
-  GFR_column = "Lab Values: eGFR",
+  gfr_column = "Lab Values: eGFR",
   comorb_string = "Comorbidity_",
   drug_string = "Drug_"
 )
@@ -14,7 +14,7 @@ start_c6(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{GFR_column}{The name of the patient GFR column as a character string.}
+\item{gfr_column}{The name of the patient GFR column as a character string.}
 
 \item{comorb_string}{Character string contained in the name of each
 comorbidity column which uniquely identifies them.}

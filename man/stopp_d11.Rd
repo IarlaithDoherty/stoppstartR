@@ -6,7 +6,7 @@
 \usage{
 stopp_d11(
   df,
-  HR_column = "Lab Values: Heart Rate",
+  hr_column = "Lab Values: Heart Rate",
   comorb_string = "Comorbidity_",
   drug_string = "Drug_"
 )
@@ -14,7 +14,7 @@ stopp_d11(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{HR_column}{The name of the patient heart rate column as a character
+\item{hr_column}{The name of the patient heart rate column as a character
 string.}
 
 \item{comorb_string}{Character string contained in the name of each

@@ -191,7 +191,7 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param Na_column The name of the patient Na column as a character string.
+#' @param sodium_column The name of the patient Na column as a character string.
 
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
@@ -206,12 +206,12 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-stopp_d4 <- function(df, Na_column = "Lab Values: Na",
+stopp_d4 <- function(df, sodium_column = "Lab Values: Na",
                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = "Lab Values: Na"
 ))) {
-    stop(paste0("No column names include ", Na_column,
-                ". Change Na_column argument."))
+    stop(paste0("No column names include ", sodium_column,
+                ". Change sodium_column argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
@@ -224,7 +224,7 @@ stopp_d4 <- function(df, Na_column = "Lab Values: Na",
   prelim_codes <- list()
 
   # prelim_checks$extras1 is TRUE if the patient's Na is less than 130 mmol/L.
-  prelim_checks$extras1 <- df[, Na_column, drop = TRUE] < 130
+  prelim_checks$extras1 <- df[, sodium_column, drop = TRUE] < 130
 
 
   # all_prelims is a logical vector with one entry per patient.

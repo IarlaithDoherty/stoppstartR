@@ -6,7 +6,7 @@
 \usage{
 stopp_b11(
   df,
-  K_column = "Lab Values: K",
+  potassium_column = "Lab Values: K",
   comorb_string = "Comorbidity_",
   drug_string = "Drug_"
 )
@@ -14,7 +14,7 @@ stopp_b11(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{K_column}{The name of the patient serum potassium column as a character
+\item{potassium_column}{The name of the patient serum potassium column as a character
 string.}
 
 \item{comorb_string}{Character string contained in the name of each

@@ -134,7 +134,7 @@ stopp_d10 <- function(df, comorb_string = "Comorbidity_",
 #'                      comorbidity column which uniquely identifies them.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
-#' @param HR_column The name of the patient heart rate column as a character
+#' @param hr_column The name of the patient heart rate column as a character
 #' string.
 #'
 #' @return `output`: character vector,
@@ -147,7 +147,7 @@ stopp_d10 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-stopp_d11 <- function(df, HR_column = "Lab Values: Heart Rate",
+stopp_d11 <- function(df, hr_column = "Lab Values: Heart Rate",
                      comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
 
@@ -157,9 +157,9 @@ stopp_d11 <- function(df, HR_column = "Lab Values: Heart Rate",
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
-  } else if (!(HR_column %in% colnames(df))) {
-    stop(paste0("No columns are named ", HR_column,
-                ". Change HR_column argument."))
+  } else if (!(hr_column %in% colnames(df))) {
+    stop(paste0("No columns are named ", hr_column,
+                ". Change hr_column argument."))
   }
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
@@ -169,7 +169,7 @@ stopp_d11 <- function(df, HR_column = "Lab Values: Heart Rate",
 
   # prelim_checks$extras1 is TRUE if the patient's HR is less than 50 beats per
   # minute.
-  prelim_checks$extras1 <- df[, HR_column, drop = TRUE] < 60
+  prelim_checks$extras1 <- df[, hr_column, drop = TRUE] < 60
 
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
   prelim_codes$comorbs1 <- c("I49.5", "R00.1",  "I44.1", "I44.2", "I44.3",

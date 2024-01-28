@@ -6,9 +6,9 @@
 \usage{
 stopp_b8(
   df,
-  K_column = "Lab Values: K",
-  Na_column = "Lab Values: Na",
-  CCa_column = "Lab Values: Corrected Ca",
+  potassium_column = "Lab Values: K",
+  sodium_column = "Lab Values: Na",
+  calcium_column = "Lab Values: Corrected Ca",
   drug_string = "Drug_",
   comorb_string = "Comorbidity_"
 )
@@ -16,11 +16,11 @@ stopp_b8(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{K_column}{The name of the patient K column as a character string.}
+\item{potassium_column}{The name of the patient K column as a character string.}
 
-\item{Na_column}{The name of the patient Na column as a character string.}
+\item{sodium_column}{The name of the patient Na column as a character string.}
 
-\item{CCa_column}{The name of the patient CCa column as a character string.}
+\item{calcium_column}{The name of the patient CCa column as a character string.}
 
 \item{drug_string}{Character string contained in the name of each drug
 column which uniquely identifies them.}

@@ -4,12 +4,12 @@
 \alias{stopp_f4}
 \title{Function to implement STOPP-F4 criterion.}
 \usage{
-stopp_f4(df, Fe_column = "Elemental Iron >600mg", drug_string = "Drug_")
+stopp_f4(df, iron_column = "Elemental Iron >600mg", drug_string = "Drug_")
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{Fe_column}{The name of the patient elemental iron column as a character
+\item{iron_column}{The name of the patient elemental iron column as a character
 string.}
 
 \item{drug_string}{Character string contained in the name of each drug

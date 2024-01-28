@@ -123,9 +123,9 @@ stopp_b7 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param K_column The name of the patient K column as a character string.
-#' @param Na_column The name of the patient Na column as a character string.
-#' @param CCa_column The name of the patient CCa column as a character string.
+#' @param potassium_column The name of the patient K column as a character string.
+#' @param sodium_column The name of the patient Na column as a character string.
+#' @param calcium_column The name of the patient CCa column as a character string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #' @param comorb_string Character string contained in the name of each
@@ -141,24 +141,24 @@ stopp_b7 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-stopp_b8 <- function(df, K_column = "Lab Values: K",
-                     Na_column = "Lab Values: Na",
-                     CCa_column = "Lab Values: Corrected Ca",
+stopp_b8 <- function(df, potassium_column = "Lab Values: K",
+                     sodium_column = "Lab Values: Na",
+                     calcium_column = "Lab Values: Corrected Ca",
                      drug_string = "Drug_",
                      comorb_string = "Comorbidity_") {
 
-  if (!any(grepl(colnames(df), pattern = K_column))) {
-    stop(paste0("No column names include ", K_column,
+  if (!any(grepl(colnames(df), pattern = potassium_column))) {
+    stop(paste0("No column names include ", potassium_column,
                 ". Change K_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
-  } else if (!(Na_column %in% colnames(df))) {
-    stop(paste0("No columns are named ", Na_column,
-                ". Change Na_column argument."))
-  } else if (!(CCa_column %in% colnames(df))) {
-    stop(paste0("No columns are named ", CCa_column,
-                ". Change CCa_column argument."))
+  } else if (!(sodium_column %in% colnames(df))) {
+    stop(paste0("No columns are named ", sodium_column,
+                ". Change sodium_column argument."))
+  } else if (!(calcium_column %in% colnames(df))) {
+    stop(paste0("No columns are named ", calcium_column,
+                ". Change calcium_column argument."))
   } else if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
                 ". Change comorb_string argument."))
@@ -193,15 +193,15 @@ stopp_b8 <- function(df, K_column = "Lab Values: K",
 
   # action_checks$extras1 is TRUE if the patient's serum sodium is greater than
   # 130.
-  action_checks$extras1 <- df[, Na_column, drop = TRUE] > 130
+  action_checks$extras1 <- df[, sodium_column, drop = TRUE] > 130
 
   # action_checks$extras2 is TRUE if the patient's serum potassium is greater
   # than 3.5.
-  action_checks$extras2 <- df[, K_column, drop = TRUE] > 3.5
+  action_checks$extras2 <- df[, potassium_column, drop = TRUE] > 3.5
 
   # action_checks$extras3 is TRUE if the patient's corrected calcium is less
   # than 2.65.
-  action_checks$extras3 <- df[, CCa_column, drop = TRUE] < 2.65
+  action_checks$extras3 <- df[, calcium_column, drop = TRUE] < 2.65
 
   # action_codes$comorb4 is a character vector of drug codes to check.
   action_codes$comorb4 <- c("M10", "E87.6", "E87.1", "E83.5")
@@ -427,7 +427,7 @@ stopp_b10 <- function(df, comorb_string = "Comorbidity_",
 #'                      comorbidity column which uniquely identifies them.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
-#' @param K_column The name of the patient serum potassium column as a character
+#' @param potassium_column The name of the patient serum potassium column as a character
 #' string.
 #'
 #' @return `output`: character vector,
@@ -440,7 +440,7 @@ stopp_b10 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-stopp_b11 <- function(df, K_column = "Lab Values: K",
+stopp_b11 <- function(df, potassium_column = "Lab Values: K",
                       comorb_string = "Comorbidity_",
                       drug_string = "Drug_") {
 
@@ -450,9 +450,9 @@ stopp_b11 <- function(df, K_column = "Lab Values: K",
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
-  } else if (!(K_column %in% colnames(df))) {
-    stop(paste0("No columns are named ", K_column,
-                ". Change K_column argument."))
+  } else if (!(potassium_column %in% colnames(df))) {
+    stop(paste0("No columns are named ", potassium_column,
+                ". Change potassium_column argument."))
   }
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
@@ -462,7 +462,7 @@ stopp_b11 <- function(df, K_column = "Lab Values: K",
 
   # prelim_checks$extras1 is TRUE if the patient's serum potassium is greater
   # than 5.
-  prelim_checks$extras1 <- df[, K_column, drop = TRUE] > 5
+  prelim_checks$extras1 <- df[, potassium_column, drop = TRUE] > 5
 
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
   prelim_codes$comorbs1 <- c("E87.5")

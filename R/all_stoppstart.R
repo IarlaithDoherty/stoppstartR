@@ -7,14 +7,14 @@
 #' @param systolic_column .
 #' @param age_column .
 #' @param gender_column .
-#' @param GFR_column .
-#' @param HR_column .
-#' @param K_column .
-#' @param Na_column .
-#' @param CCa_column .
+#' @param gfr_column .
+#' @param hr_column .
+#' @param potassium_column .
+#' @param sodium_column .
+#' @param calcium_column .
 #' @param asa_column .
 #' @param digoxin_column .
-#' @param Fe_column .
+#' @param iron_column .
 #' @param ppi_column .
 #' @param excluded_criteria .
 #' @param included_criteria .
@@ -29,14 +29,14 @@ all_stoppstart <- function(
   systolic_column = "Systolic_BP",
   age_column = "Age",
   gender_column = "Gender",
-  GFR_column = "Lab Values: eGFR",
-  HR_column = "Lab Values: Heart Rate",
-  K_column = "Lab Values: K",
-  Na_column = "Lab Values: Na",
-  CCa_column = "Lab Values: Corrected Ca",
+  gfr_column = "Lab Values: eGFR",
+  hr_column = "Lab Values: Heart Rate",
+  potassium_column = "Lab Values: K",
+  sodium_column = "Lab Values: Na",
+  calcium_column = "Lab Values: Corrected Ca",
   asa_column = "Aspirin dose >150mg",
   digoxin_column = "Digoxin Dose >125mcg",
-  Fe_column = "Elemental Iron >600mg",
+  iron_column = "Elemental Iron >600mg",
   ppi_column = "Full Dose PPI",
   excluded_criteria = c(),
   included_criteria = c(
@@ -60,7 +60,7 @@ all_stoppstart <- function(
     "stopp_i1",   "stopp_i2",   "stopp_j1",   "stopp_j2",   "stopp_j4",
     "stopp_j5",   "stopp_j6",   "stopp_k1",   "stopp_k2",   "stopp_k3",
     "stopp_k4",   "stopp_l2",   "stopp_l3",   "stopp_m1"
-    )
+  )
 ) {
 
   included_criteria <- setdiff(included_criteria, excluded_criteria)
@@ -157,7 +157,7 @@ all_stoppstart <- function(
   if ("start_c6" %in% included_criteria) {
     output$start_c6 <- start_c6(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      GFR_column = GFR_column
+      gfr_column = gfr_column
     )
   }
 
@@ -263,7 +263,7 @@ all_stoppstart <- function(
   if ("stopp_b4" %in% included_criteria) {
     output$stopp_b4 <- stopp_b4(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      HR_column = HR_column
+      hr_column = hr_column
     )
   }
 
@@ -288,9 +288,9 @@ all_stoppstart <- function(
   if ("stopp_b8" %in% included_criteria) {
     output$stopp_b8 <- stopp_b8(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      K_column = K_column,
-      Na_column = Na_column,
-      CCa_column = CCa_column
+      potassium_column = potassium_column,
+      sodium_column = sodium_column,
+      calcium_column = calcium_column
     )
   }
 
@@ -309,7 +309,7 @@ all_stoppstart <- function(
   if ("stopp_b11" %in% included_criteria) {
     output$stopp_b11 <- stopp_b11(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      K_column = K_column
+      potassium_column = potassium_column
     )
   }
 
@@ -390,7 +390,7 @@ all_stoppstart <- function(
   if ("stopp_d4" %in% included_criteria) {
     output$stopp_d4 <- stopp_d4(
       df, drug_string = drug_string,
-      Na_column = Na_column
+      sodium_column = sodium_column
     )
   }
 
@@ -433,7 +433,7 @@ all_stoppstart <- function(
   if ("stopp_d11" %in% included_criteria) {
     output$stopp_d11 <- stopp_d11(
       df, comorb_string = comorb_string, drug_string = drug_string,
-      HR_column = HR_column
+      hr_column = hr_column
     )
   }
 
@@ -458,7 +458,7 @@ all_stoppstart <- function(
   if ("stopp_e1" %in% included_criteria) {
     output$stopp_e1 <- stopp_e1(
       df, drug_string = drug_string,
-      GFR_column = GFR_column,
+      gfr_column = gfr_column,
       digoxin_column = digoxin_column
     )
   }
@@ -466,35 +466,35 @@ all_stoppstart <- function(
   if ("stopp_e2" %in% included_criteria) {
     output$stopp_e2 <- stopp_e2(
       df, drug_string = drug_string,
-      GFR_column = GFR_column
+      gfr_column = gfr_column
     )
   }
 
   if ("stopp_e3" %in% included_criteria) {
     output$stopp_e3 <- stopp_e3(
       df, drug_string = drug_string,
-      GFR_column = GFR_column
+      gfr_column = gfr_column
     )
   }
 
   if ("stopp_e4" %in% included_criteria) {
     output$stopp_e4 <- stopp_e4(
       df, drug_string = drug_string,
-      GFR_column = GFR_column
+      gfr_column = gfr_column
     )
   }
 
   if ("stopp_e5" %in% included_criteria) {
     output$stopp_e5 <- stopp_e5(
       df, drug_string = drug_string,
-      GFR_column = GFR_column
+      gfr_column = gfr_column
     )
   }
 
   if ("stopp_e6" %in% included_criteria) {
     output$stopp_e6 <- stopp_e6(
       df, drug_string = drug_string,
-      GFR_column = GFR_column
+      gfr_column = gfr_column
     )
   }
 
@@ -520,7 +520,7 @@ all_stoppstart <- function(
   if ("stopp_f4" %in% included_criteria) {
     output$stopp_f4 <- stopp_f4(
       df, drug_string = drug_string,
-      Fe_column = Fe_column
+      iron_column = iron_column
     )
   }
 

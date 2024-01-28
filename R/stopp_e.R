@@ -20,7 +20,7 @@
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param GFR_column The name of the patient Na column as a character string.
+#' @param gfr_column The name of the patient Na column as a character string.
 #' @param digoxin_column The name of the patient Digoxin column as a
 #' character string.
 #' @param drug_string Character string contained in the name of each drug
@@ -36,12 +36,12 @@
 #' }
 #'
 #' @export
-stopp_e1 <- function(df, GFR_column = "Lab Values: eGFR", digoxin_column =
+stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR", digoxin_column =
                     "Digoxin Dose >125mcg",
                      drug_string = "Drug_") {
 
-  if (!any(grepl(colnames(df), pattern = GFR_column))) {
-    stop(paste0("No column names include ", GFR_column,
+  if (!any(grepl(colnames(df), pattern = gfr_column))) {
+    stop(paste0("No column names include ", gfr_column,
                 ". Change GFR_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
@@ -58,7 +58,7 @@ stopp_e1 <- function(df, GFR_column = "Lab Values: eGFR", digoxin_column =
   prelim_codes <- list()
 
   # prelim_checks$extras1 is TRUE if the patient's GFR is less than 30ml/min.
-  prelim_checks$extras1 <- df[, GFR_column, drop = TRUE] < 30
+  prelim_checks$extras1 <- df[, gfr_column, drop = TRUE] < 30
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
   prelim_codes$drugs1 <- c("C01AA05")
@@ -114,7 +114,7 @@ stopp_e1 <- function(df, GFR_column = "Lab Values: eGFR", digoxin_column =
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param GFR_column The name of the patient Na column as a character string.
+#' @param gfr_column The name of the patient Na column as a character string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #'
@@ -128,11 +128,11 @@ stopp_e1 <- function(df, GFR_column = "Lab Values: eGFR", digoxin_column =
 #' }
 #'
 #' @export
-stopp_e2 <- function(df, GFR_column = "Lab Values: eGFR",
+stopp_e2 <- function(df, gfr_column = "Lab Values: eGFR",
                      drug_string = "Drug_") {
 
-  if (!any(grepl(colnames(df), pattern = GFR_column))) {
-    stop(paste0("No column names include ", GFR_column,
+  if (!any(grepl(colnames(df), pattern = gfr_column))) {
+    stop(paste0("No column names include ", gfr_column,
                 ". Change GFR_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
@@ -164,7 +164,7 @@ stopp_e2 <- function(df, GFR_column = "Lab Values: eGFR",
   action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 30ml/min.
-  action_checks$extras1 <- df[, GFR_column, drop = TRUE] > 30
+  action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 30
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.
@@ -196,7 +196,7 @@ stopp_e2 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param GFR_column The name of the patient Na column as a character string.
+#' @param gfr_column The name of the patient Na column as a character string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #'
@@ -210,11 +210,11 @@ stopp_e2 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @export
-stopp_e3 <- function(df, GFR_column = "Lab Values: eGFR",
+stopp_e3 <- function(df, gfr_column = "Lab Values: eGFR",
                      drug_string = "Drug_") {
 
-  if (!any(grepl(colnames(df), pattern = GFR_column))) {
-    stop(paste0("No column names include ", GFR_column,
+  if (!any(grepl(colnames(df), pattern = gfr_column))) {
+    stop(paste0("No column names include ", gfr_column,
                 ". Change GFR_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
@@ -246,7 +246,7 @@ stopp_e3 <- function(df, GFR_column = "Lab Values: eGFR",
   action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 15ml/min.
-  action_checks$extras1 <- df[, GFR_column, drop = TRUE] > 15
+  action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 15
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.
@@ -278,7 +278,7 @@ stopp_e3 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param GFR_column The name of the patient Na column as a character string.
+#' @param gfr_column The name of the patient Na column as a character string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #'
@@ -292,11 +292,11 @@ stopp_e3 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @export
-stopp_e4 <- function(df, GFR_column = "Lab Values: eGFR",
+stopp_e4 <- function(df, gfr_column = "Lab Values: eGFR",
                      drug_string = "Drug_") {
 
-  if (!any(grepl(colnames(df), pattern = GFR_column))) {
-    stop(paste0("No column names include ", GFR_column,
+  if (!any(grepl(colnames(df), pattern = gfr_column))) {
+    stop(paste0("No column names include ", gfr_column,
                 ". Change GFR_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
@@ -328,7 +328,7 @@ stopp_e4 <- function(df, GFR_column = "Lab Values: eGFR",
   action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 50ml/min.
-  action_checks$extras1 <- df[, GFR_column, drop = TRUE] > 50
+  action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 50
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.
@@ -360,7 +360,7 @@ stopp_e4 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param GFR_column The name of the patient Na column as a character string.
+#' @param gfr_column The name of the patient Na column as a character string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #'
@@ -374,11 +374,11 @@ stopp_e4 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @export
-stopp_e5 <- function(df, GFR_column = "Lab Values: eGFR",
+stopp_e5 <- function(df, gfr_column = "Lab Values: eGFR",
                      drug_string = "Drug_") {
 
-  if (!any(grepl(colnames(df), pattern = GFR_column))) {
-    stop(paste0("No column names include ", GFR_column,
+  if (!any(grepl(colnames(df), pattern = gfr_column))) {
+    stop(paste0("No column names include ", gfr_column,
                 ". Change GFR_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
@@ -410,7 +410,7 @@ stopp_e5 <- function(df, GFR_column = "Lab Values: eGFR",
   action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 50ml/min.
-  action_checks$extras1 <- df[, GFR_column, drop = TRUE] > 10
+  action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 10
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.
@@ -444,7 +444,7 @@ stopp_e5 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param GFR_column The name of the patient Na column as a character string.
+#' @param gfr_column The name of the patient Na column as a character string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #'
@@ -458,11 +458,11 @@ stopp_e5 <- function(df, GFR_column = "Lab Values: eGFR",
 #' }
 #'
 #' @export
-stopp_e6 <- function(df, GFR_column = "Lab Values: eGFR",
+stopp_e6 <- function(df, gfr_column = "Lab Values: eGFR",
                      drug_string = "Drug_") {
 
-  if (!any(grepl(colnames(df), pattern = GFR_column))) {
-    stop(paste0("No column names include ", GFR_column,
+  if (!any(grepl(colnames(df), pattern = gfr_column))) {
+    stop(paste0("No column names include ", gfr_column,
                 ". Change GFR_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
@@ -497,7 +497,7 @@ stopp_e6 <- function(df, GFR_column = "Lab Values: eGFR",
   action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 30ml/min.
-  action_checks$extras1 <- df[, GFR_column, drop = TRUE] > 30
+  action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 30
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.

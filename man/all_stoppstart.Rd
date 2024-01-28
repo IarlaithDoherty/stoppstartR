@@ -12,14 +12,14 @@ all_stoppstart(
   systolic_column = "Systolic_BP",
   age_column = "Age",
   gender_column = "Gender",
-  GFR_column = "Lab Values: eGFR",
-  HR_column = "Lab Values: Heart Rate",
-  K_column = "Lab Values: K",
-  Na_column = "Lab Values: Na",
-  CCa_column = "Lab Values: Corrected Ca",
+  gfr_column = "Lab Values: eGFR",
+  hr_column = "Lab Values: Heart Rate",
+  potassium_column = "Lab Values: K",
+  sodium_column = "Lab Values: Na",
+  calcium_column = "Lab Values: Corrected Ca",
   asa_column = "Aspirin dose >150mg",
   digoxin_column = "Digoxin Dose >125mcg",
-  Fe_column = "Elemental Iron >600mg",
+  iron_column = "Elemental Iron >600mg",
   ppi_column = "Full Dose PPI",
   excluded_criteria = c(),
   included_criteria = c("start_a1", "start_a3", "start_a4", "start_a5", "start_a6",
@@ -56,21 +56,21 @@ all_stoppstart(
 
 \item{gender_column}{.}
 
-\item{GFR_column}{.}
+\item{gfr_column}{.}
 
-\item{HR_column}{.}
+\item{hr_column}{.}
 
-\item{K_column}{.}
+\item{potassium_column}{.}
 
-\item{Na_column}{.}
+\item{sodium_column}{.}
 
-\item{CCa_column}{.}
+\item{calcium_column}{.}
 
 \item{asa_column}{.}
 
 \item{digoxin_column}{.}
 
-\item{Fe_column}{.}
+\item{iron_column}{.}
 
 \item{ppi_column}{.}
 

@@ -4,12 +4,12 @@
 \alias{stopp_e6}
 \title{Function to implement STOPP-E6 criterion.}
 \usage{
-stopp_e6(df, GFR_column = "Lab Values: eGFR", drug_string = "Drug_")
+stopp_e6(df, gfr_column = "Lab Values: eGFR", drug_string = "Drug_")
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{GFR_column}{The name of the patient Na column as a character string.}
+\item{gfr_column}{The name of the patient Na column as a character string.}
 
 \item{drug_string}{Character string contained in the name of each drug
 column which uniquely identifies them.}

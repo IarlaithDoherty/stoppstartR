@@ -4,12 +4,12 @@
 \alias{stopp_d4}
 \title{Function to implement STOPP-D4 criterion.}
 \usage{
-stopp_d4(df, Na_column = "Lab Values: Na", drug_string = "Drug_")
+stopp_d4(df, sodium_column = "Lab Values: Na", drug_string = "Drug_")
 }
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{Na_column}{The name of the patient Na column as a character string.}
+\item{sodium_column}{The name of the patient Na column as a character string.}
 
 \item{drug_string}{Character string contained in the name of each drug
 column which uniquely identifies them.}

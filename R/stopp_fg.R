@@ -305,7 +305,7 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param Fe_column The name of the patient elemental iron column as a character
+#' @param iron_column The name of the patient elemental iron column as a character
 #' string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
@@ -320,11 +320,11 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-stopp_f4 <- function(df, Fe_column = "Elemental Iron >600mg",
+stopp_f4 <- function(df, iron_column = "Elemental Iron >600mg",
                      drug_string = "Drug_") {
 
-  if (!any(grepl(colnames(df), pattern = Fe_column))) {
-    stop(paste0("No column names include ", Fe_column,
+  if (!any(grepl(colnames(df), pattern = iron_column))) {
+    stop(paste0("No column names include ", iron_column,
                 ". Change Fe_string argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
@@ -357,7 +357,7 @@ stopp_f4 <- function(df, Fe_column = "Elemental Iron >600mg",
 
   # action_checks$extras1 is TRUE if the patient's elemental iron dose is
   # less than than 600mg.
-  action_checks$extras1 <- df[, Fe_column, drop = TRUE] == "No"
+  action_checks$extras1 <- df[, iron_column, drop = TRUE] == "No"
 
   # all_actions is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'action_checks'.

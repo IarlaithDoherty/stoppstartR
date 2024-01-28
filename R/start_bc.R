@@ -648,7 +648,7 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #'                      comorbidity column which uniquely identifies them.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
-#' @param GFR_column The name of the patient GFR column as a character string.
+#' @param gfr_column The name of the patient GFR column as a character string.
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -660,7 +660,7 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @export
-start_c6 <- function(df, GFR_column = "Lab Values: eGFR",
+start_c6 <- function(df, gfr_column = "Lab Values: eGFR",
                      comorb_string = "Comorbidity_",
                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
@@ -669,9 +669,9 @@ start_c6 <- function(df, GFR_column = "Lab Values: eGFR",
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
-  } else if (!any(grepl(colnames(df), pattern = GFR_column))) {
-    stop(paste0("No column names include ", GFR_column,
-                ". Change GFR_column argument."))
+  } else if (!any(grepl(colnames(df), pattern = gfr_column))) {
+    stop(paste0("No column names include ", gfr_column,
+                ". Change gfr_column argument."))
   }
 
 
@@ -688,7 +688,7 @@ start_c6 <- function(df, GFR_column = "Lab Values: eGFR",
                                           codes = prelim_codes$comorbs1,
                                           match = "any")
   # prelim_checks$extras1 is TRUE if the patient's GFR is greater than 30ml/min.
-  prelim_checks$extras1 <- df[, GFR_column, drop = TRUE] > 30
+  prelim_checks$extras1 <- df[, gfr_column, drop = TRUE] > 30
 
   # all_prelims is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.

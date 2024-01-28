@@ -6,7 +6,7 @@
 \usage{
 stopp_e1(
   df,
-  GFR_column = "Lab Values: eGFR",
+  gfr_column = "Lab Values: eGFR",
   digoxin_column = "Digoxin Dose >125mcg",
   drug_string = "Drug_"
 )
@@ -14,7 +14,7 @@ stopp_e1(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{GFR_column}{The name of the patient Na column as a character string.}
+\item{gfr_column}{The name of the patient Na column as a character string.}
 
 \item{digoxin_column}{The name of the patient Digoxin column as a
 character string.}
