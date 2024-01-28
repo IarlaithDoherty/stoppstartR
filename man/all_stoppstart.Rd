@@ -13,7 +13,25 @@ all_stoppstart(
   age_column = "Age",
   HR_column = "HR_column",
   K_column = "K_column",
-  gender_column = "Gender"
+  gender_column = "Gender",
+  excluded_criteria = c(),
+  included_criteria = c("start_a1", "start_a3", "start_a4", "start_a5", "start_a6",
+    "start_a7", "start_a8", "start_b1", "start_c1", "start_c2", "start_c3a", "start_c3b",
+    "start_c4", "start_c5", "start_c6", "start_d1", "start_d2", "start_e1", "start_e2",
+    "start_e3", "start_e4", "start_e5", "start_e6", "start_e7", "start_g1", "start_g2",
+    "start_g3", "start_h2", "stopp_b1", "stopp_b2", "stopp_b3", "stopp_b4", "stopp_b5",
+    "stopp_b6", "stopp_b7", "stopp_b8", "stopp_b9", "stopp_b10", "stopp_b11",
+    "stopp_b13a", "stopp_b13b", 
+     "stopp_c1", "stopp_c2", "stopp_c5", "stopp_c7",
+    "stopp_c8", "stopp_c9", "stopp_c10", "stopp_c11", "stopp_d1", "stopp_d3", "stopp_d4",
+    "stopp_d5", "stopp_d6", "stopp_d7", "stopp_d8", "stopp_d9", "stopp_d10", "stopp_d11",
+    "stopp_d12", "stopp_d13", "stopp_d14", "stopp_e1", "stopp_e2", "stopp_e3",
+    "stopp_e4", "stopp_e5", "stopp_e6", "stopp_f1", "stopp_f2", "stopp_f3", "stopp_f4",
+    "stopp_g1", "stopp_g2", "stopp_g4", "stopp_h1", "stopp_h2", "stopp_h4", "stopp_h5",
+    "stopp_h6", "stopp_h7", "stopp_h8", 
+     "stopp_h9", "stopp_i1", "stopp_i2",
+    "stopp_j1", "stopp_j2", "stopp_j4", "stopp_j5", "stopp_j6", "stopp_k1", "stopp_k2",
+    "stopp_k3", "stopp_k4", "stopp_l2", "stopp_l3", "stopp_m1")
 )
 }
 \arguments{
@@ -34,6 +52,10 @@ all_stoppstart(
 \item{K_column}{.}
 
 \item{gender_column}{.}
+
+\item{excluded_criteria}{.}
+
+\item{included_criteria}{.}
 }
 \value{
 Data frame of character vectors.
