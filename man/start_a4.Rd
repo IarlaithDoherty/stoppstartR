@@ -23,7 +23,8 @@ column which uniquely identifies them.}
 
 \item{systolic_column}{The name of the systolic column as a character string.}
 
-\item{diastolic_column}{The name of the diastolic column as a character string.}
+\item{diastolic_column}{The name of the diastolic column as a character
+string.}
 }
 \value{
 \code{output}: character vector,
