@@ -301,7 +301,7 @@ start_c2 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @export
 start_c3a <- function(df, comorb_string = "Comorbidity_",
-                     drug_string = "Drug_") {
+                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
                 ". Change comorb_string argument."))

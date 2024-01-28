@@ -349,7 +349,7 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.
   all_prelims <- Reduce(x = prelim_checks, f = "&")
 
-   # action_checks is a list of logical vectors, each has one entry per patient.
+  # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
   # action_codes is a list of character vectors, each containing codes to check.
   action_codes <- list()

@@ -384,7 +384,7 @@ stopp_c10 <- function(df, drug_string = "Drug_") {
 #'
 #' @export
 stopp_c11 <- function(df,
-                     drug_string = "Drug_") {
+                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
@@ -400,9 +400,9 @@ stopp_c11 <- function(df,
   prelim_codes$drugs1 <- c("B01AC")
   # prelim_checks$drugs1 is TRUE if the patient has any listed drugs.
   prelim_checks$drugs1 <- check_matches(df,
-                                          column_string = drug_string,
-                                          codes = prelim_codes$drugs1,
-                                          match = "any")
+                                        column_string = drug_string,
+                                        codes = prelim_codes$drugs1,
+                                        match = "any")
 
   # prelim_codes$drugs2 is a character vector of drug codes to check.
   prelim_codes$drugs2 <- c("A02BC")

@@ -207,9 +207,9 @@ stopp_b8 <- function(df, K_column = "Lab Values: K",
   action_codes$comorb4 <- c("M10", "E87.6", "E87.1", "E83.5")
   # action_checks$drugs4 is TRUE if the patient has none listed comorbidities.
   action_checks$comorb4 <- check_matches(df,
-                                        column_string = comorb_string,
-                                        codes = action_codes$comorb4,
-                                        match = "none")
+                                         column_string = comorb_string,
+                                         codes = action_codes$comorb4,
+                                         match = "none")
 
 
   # all_actions is a logical vector with one entry per patient.
@@ -368,7 +368,7 @@ stopp_b9 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @export
 stopp_b10 <- function(df, comorb_string = "Comorbidity_",
-                     drug_string = "Drug_") {
+                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
                 ". Change comorb_string argument."))
@@ -441,8 +441,8 @@ stopp_b10 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @export
 stopp_b11 <- function(df, K_column = "Lab Values: K",
-                     comorb_string = "Comorbidity_",
-                     drug_string = "Drug_") {
+                      comorb_string = "Comorbidity_",
+                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
@@ -540,8 +540,8 @@ stopp_b11 <- function(df, K_column = "Lab Values: K",
 #'
 #' @export
 stopp_b13a <- function(df, systolic_column = "Systolic_BP",
-                      comorb_string = "Comorbidity_",
-                      drug_string = "Drug_") {
+                       comorb_string = "Comorbidity_",
+                       drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,

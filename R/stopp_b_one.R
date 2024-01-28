@@ -336,7 +336,7 @@ stopp_b4 <- function(df, HR_column = "Lab Values: Heart Rate",
 
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
   prelim_codes$comorbs1 <- c("I49.5", "R00.1", "I44.1", "I44.2", "I44.3",
-  "I45.5", "I45.9", "Q24.6")
+                             "I45.5", "I45.9", "Q24.6")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
                                           column_string = comorb_string,

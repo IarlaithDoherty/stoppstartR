@@ -152,9 +152,9 @@ stopp_c2 <- function(df, comorb_string = "Comorbidity_",
   prelim_codes$drugs1 <- c("A02BC")
   # prelim_checks$drugs1 is TRUE if the patient has none listed comorbidities.
   prelim_checks$drugs1 <- check_matches(df,
-                                          column_string = drug_string,
-                                          codes = prelim_codes$drugs1,
-                                          match = "none")
+                                        column_string = drug_string,
+                                        codes = prelim_codes$drugs1,
+                                        match = "none")
 
   # all_prelims is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.
@@ -168,9 +168,9 @@ stopp_c2 <- function(df, comorb_string = "Comorbidity_",
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
   action_codes$drugs1 <- c("B01AC06", "B01AC08", "N02BA01", "M01BA03",
-  "C10BX01", "C10BX02", "C10BX04", "C10BX05", "C10BX06", "C10BX08", "N02BA15",
-  "N02BA51", "N02BA65", "N02BA71"
-)
+                           "C10BX01", "C10BX02", "C10BX04", "C10BX05",
+                           "C10BX06", "C10BX08", "N02BA15", "N02BA51",
+                           "N02BA65", "N02BA71")
   # prelim_checks$drugs1 is TRUE if the patient is on none listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,

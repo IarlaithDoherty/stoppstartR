@@ -335,9 +335,9 @@ start_e2 <- function(df, drug_string = "Drug_") {
   prelim_codes$drugs1 <- c("H02AB")
   # prelim_checks$drugs1 is TRUE if the patient has any listed drugs.
   prelim_checks$drugs1 <- check_matches(df,
-                                          column_string = drug_string,
-                                          codes = prelim_codes$drugs1,
-                                          match = "any")
+                                        column_string = drug_string,
+                                        codes = prelim_codes$drugs1,
+                                        match = "any")
 
   # all_prelims is a logical vector with one entry per patient.
   # TRUE if the patient is TRUE for each element of 'prelim_checks'.
