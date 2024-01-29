@@ -221,8 +221,6 @@ stopp_d4 <- function(df, sodium_column = "Lab Values: Na",
 
   # prelim_checks is a list of logical vectors, each has one entry per patient.
   prelim_checks <- list()
-  # prelim_codes is a list of character vectors, each containing codes to check.
-  prelim_codes <- list()
 
   # prelim_checks$extras1 is TRUE if the patient's Na is less than 130 mmol/L.
   prelim_checks$extras1 <- df[, sodium_column, drop = TRUE] < 130

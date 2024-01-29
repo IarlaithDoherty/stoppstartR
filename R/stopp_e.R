@@ -75,8 +75,6 @@ stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's digoxin dose is greater than
   # 125mcg.
@@ -160,8 +158,6 @@ stopp_e2 <- function(df, gfr_column = "Lab Values: eGFR",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 30ml/min.
   action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 30
@@ -242,8 +238,6 @@ stopp_e3 <- function(df, gfr_column = "Lab Values: eGFR",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 15ml/min.
   action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 15
@@ -324,8 +318,6 @@ stopp_e4 <- function(df, gfr_column = "Lab Values: eGFR",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 50ml/min.
   action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 50
@@ -406,8 +398,6 @@ stopp_e5 <- function(df, gfr_column = "Lab Values: eGFR",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 50ml/min.
   action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 10
@@ -493,8 +483,6 @@ stopp_e6 <- function(df, gfr_column = "Lab Values: eGFR",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's GFR is greater than 30ml/min.
   action_checks$extras1 <- df[, gfr_column, drop = TRUE] > 30

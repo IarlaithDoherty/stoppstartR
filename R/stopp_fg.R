@@ -150,8 +150,6 @@ stopp_f2 <- function(df, ppi_column = "Full Dose PPI",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is True if the patient's aspirin dose column is
   # not equal to "Yes"
@@ -350,8 +348,6 @@ stopp_f4 <- function(df, iron_column = "Elemental Iron >600mg",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is TRUE if the patient's elemental iron dose is
   # less than than 600mg.

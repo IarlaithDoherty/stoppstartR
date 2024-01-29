@@ -65,8 +65,6 @@ stopp_c1 <- function(df, asa_column = "Aspirin dose >150mg",
 
   # action_checks is a list of logical vectors, each has one entry per patient.
   action_checks <- list()
-  # action_codes is a list of character vectors, each containing codes to check.
-  action_codes <- list()
 
   # action_checks$extras1 is True if the patient's aspirin dose column is
   # not equal to "Yes"
