@@ -16,11 +16,13 @@ stopp_b8(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{potassium_column}{The name of the patient K column as a character string.}
+\item{potassium_column}{The name of the patient potassium column as a
+character string.}
 
 \item{sodium_column}{The name of the patient Na column as a character string.}
 
-\item{calcium_column}{The name of the patient CCa column as a character string.}
+\item{calcium_column}{The name of the patient CCa column as a character
+string.}
 
 \item{drug_string}{Character string contained in the name of each drug
 column which uniquely identifies them.}

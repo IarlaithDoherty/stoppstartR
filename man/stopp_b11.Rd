@@ -14,8 +14,8 @@ stopp_b11(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{potassium_column}{The name of the patient serum potassium column as a character
-string.}
+\item{potassium_column}{The name of the patient serum potassium column as a
+character string.}
 
 \item{comorb_string}{Character string contained in the name of each
 comorbidity column which uniquely identifies them.}
