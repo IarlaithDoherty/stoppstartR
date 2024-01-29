@@ -36,8 +36,8 @@
 #' }
 #'
 #' @export
-stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR", digoxin_column =
-                    "Digoxin Dose >125mcg",
+stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR",
+                     digoxin_column = "Digoxin Dose >125mcg",
                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = gfr_column))) {

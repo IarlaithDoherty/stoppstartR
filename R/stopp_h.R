@@ -54,8 +54,7 @@ stopp_h1 <- function(df, comorb_string = "Comorbidity_",
 
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
   prelim_codes$comorbs1 <- c("K22.1", "K25", "K26", "K27", "K28", "K92.0",
-  "K92.1", "K92.2"
-)
+                             "K92.1", "K92.2")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
                                           column_string = comorb_string,
@@ -63,8 +62,7 @@ stopp_h1 <- function(df, comorb_string = "Comorbidity_",
                                           match = "any")
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
-  prelim_codes$drugs1 <- c("A02BA", "A02BC"
-)
+  prelim_codes$drugs1 <- c("A02BA", "A02BC")
   # prelim_checks$drugs1 is TRUE if the patient has none listed drugs.
   prelim_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
@@ -83,8 +81,7 @@ stopp_h1 <- function(df, comorb_string = "Comorbidity_",
 
   # action_codes$drugs1 is a character vector of drug codes to check.
   action_codes$drugs1 <- c("M01AA", "M01AB", "M01AC", "M01AE", "M01AG", "M01AX",
-                           "N02BA", "M01BA"
- )
+                           "N02BA", "M01BA")
   # action_checks$drugs1 is TRUE if the patient is on any listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
@@ -259,8 +256,7 @@ stopp_h4 <- function(df, comorb_string = "Comorbidity_",
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
   prelim_codes$drugs1 <- c("L04AX01", "L04AX03", "L04AA13", "L04AD01",
-  "A07EC01", "P01BA", "M01CB", "M01CC"
-)
+                           "A07EC01", "P01BA", "M01CB", "M01CC")
   # prelim_checks$drugs1 is TRUE if the patient has none listed drugs.
   prelim_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
@@ -628,9 +624,9 @@ stopp_h8 <- function(df, drug_string = "Drug_") {
   prelim_codes$drugs1 <- c("H02A", "H02B", "N02CB01")
   # prelim_checks$drugs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$drugs1 <- check_matches(df,
-                                          column_string = drug_string,
-                                          codes = prelim_codes$drugs1,
-                                          match = "any")
+                                        column_string = drug_string,
+                                        codes = prelim_codes$drugs1,
+                                        match = "any")
 
   # prelim_codes$drugs2 is a character vector of drug codes to check.
   prelim_codes$drugs2 <- c("A02BC")
@@ -726,9 +722,7 @@ stopp_h9 <- function(df, comorb_string = "Comorbidity_",
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
   prelim_codes$comorbs1 <- c("K20", "K21", "K22", "K23", "K25", "K26", "K27",
                              "K28", "K29", "K30", "K31", "R10.1", "R12", "R13",
-                             "K92.0", "K92.1", "K92.2"
-
-  )
+                             "K92.0", "K92.1", "K92.2")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
                                           column_string = comorb_string,
@@ -747,8 +741,7 @@ stopp_h9 <- function(df, comorb_string = "Comorbidity_",
 
   # action_codes$drugs1 is a character vector of drug codes to check.
   action_codes$drugs1 <- c("M05BA01", "M05BA02", "M05BA04", "M05BA05",
-                           "M05BA06", "M05BA07", "M05BB"
-  )
+                           "M05BA06", "M05BA07", "M05BB")
   # action_checks$drugs1 is TRUE if the patient is on none listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,

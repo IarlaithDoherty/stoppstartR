@@ -5,12 +5,14 @@
 start_e3_df <- data.frame(
   Comorbidity_1 = c("M80",   "M80",   "M80", NA),
   Drug_1        = c("A11CC",      NA, "A11CC", NA),
-  Drug_2        = c(NA, "A12AA", "A12AA", NA))
+  Drug_2        = c(NA, "A12AA", "A12AA", NA)
+)
 
 test_that("start_e3 works", {
   expect_equal(
     start_e3(start_e3_df),
-    c("START-E3", "START-E3", "Appropriate", "Not Relevant"))
+    c("START-E3", "START-E3", "Appropriate", "Not Relevant")
+  )
 })
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,12 +37,14 @@ start_e3_drugs2b <- c("A11GB01", "A12AA02", "A12AA",
 start_e3_trigger1 <- data.frame(
   Comorbidity_1 = expand.grid(start_e3_comorbs, NA, start_e3_drugs2b)[, 1],
   Drug_1        = NA,
-  Drug_2        = expand.grid(start_e3_comorbs, NA, start_e3_drugs2b)[, 3])
+  Drug_2        = expand.grid(start_e3_comorbs, NA, start_e3_drugs2b)[, 3]
+)
 
 start_e3_trigger2 <- data.frame(
   Comorbidity_1 = expand.grid(start_e3_comorbs, NA, start_e3_drugs2b)[, 1],
   Drug_1        = expand.grid(start_e3_comorbs, NA, start_e3_drugs2b)[, 2],
-  Drug_2        = NA)
+  Drug_2        = NA
+)
 
 start_e3_appropriate <- data.frame(
   Comorbidity_1 = expand.grid(start_e3_comorbs,
@@ -48,18 +52,21 @@ start_e3_appropriate <- data.frame(
   Drug_1        = expand.grid(start_e3_comorbs,
                               start_e3_drugs1, start_e3_drugs2)[, 2],
   Drug_2        = expand.grid(start_e3_comorbs,
-                              start_e3_drugs1, start_e3_drugs2)[, 3])
+                              start_e3_drugs1, start_e3_drugs2)[, 3]
+)
 
 test_that("all triggered 1", {
   expect_equal(
     start_e3(start_e3_trigger1),
-    rep("START-E3", length(start_e3_comorbs) * length(start_e3_drugs2b)))
+    rep("START-E3", length(start_e3_comorbs) * length(start_e3_drugs2b))
+  )
 })
 
 test_that("all triggered 2", {
   expect_equal(
     start_e3(start_e3_trigger2),
-    rep("START-E3", length(start_e3_comorbs) * length(start_e3_drugs1b)))
+    rep("START-E3", length(start_e3_comorbs) * length(start_e3_drugs1b))
+  )
 })
 
 test_that("all appropriate", {
@@ -67,5 +74,6 @@ test_that("all appropriate", {
     start_e3(start_e3_appropriate),
     rep("Appropriate",
         length(start_e3_comorbs) * length(start_e3_drugs1)
-        * length(start_e3_drugs2)))
+        * length(start_e3_drugs2))
+  )
 })

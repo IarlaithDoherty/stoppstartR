@@ -123,9 +123,11 @@ stopp_b7 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #'
 #' @param df Dataframe of patient information.
-#' @param potassium_column The name of the patient K column as a character string.
+#' @param potassium_column The name of the patient potassium column as a
+#'                         character string.
 #' @param sodium_column The name of the patient Na column as a character string.
-#' @param calcium_column The name of the patient CCa column as a character string.
+#' @param calcium_column The name of the patient CCa column as a character
+#'                       string.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
 #' @param comorb_string Character string contained in the name of each
@@ -427,8 +429,8 @@ stopp_b10 <- function(df, comorb_string = "Comorbidity_",
 #'                      comorbidity column which uniquely identifies them.
 #' @param drug_string Character string contained in the name of each drug
 #'                    column which uniquely identifies them.
-#' @param potassium_column The name of the patient serum potassium column as a character
-#' string.
+#' @param potassium_column The name of the patient serum potassium column as a
+#'                         character string.
 #'
 #' @return `output`: character vector,
 #' \itemize{

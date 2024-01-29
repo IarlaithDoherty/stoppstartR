@@ -39,7 +39,7 @@
 #'
 #' @export
 stopp_d10 <- function(df, comorb_string = "Comorbidity_",
-                     drug_string = "Drug_") {
+                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
                 ". Change comorb_string argument."))
@@ -148,8 +148,8 @@ stopp_d10 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @export
 stopp_d11 <- function(df, hr_column = "Lab Values: Heart Rate",
-                     comorb_string = "Comorbidity_",
-                     drug_string = "Drug_") {
+                      comorb_string = "Comorbidity_",
+                      drug_string = "Drug_") {
 
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
@@ -248,7 +248,7 @@ stopp_d11 <- function(df, hr_column = "Lab Values: Heart Rate",
 #'
 #' @export
 stopp_d12 <- function(df,
-                     drug_string = "Drug_") {
+                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
@@ -261,8 +261,7 @@ stopp_d12 <- function(df,
   action_codes <- list()
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
-  action_codes$drugs1 <- c("N05AA", "N05AB", "N05AC", "N05AX07"
-)
+  action_codes$drugs1 <- c("N05AA", "N05AB", "N05AC", "N05AX07")
   # prelim_checks$drugs1 is TRUE if the patient is on none listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
@@ -318,7 +317,7 @@ stopp_d12 <- function(df,
 #'
 #' @export
 stopp_d13 <- function(df, comorb_string = "Comorbidity_",
-                     drug_string = "Drug_") {
+                      drug_string = "Drug_") {
   if (!any(grepl(colnames(df), pattern = comorb_string))) {
     stop(paste0("No column names include ", comorb_string,
                 ". Change comorb_string argument."))
@@ -431,9 +430,7 @@ stopp_d14 <- function(df,
                            "R06AX02", "R06AX03", "R06AX04", "R06AX05",
                            "R06AX08", "R06AX09", "R06AX15", "R06AX16",
                            "R06AX17", "R06AX23", "R06AX53", "R06AX58",
-                           "N05BB01", "N05BB51", "N07CA02", "N07CA52"
-
-  )
+                           "N05BB01", "N05BB51", "N07CA02", "N07CA52")
   # prelim_checks$drugs1 is TRUE if the patient is on none listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,

@@ -46,8 +46,9 @@ stopp_d1 <- function(df, comorb_string = "Comorbidity_",
   prelim_codes <- list()
 
   # prelim_codes$comorbs1 is a character vector of comorbidity codes to check.
-  prelim_codes$comorbs1 <- c("F00", "F01", "F02", "F03", "G30", "G31.0",
-  "G31.1", "G31.8", "H40.2", "I44", "I45", "N40", "R33")
+  prelim_codes$comorbs1 <- c("F00", "F01", "F02", "F03",
+                             "G30", "G31.0", "G31.1", "G31.8",
+                             "H40.2", "I44", "I45", "N40", "R33")
   # prelim_checks$comorbs1 is TRUE if the patient has any listed comorbidities.
   prelim_checks$comorbs1 <- check_matches(df,
                                           column_string = comorb_string,
@@ -154,7 +155,7 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 
   # prelim_codes$drugs1 is a character vector of drug codes to check.
   action_codes$drugs1 <- c("N05AA01", "N05AH02", "N05AF01", "N05AB02",
-  "N05AC04", "N05AA03", "N05AF05")
+                           "N05AC04", "N05AA03", "N05AF05")
   # prelim_checks$drugs1 is TRUE if the patient is on none listed drugs.
   action_checks$drugs1 <- check_matches(df,
                                         column_string = drug_string,
@@ -208,8 +209,8 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 #' @export
 stopp_d4 <- function(df, sodium_column = "Lab Values: Na",
                      drug_string = "Drug_") {
-  if (!any(grepl(colnames(df), pattern = "Lab Values: Na"
-))) {
+
+  if (!any(grepl(colnames(df), pattern = "Lab Values: Na"))) {
     stop(paste0("No column names include ", sodium_column,
                 ". Change sodium_column argument."))
   } else if (!any(grepl(colnames(df), pattern = drug_string))) {
@@ -289,7 +290,7 @@ stopp_d4 <- function(df, sodium_column = "Lab Values: Na",
 #' @export
 stopp_d5 <- function(df,
                      drug_string = "Drug_") {
- if (!any(grepl(colnames(df), pattern = drug_string))) {
+  if (!any(grepl(colnames(df), pattern = drug_string))) {
     stop(paste0("No column names include ", drug_string,
                 ". Change drug_string argument."))
   }
@@ -396,7 +397,7 @@ stopp_d6 <- function(df, comorb_string = "Comorbidity_",
                                         codes = action_codes$drugs1,
                                         match = "none",
                                         exceptions = c("N05AH04", "N05AH02",
-                                                    "N05AN"))
+                                                       "N05AN"))
 
 
   # all_actions is a logical vector with one entry per patient.
