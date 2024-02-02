@@ -19,14 +19,7 @@
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_b1 <- function(df, comorb_string = "Comorbidity_",
@@ -106,14 +99,7 @@ start_b1 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_c1 <- function(df, comorb_string = "Comorbidity_",
@@ -190,14 +176,7 @@ start_c1 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_c2 <- function(df, comorb_string = "Comorbidity_",
@@ -274,14 +253,7 @@ start_c2 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_c3a <- function(df, comorb_string = "Comorbidity_",
@@ -358,14 +330,7 @@ start_c3a <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_c3b <- function(df, comorb_string = "Comorbidity_",
@@ -443,14 +408,7 @@ start_c3b <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_c4 <- function(df, comorb_string = "Comorbidity_",
@@ -529,14 +487,7 @@ start_c4 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_c5 <- function(df, comorb_string = "Comorbidity_",
@@ -617,14 +568,7 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit start_a1 return
 #'
 #' @export
 start_c6 <- function(df, gfr_column = "Lab Values: eGFR",

@@ -23,13 +23,15 @@ each comorbidity column which uniquely identifies them.}
 each drug column which uniquely identifies them.}
 }
 \value{
-\code{output}: character vector,
+A character vector with one entry per patient / row in \code{df}. Each
+entry takes one of the following three values:
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
-\item "Appropriate" if the conditions are satisfied but the correct drug has
-already been prescribed.
+\item "Appropriate" if the conditions are satisfied but the correct drugs
+have been prescribed.
 \item The name of the criterion if the conditions are satisfied and the
-correct drug has not been prescribed.
+correct drugs have not been prescribed. That is, if this START
+criterion has been triggered.
 }
 }
 \description{
