@@ -9,7 +9,11 @@
 Implement STOPP/START criteria (Version 2).
 }
 \author{
-Iarlaith Doherty
+\strong{Maintainer}: Ultan Doherty \email{dohertyu@tcd.ie} (\href{https://orcid.org/0000-0003-1791-395X}{ORCID})
 
-Ultan Doherty
+Authors:
+\itemize{
+  \item Iarlaith Doherty \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+}
+
 }
