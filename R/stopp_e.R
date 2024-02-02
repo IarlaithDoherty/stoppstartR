@@ -21,14 +21,7 @@
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR",
@@ -108,14 +101,7 @@ stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_e2 <- function(df, gfr_column = "Lab Values: eGFR",
@@ -185,14 +171,7 @@ stopp_e2 <- function(df, gfr_column = "Lab Values: eGFR",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_e3 <- function(df, gfr_column = "Lab Values: eGFR",
@@ -262,14 +241,7 @@ stopp_e3 <- function(df, gfr_column = "Lab Values: eGFR",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_e4 <- function(df, gfr_column = "Lab Values: eGFR",
@@ -339,14 +311,7 @@ stopp_e4 <- function(df, gfr_column = "Lab Values: eGFR",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_e5 <- function(df, gfr_column = "Lab Values: eGFR",
@@ -418,14 +383,7 @@ stopp_e5 <- function(df, gfr_column = "Lab Values: eGFR",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_e6 <- function(df, gfr_column = "Lab Values: eGFR",

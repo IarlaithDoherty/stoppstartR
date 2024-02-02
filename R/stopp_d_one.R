@@ -15,14 +15,7 @@
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d1 <- function(df, comorb_string = "Comorbidity_",
@@ -101,14 +94,7 @@ stopp_d1 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d3 <- function(df, comorb_string = "Comorbidity_",
@@ -185,14 +171,7 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d4 <- function(df, sodium_column = "Lab Values: Na",
@@ -262,14 +241,7 @@ stopp_d4 <- function(df, sodium_column = "Lab Values: Na",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d5 <- function(df,
@@ -325,14 +297,7 @@ stopp_d5 <- function(df,
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d6 <- function(df, comorb_string = "Comorbidity_",
@@ -413,14 +378,7 @@ stopp_d6 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d7 <- function(df, drug_string = "Drug_") {
@@ -503,14 +461,7 @@ stopp_d7 <- function(df, drug_string = "Drug_") {
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d8 <- function(df, comorb_string = "Comorbidity_",
@@ -606,14 +557,7 @@ stopp_d8 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `output`: character vector,
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drug has
-#' already been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#' correct drug has not been prescribed.
-#' }
+#' @inherit stopp_b1 return
 #'
 #' @export
 stopp_d9 <- function(df, comorb_string = "Comorbidity_",

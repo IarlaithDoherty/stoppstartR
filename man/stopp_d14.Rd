@@ -13,13 +13,15 @@ stopp_d14(df, drug_string = "Drug_")
 each drug column which uniquely identifies them.}
 }
 \value{
-\code{output}: character vector,
+A character vector with one entry per patient / row in \code{df}. Each
+entry takes one of the following three values:
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
-\item "Appropriate" if the conditions are satisfied but the correct drug has
-already been prescribed.
+\item "Appropriate" if the conditions are satisfied but the incorrect drugs
+have not been prescribed.
 \item The name of the criterion if the conditions are satisfied and the
-correct drug has not been prescribed.
+incorrect drugs have been prescribed. That is, if this STOPP
+criterion has been triggered.
 }
 }
 \description{
