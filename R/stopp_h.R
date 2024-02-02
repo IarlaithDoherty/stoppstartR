@@ -20,11 +20,7 @@
 #' M01AA, M01AB, M01AC, M01AE, M01AG, M01AX, N02BA, M01BA
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -119,11 +115,7 @@ stopp_h1 <- function(df, comorb_string = "Comorbidity_",
 #' M01A, M01BA01
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -213,11 +205,7 @@ stopp_h2 <- function(df, comorb_string = "Comorbidity_",
 #' H02AB, H02BX01
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -314,11 +302,7 @@ stopp_h4 <- function(df, comorb_string = "Comorbidity_",
 #' H02AB, H02BX01, M01BA
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -406,11 +390,7 @@ stopp_h5 <- function(df, comorb_string = "Comorbidity_",
 #' M01A, N02BA, M04AC01, M01BA
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -498,11 +478,7 @@ stopp_h6 <- function(df, comorb_string = "Comorbidity_",
 #' M01AH
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -594,9 +570,7 @@ stopp_h7 <- function(df, comorb_string = "Comorbidity_",
 #' M01A, N02BA, N02CB01, H02BX01, M01BA
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -687,11 +661,7 @@ stopp_h8 <- function(df, drug_string = "Drug_") {
 #' M05BA01, M05BA02, M05BA04, M05BA05, M05BA06, M05BA07, M05BB
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{

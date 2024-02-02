@@ -18,11 +18,7 @@
 #' Yes.
 #'}
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param asa_column The name of the patient aspirin column as a
-#' character string.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -106,11 +102,7 @@ stopp_c1 <- function(df, asa_column = "Aspirin dose >150mg",
 #' C10BX06, C10BX08, N02BA15, N02BA51, N02BA65, N02BA71
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -209,11 +201,7 @@ stopp_c2 <- function(df, comorb_string = "Comorbidity_",
 #' B01AC06, B01AC08, B01AC56
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{

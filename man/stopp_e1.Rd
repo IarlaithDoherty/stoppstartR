@@ -14,7 +14,7 @@ stopp_e1(
 \arguments{
 \item{df}{Dataframe of patient information.}
 
-\item{gfr_column}{The name of the patient Na column as a character string.}
+\item{gfr_column}{The name of the patient GFR column as a character string.}
 
 \item{digoxin_column}{The name of the patient Digoxin column as a
 character string.}

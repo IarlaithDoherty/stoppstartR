@@ -17,11 +17,7 @@
 #' R03AL, R03AK12, R03AK13, R03AC, or R03BB.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -108,11 +104,7 @@ start_b1 <- function(df, comorb_string = "Comorbidity_",
 #' N04B
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -196,11 +188,7 @@ start_c1 <- function(df, comorb_string = "Comorbidity_",
 #' N06AB, N06AF, N06AG, N06AX, N06CA03
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -284,11 +272,7 @@ start_c2 <- function(df, comorb_string = "Comorbidity_",
 #' N06DA
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -372,11 +356,7 @@ start_c3a <- function(df, comorb_string = "Comorbidity_",
 #' N06DA03
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -461,11 +441,7 @@ start_c3b <- function(df, comorb_string = "Comorbidity_",
 #' S01EE or S01ED
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -551,11 +527,7 @@ start_c4 <- function(df, comorb_string = "Comorbidity_",
 #' N06AB, N06AX16, N06AX21, N03AX16, or N06CA03.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -643,12 +615,7 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #' N04BC04, N04BC05, or N04BC09.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param gfr_column The name of the patient GFR column as a character string.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{

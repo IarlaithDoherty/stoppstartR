@@ -18,13 +18,7 @@
 #' G04CA.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param gender_column The name of the patient gender column as a character
-#'                    string.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -116,13 +110,7 @@ start_g1 <- function(df, gender_column = "Gender",
 #' G04CB.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param gender_column The name of the patient gender column as a character
-#'                    string.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -214,13 +202,7 @@ start_g2 <- function(df, gender_column = "Gender",
 #' G03CA03 or G03CA04.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param gender_column The name of the patient gender column as a character
-#'                    string.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -312,9 +294,7 @@ start_g3 <- function(df, gender_column = "Gender",
 #'
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{

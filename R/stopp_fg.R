@@ -13,11 +13,7 @@
 #' N05AB04, A03FA01
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -103,11 +99,7 @@ stopp_f1 <- function(df, comorb_string = "Comorbidity_",
 #' Yes.
 #'}
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param ppi_column The name of the patient PPI column as a
-#' character string.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -194,11 +186,7 @@ stopp_f2 <- function(df, ppi_column = "Full Dose PPI",
 #' C08DA51, C09BB10, A02AB
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -300,11 +288,7 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
 #' Yes
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param iron_column The name of the patient elemental iron column as a
-#'                    character string.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -385,9 +369,7 @@ stopp_f4 <- function(df, iron_column = "Elemental Iron >600mg",
 #' R03A, R03BA, R03BB.
 #'}
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -471,11 +453,7 @@ stopp_g1 <- function(df, drug_string = "Drug_") {
 #' H02AB01, H02AB02, H02AB04, H02AB06, H02AB07, H02AB08, H02AB09, H02BX01
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -570,11 +548,7 @@ stopp_g2 <- function(df, comorb_string = "Comorbidity_",
 #' C07AA
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{

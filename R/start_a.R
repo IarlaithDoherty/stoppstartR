@@ -16,12 +16,7 @@
 #' B01AA, B01AE, or B01AF.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#'
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -109,11 +104,7 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
 #' B01AC.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @inherit start_a1 return
 #'
@@ -205,14 +196,7 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 #' }
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param systolic_column The name of the systolic column as a character string.
-#' @param diastolic_column The name of the diastolic column as a character
-#'                         string.
+#' @inheritParams all_stoppstart
 #'
 #' @inherit start_a1 return
 #'
@@ -303,12 +287,7 @@ start_a4 <- function(df, comorb_string = "Comorbidity_",
 #' C10AA.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param age_column The name of the patient age column as a character string.
+#' @inheritParams all_stoppstart
 #'
 #' @inherit start_a1 return
 #'
@@ -394,11 +373,7 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
 #' C09.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @inherit start_a1 return
 #'
@@ -478,11 +453,7 @@ start_a6 <- function(df, comorb_string = "Comorbidity_",
 #' C07.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @inherit start_a1 return
 #'
@@ -560,11 +531,7 @@ start_a7 <- function(df, comorb_string = "Comorbidity_",
 #' C07FB02, C07CB02, C07BB02, or C07BB52.
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @inherit start_a1 return
 #'

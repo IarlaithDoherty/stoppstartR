@@ -1,21 +1,32 @@
 #' Implement all STOPP/START criteria or a subset of them.
 #'
-#' @param df Patient info
-#' @param comorb_string .
-#' @param drug_string .
-#' @param diastolic_column .
-#' @param systolic_column .
-#' @param age_column .
-#' @param gender_column .
-#' @param gfr_column .
-#' @param hr_column .
-#' @param potassium_column .
-#' @param sodium_column .
-#' @param calcium_column .
-#' @param asa_column .
-#' @param digoxin_column .
-#' @param iron_column .
-#' @param ppi_column .
+#' @param df Dataframe of patient information.
+#' @param comorb_string Character string contained in the name of each
+#'                      comorbidity column which uniquely identifies them.
+#' @param drug_string Character string contained in the name of each drug
+#'                    column which uniquely identifies them.
+#' @param diastolic_column The name of the diastolic column as a character
+#'                         string.
+#' @param systolic_column The name of the systolic column as a character string.
+#' @param age_column The name of the patient age column as a character string.
+#' @param gender_column The name of the patient gender column as a character
+#'                      string.
+#' @param gfr_column The name of the patient GFR column as a character string.
+#' @param hr_column The name of the patient heart rate column as a character
+#'                  string.
+#' @param potassium_column The name of the patient potassium column as a
+#'                         character string.
+#' @param sodium_column The name of the patient Na column as a character string.
+#' @param calcium_column The name of the patient CCa column as a character
+#'                       string.
+#' @param asa_column The name of the patient aspirin column as a
+#'                   character string.
+#' @param digoxin_column The name of the patient Digoxin column as a
+#'                       character string.
+#' @param iron_column The name of the patient elemental iron column as a
+#'                    character string.
+#' @param ppi_column The name of the patient PPI column as a
+#'                   character string.
 #' @param excluded_criteria .
 #' @param included_criteria .
 #'

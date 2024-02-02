@@ -14,9 +14,7 @@
 #' N05BA, N05CD, N03AE
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -81,9 +79,7 @@ stopp_k1 <- function(df,
 #' N05A
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -165,11 +161,7 @@ stopp_k2 <- function(df, drug_string = "Drug_") {
 #' G04CA, C02CA, C02LE01, C07AG, C07BG, C07CG, C08, C09, C01DA
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -253,9 +245,7 @@ stopp_k3 <- function(df, comorb_string = "Comorbidity_",
 #' N05CF
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -319,9 +309,7 @@ stopp_k4 <- function(df,
 #' N02A, R05DA04, N07BC06, N07BC02, N07BC01
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -405,9 +393,7 @@ stopp_l2 <- function(df, drug_string = "Drug_") {
 #' N02A, excluding N02AB03, N02AE01
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -496,9 +482,7 @@ stopp_l3 <- function(df, drug_string = "Drug_") {
 #' N05AC02, N05AA04, N05AF04
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{

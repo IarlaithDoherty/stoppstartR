@@ -42,37 +42,48 @@ all_stoppstart(
 )
 }
 \arguments{
-\item{df}{Patient info}
+\item{df}{Dataframe of patient information.}
 
-\item{comorb_string}{.}
+\item{comorb_string}{Character string contained in the name of each
+comorbidity column which uniquely identifies them.}
 
-\item{drug_string}{.}
+\item{drug_string}{Character string contained in the name of each drug
+column which uniquely identifies them.}
 
-\item{diastolic_column}{.}
+\item{diastolic_column}{The name of the diastolic column as a character
+string.}
 
-\item{systolic_column}{.}
+\item{systolic_column}{The name of the systolic column as a character string.}
 
-\item{age_column}{.}
+\item{age_column}{The name of the patient age column as a character string.}
 
-\item{gender_column}{.}
+\item{gender_column}{The name of the patient gender column as a character
+string.}
 
-\item{gfr_column}{.}
+\item{gfr_column}{The name of the patient GFR column as a character string.}
 
-\item{hr_column}{.}
+\item{hr_column}{The name of the patient heart rate column as a character
+string.}
 
-\item{potassium_column}{.}
+\item{potassium_column}{The name of the patient potassium column as a
+character string.}
 
-\item{sodium_column}{.}
+\item{sodium_column}{The name of the patient Na column as a character string.}
 
-\item{calcium_column}{.}
+\item{calcium_column}{The name of the patient CCa column as a character
+string.}
 
-\item{asa_column}{.}
+\item{asa_column}{The name of the patient aspirin column as a
+character string.}
 
-\item{digoxin_column}{.}
+\item{digoxin_column}{The name of the patient Digoxin column as a
+character string.}
 
-\item{iron_column}{.}
+\item{iron_column}{The name of the patient elemental iron column as a
+character string.}
 
-\item{ppi_column}{.}
+\item{ppi_column}{The name of the patient PPI column as a
+character string.}
 
 \item{excluded_criteria}{.}
 

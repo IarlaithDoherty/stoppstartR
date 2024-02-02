@@ -19,12 +19,7 @@
 #' Yes
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param gfr_column The name of the patient Na column as a character string.
-#' @param digoxin_column The name of the patient Digoxin column as a
-#' character string.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -111,10 +106,7 @@ stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR",
 #' 30
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param gfr_column The name of the patient Na column as a character string.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -191,10 +183,7 @@ stopp_e2 <- function(df, gfr_column = "Lab Values: eGFR",
 #' 15
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param gfr_column The name of the patient Na column as a character string.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -271,10 +260,7 @@ stopp_e3 <- function(df, gfr_column = "Lab Values: eGFR",
 #' 50
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param gfr_column The name of the patient Na column as a character string.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -351,10 +337,7 @@ stopp_e4 <- function(df, gfr_column = "Lab Values: eGFR",
 #' 10
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param gfr_column The name of the patient Na column as a character string.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
@@ -433,10 +416,7 @@ stopp_e5 <- function(df, gfr_column = "Lab Values: eGFR",
 #' 30
 #' }
 #'
-#' @param df Dataframe of patient information.
-#' @param gfr_column The name of the patient Na column as a character string.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
+#' @inheritParams all_stoppstart
 #'
 #' @return `output`: character vector,
 #' \itemize{
