@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: c(
     person("Iarlaith", "Doherty", , "first.last@example.com", role = c("aut"),
            comment = c(ORCID = "YOUR-ORCID-ID")),
-    person("Ultan", "Doherty", , "dohertyu@tcd.ie", role = c("cre"),
+    person("Ultan", "Doherty", , "dohertyu@tcd.ie", role = c("cre", "aut"),
            comment = c(ORCID = "0000-0003-1791-395X"))
     )
 Description: Implement STOPP/START criteria (Version 2).
