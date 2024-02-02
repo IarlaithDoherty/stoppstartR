@@ -1,2 +1,2 @@
-#' The stoppstartR package
+#' Information about the stoppstartR package
 "_PACKAGE"

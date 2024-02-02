@@ -63,7 +63,6 @@ stopp_k1 <- function(df,
 #'
 #' STOPP-K2 requires all of the following conditions to be satisfied:
 #' \itemize{
-
 #' \item None of the following drugs:
 #'
 #' N05AN
@@ -272,7 +271,6 @@ stopp_k4 <- function(df,
 #'
 #' STOPP-L2 requires all of the following conditions to be satisfied:
 #' \itemize{
-
 #' \item None of the following drugs:
 #'
 #' A06A, A02AA04
@@ -349,7 +347,6 @@ stopp_l2 <- function(df, drug_string = "Drug_") {
 #'
 #' STOPP-L3 requires all of the following conditions to be satisfied:
 #' \itemize{
-
 #' \item Any of the following drugs:
 #'
 #' N02AB03, N02AE01
@@ -428,7 +425,6 @@ stopp_l3 <- function(df, drug_string = "Drug_") {
 #'
 #' STOPP-M1 requires all of the following conditions to be satisfied:
 #' \itemize{
-
 #' \item More than two of the following drugs:
 #'
 #' R06AA, R06AB, R06AC, R06AD , R06AE01, R06AE03, R06AE04, R06AE05, R06AE06,

@@ -1,4 +1,6 @@
-#' Implement all STOPP/START criteria or a subset of them.
+#' @title Implement Any Subset of the STOPP/START Criteria
+#'
+#' @description Main function of the stoppstartR package.
 #'
 #' @param df data.frame: Patient information.
 #' @param comorb_string Character string: Common text contained in the name of
@@ -21,12 +23,12 @@
 #' @param iron_column Character string: The name of the patient elemental iron
 #'                    column.
 #' @param ppi_column Character string: The name of the patient PPI column.
-#' @param excluded_criteria Character vector: The names of STOPP/START
-#'                          criteria which will not be implemented, even if they
-#'                          appear in `included_criteria`.
-#' @param included_criteria Character vector: The names of STOPP/START
-#'                          criteria which will be implemented, unless they also
-#'                          appear in `excluded_criteria`.
+#' @param excluded_criteria Character vector: The names of the single criterion
+#'                          stoppstartR functions which will not be applied to
+#'                          `df`, even if they appear in `included_criteria`.
+#' @param included_criteria Character vector: The names of the single criterion
+#'                          stoppstartR functions which will be applied to
+#'                          `df`, unless they appear in `excluded_criteria`.
 #'
 #' @return Data frame of character vectors.
 #' @export

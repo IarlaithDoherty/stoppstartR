@@ -2,7 +2,7 @@
 % Please edit documentation in R/all_stoppstart.R
 \name{all_stoppstart}
 \alias{all_stoppstart}
-\title{Implement all STOPP/START criteria or a subset of them.}
+\title{Implement Any Subset of the STOPP/START Criteria}
 \usage{
 all_stoppstart(
   df,
@@ -79,17 +79,17 @@ column.}
 
 \item{ppi_column}{Character string: The name of the patient PPI column.}
 
-\item{excluded_criteria}{Character vector: The names of STOPP/START
-criteria which will not be implemented, even if they
-appear in \code{included_criteria}.}
+\item{excluded_criteria}{Character vector: The names of the single criterion
+stoppstartR functions which will not be applied to
+\code{df}, even if they appear in \code{included_criteria}.}
 
-\item{included_criteria}{Character vector: The names of STOPP/START
-criteria which will be implemented, unless they also
-appear in \code{excluded_criteria}.}
+\item{included_criteria}{Character vector: The names of the single criterion
+stoppstartR functions which will be applied to
+\code{df}, unless they appear in \code{excluded_criteria}.}
 }
 \value{
 Data frame of character vectors.
 }
 \description{
-Implement all STOPP/START criteria or a subset of them.
+Main function of the stoppstartR package.
 }
