@@ -12,15 +12,15 @@ stopp_b13a(
 )
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{systolic_column}{The name of the systolic column as a character string.}
+\item{systolic_column}{Character string: The name of the systolic column.}
 
-\item{comorb_string}{Character string contained in the name of each
-comorbidity column which uniquely identifies them.}
+\item{comorb_string}{Character string: Common text contained in the name of
+each comorbidity column which uniquely identifies them.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,

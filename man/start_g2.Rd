@@ -12,16 +12,15 @@ start_g2(
 )
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{gender_column}{The name of the patient gender column as a character
-string.}
+\item{gender_column}{Character string: The name of the patient gender column.}
 
-\item{comorb_string}{Character string contained in the name of each
-comorbidity column which uniquely identifies them.}
+\item{comorb_string}{Character string: Common text contained in the name of
+each comorbidity column which uniquely identifies them.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,

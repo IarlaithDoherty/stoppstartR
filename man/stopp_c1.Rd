@@ -7,13 +7,12 @@
 stopp_c1(df, asa_column = "Aspirin dose >150mg", drug_string = "Drug_")
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{asa_column}{The name of the patient aspirin column as a
-character string.}
+\item{asa_column}{Character string: The name of the patient aspirin column.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,

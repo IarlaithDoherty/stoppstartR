@@ -1,34 +1,32 @@
 #' Implement all STOPP/START criteria or a subset of them.
 #'
-#' @param df Dataframe of patient information.
-#' @param comorb_string Character string contained in the name of each
-#'                      comorbidity column which uniquely identifies them.
-#' @param drug_string Character string contained in the name of each drug
-#'                    column which uniquely identifies them.
-#' @param diastolic_column The name of the diastolic column as a character
-#'                         string.
-#' @param systolic_column The name of the systolic column as a character string.
-#' @param age_column The name of the patient age column as a character string.
-#' @param gender_column The name of the patient gender column as a character
-#'                      string.
-#' @param gfr_column The name of the patient GFR column as a character string.
-#' @param hr_column The name of the patient heart rate column as a character
-#'                  string.
-#' @param potassium_column The name of the patient potassium column as a
-#'                         character string.
-#' @param sodium_column The name of the patient Na column as a character string.
-#' @param calcium_column The name of the patient CCa column as a character
-#'                       string.
-#' @param asa_column The name of the patient aspirin column as a
-#'                   character string.
-#' @param digoxin_column The name of the patient Digoxin column as a
-#'                       character string.
-#' @param iron_column The name of the patient elemental iron column as a
-#'                    character string.
-#' @param ppi_column The name of the patient PPI column as a
-#'                   character string.
-#' @param excluded_criteria .
-#' @param included_criteria .
+#' @param df data.frame: Patient information.
+#' @param comorb_string Character string: Common text contained in the name of
+#'                      each comorbidity column which uniquely identifies them.
+#' @param drug_string Character string: Common text contained in the name of
+#'                    each drug column which uniquely identifies them.
+#' @param diastolic_column Character string: The name of the diastolic column.
+#' @param systolic_column Character string: The name of the systolic column.
+#' @param age_column Character string: The name of the patient age column.
+#' @param gender_column Character string: The name of the patient gender column.
+#' @param gfr_column Character string: The name of the patient GFR column.
+#' @param hr_column Character string: The name of the patient heart rate column.
+#' @param potassium_column Character string: The name of the patient potassium
+#'                         column.
+#' @param sodium_column Character string: The name of the patient Na column.
+#' @param calcium_column Character string: The name of the patient CCa column.
+#' @param asa_column Character string: The name of the patient aspirin column.
+#' @param digoxin_column Character string: The name of the patient Digoxin
+#'                       column.
+#' @param iron_column Character string: The name of the patient elemental iron
+#'                    column.
+#' @param ppi_column Character string: The name of the patient PPI column.
+#' @param excluded_criteria Character vector: The names of STOPP/START
+#'                          criteria which will not be implemented, even if they
+#'                          appear in `included_criteria`.
+#' @param included_criteria Character vector: The names of STOPP/START
+#'                          criteria which will be implemented, unless they also
+#'                          appear in `excluded_criteria`.
 #'
 #' @return Data frame of character vectors.
 #' @export

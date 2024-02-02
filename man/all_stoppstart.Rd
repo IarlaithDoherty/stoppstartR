@@ -42,52 +42,50 @@ all_stoppstart(
 )
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{comorb_string}{Character string contained in the name of each
-comorbidity column which uniquely identifies them.}
+\item{comorb_string}{Character string: Common text contained in the name of
+each comorbidity column which uniquely identifies them.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 
-\item{diastolic_column}{The name of the diastolic column as a character
-string.}
+\item{diastolic_column}{Character string: The name of the diastolic column.}
 
-\item{systolic_column}{The name of the systolic column as a character string.}
+\item{systolic_column}{Character string: The name of the systolic column.}
 
-\item{age_column}{The name of the patient age column as a character string.}
+\item{age_column}{Character string: The name of the patient age column.}
 
-\item{gender_column}{The name of the patient gender column as a character
-string.}
+\item{gender_column}{Character string: The name of the patient gender column.}
 
-\item{gfr_column}{The name of the patient GFR column as a character string.}
+\item{gfr_column}{Character string: The name of the patient GFR column.}
 
-\item{hr_column}{The name of the patient heart rate column as a character
-string.}
+\item{hr_column}{Character string: The name of the patient heart rate column.}
 
-\item{potassium_column}{The name of the patient potassium column as a
-character string.}
+\item{potassium_column}{Character string: The name of the patient potassium
+column.}
 
-\item{sodium_column}{The name of the patient Na column as a character string.}
+\item{sodium_column}{Character string: The name of the patient Na column.}
 
-\item{calcium_column}{The name of the patient CCa column as a character
-string.}
+\item{calcium_column}{Character string: The name of the patient CCa column.}
 
-\item{asa_column}{The name of the patient aspirin column as a
-character string.}
+\item{asa_column}{Character string: The name of the patient aspirin column.}
 
-\item{digoxin_column}{The name of the patient Digoxin column as a
-character string.}
+\item{digoxin_column}{Character string: The name of the patient Digoxin
+column.}
 
-\item{iron_column}{The name of the patient elemental iron column as a
-character string.}
+\item{iron_column}{Character string: The name of the patient elemental iron
+column.}
 
-\item{ppi_column}{The name of the patient PPI column as a
-character string.}
+\item{ppi_column}{Character string: The name of the patient PPI column.}
 
-\item{excluded_criteria}{.}
+\item{excluded_criteria}{Character vector: The names of STOPP/START
+criteria which will not be implemented, even if they
+appear in \code{included_criteria}.}
 
-\item{included_criteria}{.}
+\item{included_criteria}{Character vector: The names of STOPP/START
+criteria which will be implemented, unless they also
+appear in \code{excluded_criteria}.}
 }
 \value{
 Data frame of character vectors.

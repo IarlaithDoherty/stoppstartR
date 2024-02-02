@@ -7,13 +7,12 @@
 stopp_f2(df, ppi_column = "Full Dose PPI", drug_string = "Drug_")
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{ppi_column}{The name of the patient PPI column as a
-character string.}
+\item{ppi_column}{Character string: The name of the patient PPI column.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,

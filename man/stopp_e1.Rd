@@ -12,15 +12,15 @@ stopp_e1(
 )
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{gfr_column}{The name of the patient GFR column as a character string.}
+\item{gfr_column}{Character string: The name of the patient GFR column.}
 
-\item{digoxin_column}{The name of the patient Digoxin column as a
-character string.}
+\item{digoxin_column}{Character string: The name of the patient Digoxin
+column.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,

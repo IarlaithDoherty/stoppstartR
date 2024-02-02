@@ -13,18 +13,17 @@ start_a4(
 )
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{comorb_string}{Character string contained in the name of each
-comorbidity column which uniquely identifies them.}
+\item{comorb_string}{Character string: Common text contained in the name of
+each comorbidity column which uniquely identifies them.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 
-\item{systolic_column}{The name of the systolic column as a character string.}
+\item{systolic_column}{Character string: The name of the systolic column.}
 
-\item{diastolic_column}{The name of the diastolic column as a character
-string.}
+\item{diastolic_column}{Character string: The name of the diastolic column.}
 }
 \value{
 \code{output}: character vector,

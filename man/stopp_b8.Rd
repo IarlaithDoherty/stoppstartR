@@ -14,21 +14,20 @@ stopp_b8(
 )
 }
 \arguments{
-\item{df}{Dataframe of patient information.}
+\item{df}{data.frame: Patient information.}
 
-\item{potassium_column}{The name of the patient potassium column as a
-character string.}
+\item{potassium_column}{Character string: The name of the patient potassium
+column.}
 
-\item{sodium_column}{The name of the patient Na column as a character string.}
+\item{sodium_column}{Character string: The name of the patient Na column.}
 
-\item{calcium_column}{The name of the patient CCa column as a character
-string.}
+\item{calcium_column}{Character string: The name of the patient CCa column.}
 
-\item{drug_string}{Character string contained in the name of each drug
-column which uniquely identifies them.}
+\item{drug_string}{Character string: Common text contained in the name of
+each drug column which uniquely identifies them.}
 
-\item{comorb_string}{Character string contained in the name of each
-comorbidity column which uniquely identifies them.}
+\item{comorb_string}{Character string: Common text contained in the name of
+each comorbidity column which uniquely identifies them.}
 }
 \value{
 \code{output}: character vector,
