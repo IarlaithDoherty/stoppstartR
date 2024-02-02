@@ -1,0 +1,90 @@
+---
+title: "stoppstartR"
+author:
+- Iarlaith Doherty
+- Ultán Doherty
+date: "`r format(Sys.time(), '%d %B %Y')`"
+# output: rmarkdown::html_vignette
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{stoppstartR}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+## Installing stoppstartR
+
+```{r setup, eval=FALSE}
+install.packages("remotes")
+
+remotes::install_github("https://github.com/IarlaithDoherty/stoppstartR")
+
+stoppstartR::all_stoppstart(patient_data_frame)
+
+```
+
+## Data Set Layout
+
+To apply the STOPP/START criteria implemented in `stoppstartR`, the patient data must be in the form of a data.frame object.
+
+The main function in the `stoppstartR` package is `all_stoppstart`. The `all_stoppstart` function allows the user to apply any subset of the STOPP/START criteria implemented in the `stoppstartR` package.
+
+### Comorbidity columns and the `comorb_string` argument
+
+The `stoppstartR` package is designed to be applied to a data.frame object with one row per patient, in which the patient comorbidities are listed across a set of columns. Each of an individual patient's comorbidities are expected to be listed in a separate column. Each column may contain a variety of comorbidities across different patients. Each entry in these columns is expected to contain a single comorbidity. This entry must contain the ICD10 code for that comorbidity, but it may also contain other characters / text, for example the name of the comorbidity.
+
+An example of a suitable entry would be `"Chronic atrial fibrillation - I48.2"`. The `stoppstartR` functions will recognise that this entry contains the character string `"I48.2"` and will ignore the rest of the text.
+
+The `all_stoppstart` function and all of the single criterion functions, such as `start_a1`, have a `comorb_string` argument. This is used by the functions to identify which columns of the data set contain the patient comorbidities. They do so by selecting every column whose name contains the character string, `comorb_string`.
+
+For example, if the patient comorbidity columns are named `"Comorbidity_1"`, `"Comorbidity_2"`, etc., then the value of the `comorb_string` argument should be `"Comorbidity_"`. This is the default argument value but any other character string, e.g. `"comorbidities_"`, can be specified by setting `, comorb_string = "comorbidities",` in the function call.
+
+As well as being contained in the column name of every patient comorbidity column, the character string, `"comorb_string"`, should also not be contained in the column name of any other columns.
+
+### Drug columns and the `drug_string` argument
+
+Similarly to patient comorbidities, patient drugs should be listed across a set of columns whose names share a common character string. This character string is specified by the `drug_string` argument which acts in the same way as the `comorb_string` argument. Its default value is `"Drug_"`, which would suit a set of columns named `"Drug_1"`, `"Drug_2"`, etc. For a given patient / row, each drug should be listed in a separate column. These entries should contain the ATC code, although as with comorbidities, they may also contain other text, for example, `"warfarin - B01AA03"`.
+
+### Other columns
+
+The `all_stoppstart` function also takes the following arguments:
+
+-   `age_column`
+
+-   `gender_column`
+
+-   `diastolic_column`
+
+-   `systolic_column`
+
+-   `gfr_column`
+
+-   `hr_column`
+
+-   `potassium_column`
+
+-   `sodium_column`
+
+-   `calcium_column`
+
+-   `asa_column`
+
+-   `digoxin_column`
+
+-   `iron_column`
+
+-   `ppi_column`
+
+These arguments require the exact full name of their corresponding columns.
