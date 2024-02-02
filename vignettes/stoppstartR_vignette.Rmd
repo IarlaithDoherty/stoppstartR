@@ -1,11 +1,10 @@
 ---
 title: "stoppstartR"
 author:
-- Iarlaith Doherty
-- Ultán Doherty
+- Iarlaith Doherty & Ultán Doherty
 date: "`r format(Sys.time(), '%d %B %Y')`"
-# output: rmarkdown::html_vignette
-output: rmarkdown::pdf_document
+output: rmarkdown::html_vignette
+# output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{stoppstartR}
   %\VignetteEncoding{UTF-8}
