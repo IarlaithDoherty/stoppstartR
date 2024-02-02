@@ -1,5 +1,5 @@
 Package: stoppstartR
-Title: Implement STOPP/START Criteria (Version 2).
+Title: Implement STOPP/START Criteria (Version 2)
 Version: 0.0.0.9000
 Authors@R: c(
     person("Iarlaith", "Doherty", , "first.last@example.com", role = c("aut"),
