@@ -1,50 +1,53 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Basic Test -------------------------------------------------------------------
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+test_that("Not Relevant", {
+  start_a3_irrelevant1 <- expand.grid(
+    Comorbidity_1 = c("I48"),
+    Comorbidity_2 = c(
+      NA, "I20", "I21", "I22", "I24", "I25", "I63", "I64", "I65", "I66",
+      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"),
+    Drug_1 = c(NA, "B01AC")
+  )
 
-start_a3_df <- data.frame(
-  Comorbidity_1 = c("I20",   "I20", "I20", NA),
-  Comorbidity_2 = c(NA, NA, "I48", NA),
-  Drug_1        = c(NA, "B01AC", NA, NA)
-)
+  start_a3_irrelevant2 <- expand.grid(
+    Comorbidity_1 = c(NA),
+    Comorbidity_2 = c(NA),
+    Drug_1 = c(NA, "B01AC")
+  )
 
-test_that("start_a3 works", {
-  expect_equal(
-    start_a3(start_a3_df),
-    c("START-A3", "Appropriate", "Not Relevant", "Not Relevant")
+  start_a3_irrelevant <- rbind(start_a3_irrelevant1, start_a3_irrelevant2)
+
+  expect_setequal(
+    start_a3(start_a3_irrelevant),
+    "Not Relevant"
   )
 })
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Comprehensive Test -----------------------------------------------------------
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-start_a3_comorbs <- c("I20", "I21", "I22", "I24", "I25",
-                      "I63", "I64", "I65", "I66",
-                      "I73.9", "I74", "G45",
-                      "Z95.1", "Z95.5", "Z95.8")
-start_a3_drugs   <- c("B01AC")
-
-start_a3_trigger <- data.frame(
-  Comorbidity_1 = start_a3_comorbs,
-  Drug_1        = NA
-)
-
-start_a3_appropriate <- data.frame(
-  Comorbidity_1 = expand.grid(start_a3_comorbs, start_a3_drugs)[, 1],
-  Drug_1        = expand.grid(start_a3_comorbs, start_a3_drugs)[, 2]
-)
-
-test_that("all triggered", {
-  expect_equal(
-    start_a3(start_a3_trigger),
-    rep("START-A3", length(start_a3_comorbs))
+test_that("Appropriate", {
+  start_a3_appropriate <- expand.grid(
+    Comorbidity_1 = c(NA),
+    Comorbidity_2 = c(
+      "I20", "I21", "I22", "I24", "I25", "I63", "I64", "I65", "I66",
+      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"),
+    Drug_1 = c("B01AC")
   )
-})
 
-test_that("all appropriate", {
-  expect_equal(
+  expect_setequal(
     start_a3(start_a3_appropriate),
-    rep("Appropriate", length(start_a3_comorbs) * length(start_a3_drugs))
+    "Appropriate"
   )
 })
+
+test_that("Triggered", {
+  start_a3_triggered <- expand.grid(
+    Comorbidity_1 = c(NA),
+    Comorbidity_2 = c(
+      "I20", "I21", "I22", "I24", "I25", "I63", "I64", "I65", "I66",
+      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"),
+    Drug_1 = c(NA)
+  )
+
+  expect_setequal(
+    start_a3(start_a3_triggered),
+    "START-A3"
+  )
+})
+
