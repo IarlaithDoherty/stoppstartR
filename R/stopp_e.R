@@ -6,6 +6,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E1.
 #'
+#' @details
+#'
 #' STOPP-E1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item GFR less than:
@@ -89,6 +91,8 @@ stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E2.
 #'
+#' @details
+#'
 #' STOPP-E2 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -158,6 +162,8 @@ stopp_e2 <- function(df, gfr_column = "Lab Values: eGFR",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E3.
+#'
+#' @details
 #'
 #' STOPP-E3 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -229,6 +235,8 @@ stopp_e3 <- function(df, gfr_column = "Lab Values: eGFR",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E4.
 #'
+#' @details
+#'
 #' STOPP-E4 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -299,6 +307,8 @@ stopp_e4 <- function(df, gfr_column = "Lab Values: eGFR",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E5.
 #'
+#' @details
+#'
 #' STOPP-E5 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -361,13 +371,17 @@ stopp_e5 <- function(df, gfr_column = "Lab Values: eGFR",
 
   return(output)
 }
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #' @title Implement STOPP-E6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E6.
+#'
+#' @details
 #'
 #' STOPP-E6 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -436,6 +450,3 @@ stopp_e6 <- function(df, gfr_column = "Lab Values: eGFR",
 
   return(output)
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

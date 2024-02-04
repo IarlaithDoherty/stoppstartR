@@ -7,6 +7,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C1.
 #'
+#' @details
+#'
 #' STOPP-C1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -75,11 +77,12 @@ stopp_c1 <- function(df, asa_column = "Aspirin dose >150mg",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 #' @title Implement STOPP-C2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C2.
+#'
+#' @details
 #'
 #' STOPP-C2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -174,6 +177,8 @@ stopp_c2 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C5.
 #'
+#' @details
+#'
 #' STOPP-C5 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -254,7 +259,3 @@ stopp_c5 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

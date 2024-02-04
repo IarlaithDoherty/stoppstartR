@@ -7,6 +7,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B1.
 #'
+#' @details
+#'
 #' STOPP-B1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -105,6 +107,8 @@ stopp_b1 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B2.
 #'
+#' @details
+#'
 #' STOPP-B2 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -183,6 +187,8 @@ stopp_b2 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B3.
 #'
+#' @details
+#'
 #' STOPP-B3 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -257,6 +263,8 @@ stopp_b3 <- function(df, drug_string = "Drug_") {
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B4.
+#'
+#' @details
 #'
 #' STOPP-B4 requires the following conditions to be satisfied:
 #' \itemize{
@@ -345,6 +353,8 @@ stopp_b4 <- function(df, hr_column = "Lab Values: Heart Rate",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B5.
+#'
+#' @details
 #'
 #' STOPP-B5 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -435,6 +445,8 @@ stopp_b5 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B6.
+#'
+#' @details
 #'
 #' STOPP-B6 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -527,7 +539,3 @@ stopp_b6 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

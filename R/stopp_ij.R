@@ -7,6 +7,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-I1.
 #'
+#' @details
+#'
 #' STOPP-I1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -90,6 +92,8 @@ stopp_i1 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-I2.
 #'
+#' @details
+#'
 #' STOPP-I2 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -171,6 +175,8 @@ stopp_i2 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J1.
 #'
+#' @details
+#'
 #' STOPP-J1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -224,6 +230,8 @@ stopp_j1 <- function(df, drug_string = "Drug_") {
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J2.
+#'
+#' @details
 #'
 #' STOPP-J2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -305,6 +313,8 @@ stopp_j2 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J4.
 #'
+#' @details
+#'
 #' STOPP-J4 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -384,6 +394,8 @@ stopp_j4 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J5.
+#'
+#' @details
 #'
 #' STOPP-J5 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -482,6 +494,8 @@ stopp_j5 <- function(df, gender_column = "Gender",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J6.
 #'
+#' @details
+#'
 #' STOPP-J6 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item None of the following comorbidities:
@@ -552,7 +566,3 @@ stopp_j6 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

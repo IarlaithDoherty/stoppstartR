@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-D11.
-
+}
+\details{
 STOPP-D11 requires the following conditions to be satisfied:
 \itemize{
 \item Heart Rate less than 60 beats per minute.

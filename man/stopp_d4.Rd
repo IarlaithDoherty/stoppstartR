@@ -28,7 +28,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-D4.
-
+}
+\details{
 STOPP-D4 requires all of the following conditions to be satisfied:
 \itemize{
 \item Serum sodium less than:

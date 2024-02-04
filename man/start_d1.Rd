@@ -29,7 +29,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-D1.
-
+}
+\details{
 START-D1 requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following comorbidities:

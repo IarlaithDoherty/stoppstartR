@@ -6,6 +6,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining START-A1.
 #'
+#' @details
+#'
 #' START-A1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -90,6 +92,8 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A3.
+#'
+#' @details
 #'
 #' START-A3 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -182,6 +186,8 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A4.
+#'
+#' @details
 #'
 #' START-A4 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -276,6 +282,8 @@ start_a4 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-A5.
 #'
+#' @details
+#'
 #' START-A5 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Age less than 85 years.
@@ -364,6 +372,8 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-A6.
 #'
+#' @details
+#'
 #' START-A6 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -444,6 +454,8 @@ start_a6 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-A7.
 #'
+#' @details
+#'
 #' START-A7 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -522,6 +534,8 @@ start_a7 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-A8.
 #'
+#' @details
+#'
 #' START-A8 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -593,6 +607,3 @@ start_a8 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

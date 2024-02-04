@@ -104,7 +104,6 @@ all_stoppstart <- function(
 
   output <- as.data.frame(matrix(nrow = nrow(df), ncol = 0))
 
-
   output$start_a1 <- try(start_a1(
     df, comorb_string = comorb_string, drug_string = drug_string
   ), silent = !inclusion_vector["start_a1"])

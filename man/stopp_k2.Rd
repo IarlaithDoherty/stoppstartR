@@ -26,7 +26,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-K2.
-
+}
+\details{
 STOPP-K2 requires all of the following conditions to be satisfied:
 \itemize{
 \item None of the following drugs:

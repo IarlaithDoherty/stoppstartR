@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-C6.
-
+}
+\details{
 START-C6 requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following comorbidities:

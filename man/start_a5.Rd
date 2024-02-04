@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-A5.
-
+}
+\details{
 START-A5 requires all of the following conditions to be satisfied:
 \itemize{
 \item Age less than 85 years.

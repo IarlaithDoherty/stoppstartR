@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-B13a.
-
+}
+\details{
 STOPP-B13a requires the following conditions to be satisfied:
 \itemize{
 \item Systolic_BP < 90

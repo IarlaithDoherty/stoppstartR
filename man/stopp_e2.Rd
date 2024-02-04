@@ -28,7 +28,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-E2.
-
+}
+\details{
 STOPP-E2 requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following drugs:

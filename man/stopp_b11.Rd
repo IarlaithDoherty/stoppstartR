@@ -37,7 +37,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-B11.
-
+}
+\details{
 STOPP-B11 requires the following conditions to be satisfied:
 \itemize{
 \item Serum potassium >5 .

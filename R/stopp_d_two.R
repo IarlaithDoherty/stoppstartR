@@ -6,6 +6,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D10.
 #'
+#' @details
+#'
 #' STOPP-D10 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -100,6 +102,8 @@ stopp_d10 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D11.
+#'
+#' @details
 #'
 #' STOPP-D11 requires the following conditions to be satisfied:
 #' \itemize{
@@ -202,6 +206,8 @@ stopp_d11 <- function(df, hr_column = "Lab Values: Heart Rate",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D12.
 #'
+#' @details
+#'
 #' STOPP-D12 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -253,6 +259,8 @@ stopp_d12 <- function(df,
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D13.
+#'
+#' @details
 #'
 #' STOPP-D13 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -341,6 +349,8 @@ stopp_d13 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D14.
+#'
+#' @details
 #'
 #' STOPP-D14 requires all of the following conditions to be satisfied:
 #' \itemize{

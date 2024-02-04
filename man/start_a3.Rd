@@ -29,7 +29,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-A3.
-
+}
+\details{
 START-A3 requires all of the following conditions to be satisfied:
 \itemize{
 \item None of the following comorbidities:

@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-E1.
-
+}
+\details{
 STOPP-E1 requires all of the following conditions to be satisfied:
 \itemize{
 \item GFR less than:

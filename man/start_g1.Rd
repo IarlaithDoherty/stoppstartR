@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-G1.
-
+}
+\details{
 START-G1 requires all of the following conditions to be satisfied:
 \itemize{
 \item Gender equals Male.

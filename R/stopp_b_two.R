@@ -7,6 +7,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B7.
 #'
+#' @details
+#'
 #' STOPP-B7 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -95,6 +97,8 @@ stopp_b7 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B8.
+#'
+#' @details
 #'
 #' STOPP-B8 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -208,6 +212,8 @@ stopp_b8 <- function(df, potassium_column = "Lab Values: K",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B9.
 #'
+#' @details
+#'
 #' STOPP-B9 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -308,6 +314,8 @@ stopp_b9 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B10.
 #'
+#' @details
+#'
 #' STOPP-B10 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -362,6 +370,8 @@ stopp_b10 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B11.
+#'
+#' @details
 #'
 #' STOPP-B11 requires the following conditions to be satisfied:
 #' \itemize{
@@ -450,6 +460,8 @@ stopp_b11 <- function(df, potassium_column = "Lab Values: K",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B13a.
 #'
+#' @details
+#'
 #' STOPP-B13a requires the following conditions to be satisfied:
 #' \itemize{
 #' \item Systolic_BP < 90
@@ -536,6 +548,8 @@ stopp_b13a <- function(df, systolic_column = "Systolic_BP",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B13b.
 #'
+#' @details
+#'
 #' STOPP-B13b requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -601,7 +615,3 @@ stopp_b13b <- function(df, drug_string = "Drug_") {
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

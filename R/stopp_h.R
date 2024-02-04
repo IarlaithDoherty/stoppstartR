@@ -7,6 +7,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H1.
 #'
+#' @details
+#'
 #' STOPP-H1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -98,6 +100,8 @@ stopp_h1 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H2.
 #'
+#' @details
+#'
 #' STOPP-H2 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -177,6 +181,8 @@ stopp_h2 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H4.
+#'
+#' @details
 #'
 #' STOPP-H4 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -270,6 +276,8 @@ stopp_h4 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H5.
 #'
+#' @details
+#'
 #' STOPP-H5 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -352,6 +360,8 @@ stopp_h5 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H6.
 #'
+#' @details
+#'
 #' STOPP-H6 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -432,6 +442,8 @@ stopp_h6 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H7.
+#'
+#' @details
 #'
 #' STOPP-H7 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -514,6 +526,8 @@ stopp_h7 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H8.
+#'
+#' @details
 #'
 #' STOPP-H8 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -600,6 +614,8 @@ stopp_h8 <- function(df, drug_string = "Drug_") {
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H9.
 #'
+#' @details
+#'
 #' STOPP-H9 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -673,7 +689,3 @@ stopp_h9 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

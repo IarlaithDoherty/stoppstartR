@@ -29,7 +29,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-C3a.
-
+}
+\details{
 START-C3a requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following comorbidities:

@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-G3.
-
+}
+\details{
 START-G3 requires all of the following conditions to be satisfied:
 \itemize{
 \item Gender equals Female.

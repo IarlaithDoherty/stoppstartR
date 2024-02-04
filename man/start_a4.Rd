@@ -39,7 +39,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining START-A4.
-
+}
+\details{
 START-A4 requires all of the following conditions to be satisfied:
 \itemize{
 \item None of the following drugs:

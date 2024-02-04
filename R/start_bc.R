@@ -6,6 +6,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining START-B1.
 #'
+#' @details
+#'
 #' START-B1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -87,6 +89,8 @@ start_b1 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-C1.
 #'
+#' @details
+#'
 #' START-C1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -163,6 +167,8 @@ start_c1 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C2.
+#'
+#' @details
 #'
 #' START-C2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -241,6 +247,8 @@ start_c2 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-C3a.
 #'
+#' @details
+#'
 #' START-C3a requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -317,6 +325,8 @@ start_c3a <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C3b.
+#'
+#' @details
 #'
 #' START-C3b requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -395,6 +405,8 @@ start_c3b <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C4.
+#'
+#' @details
 #'
 #' START-C4 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -475,6 +487,8 @@ start_c4 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-C5.
 #'
+#' @details
+#'
 #' START-C5 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -552,6 +566,8 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C6.
+#'
+#' @details
 #'
 #' START-C6 requires all of the following conditions to be satisfied:
 #' \itemize{

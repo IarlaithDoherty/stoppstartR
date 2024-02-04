@@ -3,6 +3,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D1.
 #'
+#' @details
+#'
 #' STOPP-D1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -82,6 +84,8 @@ stopp_d1 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D3.
 #'
+#' @details
+#'
 #' STOPP-D3 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -159,6 +163,8 @@ stopp_d3 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D4.
 #'
+#' @details
+#'
 #' STOPP-D4 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Serum sodium less than:
@@ -232,6 +238,8 @@ stopp_d4 <- function(df, sodium_column = "Lab Values: Na",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D5.
 #'
+#' @details
+#'
 #' STOPP-D5 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -281,6 +289,8 @@ stopp_d5 <- function(df,
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D6.
+#'
+#' @details
 #'
 #' STOPP-D6 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -365,6 +375,8 @@ stopp_d6 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D7.
 #'
+#' @details
+#'
 #' STOPP-D7 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -441,6 +453,8 @@ stopp_d7 <- function(df, drug_string = "Drug_") {
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D8.
+#'
+#' @details
 #'
 #' STOPP-D8 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -539,6 +553,8 @@ stopp_d8 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D9.
 #'
+#' @details
+#'
 #' STOPP-D9 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -624,7 +640,3 @@ stopp_d9 <- function(df, comorb_string = "Comorbidity_",
                    "Not Relevant")
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-J5.
-
+}
+\details{
 STOPP-J5 requires all of the following conditions to be satisfied:
 \itemize{
 \item Gender equals Female.

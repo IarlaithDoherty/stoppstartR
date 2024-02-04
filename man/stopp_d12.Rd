@@ -26,7 +26,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-D12.
-
+}
+\details{
 STOPP-D12 requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following drugs:

@@ -29,7 +29,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-B10.
-
+}
+\details{
 STOPP-B10 requires all of the following conditions to be satisfied:
 \itemize{
 \item Any of the following drugs:

@@ -4,6 +4,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C7.
 #'
+#' @details
+#'
 #' STOPP-C requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -59,6 +61,8 @@ stopp_c7 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C8.
+#'
+#' @details
 #'
 #' STOPP-C8 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -149,6 +153,8 @@ stopp_c8 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C9.
 #'
+#' @details
+#'
 #' STOPP-C9 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -238,6 +244,8 @@ stopp_c9 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C10.
 #'
+#' @details
+#'
 #' STOPP-C10 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -313,6 +321,8 @@ stopp_c10 <- function(df, drug_string = "Drug_") {
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C11.
+#'
+#' @details
 #'
 #' STOPP-C11 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -390,7 +400,3 @@ stopp_c11 <- function(df,
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

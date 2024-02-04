@@ -36,7 +36,8 @@ criterion has been triggered.
 }
 \description{
 Determine which patients triggered the conditions defining STOPP-B4.
-
+}
+\details{
 STOPP-B4 requires the following conditions to be satisfied:
 \itemize{
 \item Heart Rate less than 50 beats per minute.

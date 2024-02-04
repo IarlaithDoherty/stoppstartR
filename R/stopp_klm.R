@@ -7,6 +7,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K1.
 #'
+#' @details
+#'
 #' STOPP-K1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -60,6 +62,8 @@ stopp_k1 <- function(df,
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K2.
+#'
+#' @details
 #'
 #' STOPP-K2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -135,6 +139,8 @@ stopp_k2 <- function(df, drug_string = "Drug_") {
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K3.
+#'
+#' @details
 #'
 #' STOPP-K3 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -216,6 +222,8 @@ stopp_k3 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K4.
 #'
+#' @details
+#'
 #' STOPP-K4 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -268,6 +276,8 @@ stopp_k4 <- function(df,
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-L2.
+#'
+#' @details
 #'
 #' STOPP-L2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -344,6 +354,8 @@ stopp_l2 <- function(df, drug_string = "Drug_") {
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-L3.
+#'
+#' @details
 #'
 #' STOPP-L3 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -423,6 +435,8 @@ stopp_l3 <- function(df, drug_string = "Drug_") {
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-M1.
 #'
+#' @details
+#'
 #' STOPP-M1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item More than two of the following drugs:
@@ -485,7 +499,3 @@ stopp_m1 <- function(df, drug_string = "Drug_") {
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

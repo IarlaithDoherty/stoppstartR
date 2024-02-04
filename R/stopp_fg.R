@@ -3,6 +3,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F1.
 #'
+#' @details
+#'
 #' STOPP-F1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -72,6 +74,7 @@ stopp_f1 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
+
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -80,6 +83,8 @@ stopp_f1 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F2.
+#'
+#' @details
 #'
 #' STOPP-F2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -153,6 +158,8 @@ stopp_f2 <- function(df, ppi_column = "Full Dose PPI",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F3.
+#'
+#' @details
 #'
 #' STOPP-F3 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -257,6 +264,8 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F4.
 #'
+#' @details
+#'
 #' STOPP-E1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -329,6 +338,8 @@ stopp_f4 <- function(df, iron_column = "Elemental Iron >600mg",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-G1.
+#'
+#' @details
 #'
 #' STOPP-G1 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -404,6 +415,8 @@ stopp_g1 <- function(df, drug_string = "Drug_") {
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-G2.
+#'
+#' @details
 #'
 #' STOPP-G2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -496,6 +509,8 @@ stopp_g2 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-G4.
 #'
+#' @details
+#'
 #' STOPP-G4 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -566,7 +581,3 @@ stopp_g4 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

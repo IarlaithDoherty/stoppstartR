@@ -6,6 +6,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining START-D1.
 #'
+#' @details
+#'
 #' START-D1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -84,6 +86,8 @@ start_d1 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-D1.
 #'
+#' @details
+#'
 #' START-D2 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -92,7 +96,6 @@ start_d1 <- function(df, comorb_string = "Comorbidity_",
 #' \item Any of the following comorbidities:
 #'
 #' K59.0
-
 #' \item None of the following drugs:
 #'
 #' A06AC
@@ -173,6 +176,8 @@ start_d2 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-E1.
 #'
+#' @details
+#'
 #' START-E1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -251,6 +256,8 @@ start_e1 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E2.
+#'
+#' @details
 #'
 #' START-E2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -354,6 +361,8 @@ start_e2 <- function(df, drug_string = "Drug_") {
 #' @description
 #' Determine which patients triggered the conditions defining START-E3.
 #'
+#' @details
+#'
 #' START-E3 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -452,6 +461,8 @@ start_e3 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-E4.
 #'
+#' @details
+#'
 #' START-E4 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -530,6 +541,8 @@ start_e4 <- function(df, comorb_string = "Comorbidity_",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E5.
+#'
+#' @details
 #'
 #' START-E5 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -611,6 +624,8 @@ start_e5 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-E6.
 #'
+#' @details
+#'
 #' START-E6 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following comorbidities:
@@ -689,6 +704,8 @@ start_e6 <- function(df, comorb_string = "Comorbidity_",
 #' @description
 #' Determine which patients triggered the conditions defining START-E7.
 #'
+#' @details
+#'
 #' START-E7 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -754,7 +771,3 @@ start_e7 <- function(df, drug_string = "Drug_") {
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

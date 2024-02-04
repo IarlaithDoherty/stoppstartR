@@ -7,6 +7,8 @@
 #' @description
 #' Determine which patients triggered the conditions defining START-G1.
 #'
+#' @details
+#'
 #' START-G1 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Gender equals Male.
@@ -91,6 +93,8 @@ start_g1 <- function(df, gender_column = "Gender",
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-G2.
+#'
+#' @details
 #'
 #' START-G2 requires all of the following conditions to be satisfied:
 #' \itemize{
@@ -177,6 +181,8 @@ start_g2 <- function(df, gender_column = "Gender",
 #' @description
 #' Determine which patients triggered the conditions defining START-G3.
 #'
+#' @details
+#'
 #' START-G3 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Gender equals Female.
@@ -262,6 +268,8 @@ start_g3 <- function(df, gender_column = "Gender",
 #' @description
 #' Determine which patients triggered the conditions defining START-H2.
 #'
+#' @details
+#'
 #' START-H2 requires all of the following conditions to be satisfied:
 #' \itemize{
 #' \item Any of the following drugs:
@@ -328,7 +336,3 @@ start_h2 <- function(df, drug_string = "Drug_") {
 
   return(output)
 }
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
