@@ -13,15 +13,11 @@ start_e7(df, drug_string = "Drug_")
 each drug column which uniquely identifies them.}
 }
 \value{
-A character vector with one entry per patient / row in \code{df}. Each
-entry takes one of the following three values:
+A character vector with one entry per patient / row in \code{df}. Each entry takes one of the following three values:
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
-\item "Appropriate" if the conditions are satisfied but the correct drugs
-have been prescribed.
-\item The name of the criterion if the conditions are satisfied and the
-correct drugs have not been prescribed. That is, if this START
-criterion has been triggered.
+\item "Appropriate" if the conditions are satisfied but the correct drugs have been prescribed.
+\item "START-A1" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A1 has been triggered.
 }
 }
 \description{

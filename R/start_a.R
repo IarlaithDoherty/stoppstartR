@@ -1,35 +1,23 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Implement START-A1 criterion.
+#' @title `r write_title("START-A1")`
 #'
-#' @description
-#' Determine which patients triggered the conditions defining START-A1.
+#' @description `r write_description("START-A1")`
 #'
 #' @details
 #'
-#' START-A1 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item Any of the following comorbidities:
+#' `r write_details_relevant("START-A1")`
+#' * They have been diagnosed with any of the following comorbidities:
+#'    * I48.2.
 #'
-#' I48.2.
-#' \item None of the following drugs:
-#'
-#' B01AA, B01AE, or B01AF.
-#' }
+#' `r write_details_triggered("START-A1")`
+#' * They have not been prescribed any of the following drugs:
+#'    * B01AA, B01AE, B01AF.
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return A character vector with one entry per patient / row in `df`. Each
-#'         entry takes one of the following three values:
-#' \itemize{
-#' \item "Not Relevant" if the conditions are not satisfied.
-#' \item "Appropriate" if the conditions are satisfied but the correct drugs
-#'       have been prescribed.
-#' \item The name of the criterion if the conditions are satisfied and the
-#'       correct drugs have not been prescribed. That is, if this START
-#'       criterion has been triggered.
-#' }
+#' @return `r write_return("START-A1")`
 #'
 #' @export
 start_a1 <- function(df, comorb_string = "Comorbidity_",
