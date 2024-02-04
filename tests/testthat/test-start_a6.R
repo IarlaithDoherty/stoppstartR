@@ -5,7 +5,8 @@ test_that("Not Relevant", {
   )
 
   expect_setequal(
-    start_a6(start_a6_irrelevant),
+    start_a6(start_a6_irrelevant,
+             comorb_string = "Comorbidity_", drug_string = "Drug_"),
     "Not Relevant"
   )
 })
@@ -17,7 +18,8 @@ test_that("Appropriate", {
   )
 
   expect_setequal(
-    start_a6(start_a6_appropriate),
+    start_a6(start_a6_appropriate,
+             comorb_string = "Comorbidity_", drug_string = "Drug_"),
     "Appropriate"
   )
 })
@@ -29,7 +31,8 @@ test_that("Triggered", {
   )
 
   expect_setequal(
-    start_a6(start_a6_triggered),
+    start_a6(start_a6_triggered,
+             comorb_string = "Comorbidity_", drug_string = "Drug_"),
     "START-A6"
   )
 })

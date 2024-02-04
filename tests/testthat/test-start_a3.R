@@ -16,7 +16,8 @@ test_that("Not Relevant", {
   start_a3_irrelevant <- rbind(start_a3_irrelevant1, start_a3_irrelevant2)
 
   expect_setequal(
-    start_a3(start_a3_irrelevant),
+    start_a3(start_a3_irrelevant,
+             comorb_string = "Comorbidity_", drug_string = "Drug_"),
     "Not Relevant"
   )
 })
@@ -31,7 +32,8 @@ test_that("Appropriate", {
   )
 
   expect_setequal(
-    start_a3(start_a3_appropriate),
+    start_a3(start_a3_appropriate,
+             comorb_string = "Comorbidity_", drug_string = "Drug_"),
     "Appropriate"
   )
 })
@@ -46,7 +48,8 @@ test_that("Triggered", {
   )
 
   expect_setequal(
-    start_a3(start_a3_triggered),
+    start_a3(start_a3_triggered,
+             comorb_string = "Comorbidity_", drug_string = "Drug_"),
     "START-A3"
   )
 })

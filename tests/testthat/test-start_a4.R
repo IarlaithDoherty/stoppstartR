@@ -16,7 +16,10 @@ test_that("Not Relevant", {
   start_a4_irrelevant <- rbind(start_a4_irrelevant1, start_a4_irrelevant2)
 
   expect_setequal(
-    start_a4(start_a4_irrelevant),
+    start_a4(start_a4_irrelevant,
+             comorb_string = "Comorbidity_", drug_string = "Drug_",
+             diastolic_column = "Diastolic",
+             systolic_column = "Systolic"),
     "Not Relevant"
   )
 })
@@ -47,7 +50,10 @@ test_that("Appropriate", {
                                 start_a4_appropriate3)
 
   expect_setequal(
-    start_a4(start_a4_appropriate),
+    start_a4(start_a4_appropriate,
+             comorb_string = "Comorbidity_", drug_string = "Drug_",
+             diastolic_column = "Diastolic",
+             systolic_column = "Systolic"),
     "Appropriate"
   )
 })
@@ -79,7 +85,10 @@ test_that("Triggered", {
 
 
   expect_setequal(
-    start_a4(start_a4_triggered),
+    start_a4(start_a4_triggered,
+             comorb_string = "Comorbidity_", drug_string = "Drug_",
+             diastolic_column = "Diastolic",
+             systolic_column = "Systolic"),
     "START-A4"
   )
 })
