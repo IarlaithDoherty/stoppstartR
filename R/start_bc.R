@@ -1,7 +1,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement START-B1 criterion.
+#' @title Implement START-B1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-B1.
@@ -82,7 +82,7 @@ start_b1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-C1 criterion.
+#' @title Implement START-C1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C1.
@@ -159,7 +159,7 @@ start_c1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-C2 criterion.
+#' @title Implement START-C2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C2.
@@ -236,7 +236,7 @@ start_c2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-C3a criterion.
+#' @title Implement START-C3a criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C3a.
@@ -313,7 +313,7 @@ start_c3a <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-C3b criterion.
+#' @title Implement START-C3b criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C3b.
@@ -391,7 +391,7 @@ start_c3b <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-C4 criterion.
+#' @title Implement START-C4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C4.
@@ -470,7 +470,7 @@ start_c4 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement START-C5 criterion.
+#' @title Implement START-C5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C5.
@@ -548,7 +548,7 @@ start_c5 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-C6 criterion.
+#' @title Implement START-C6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-C6.

@@ -1,7 +1,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement START-D1 criterion.
+#' @title Implement START-D1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-D1.
@@ -79,7 +79,7 @@ start_d1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-D2 criterion.
+#' @title Implement START-D2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-D1.
@@ -168,7 +168,7 @@ start_d2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-E1 criterion.
+#' @title Implement START-E1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E1.
@@ -247,7 +247,7 @@ start_e1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-E2 criterion.
+#' @title Implement START-E2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E2.
@@ -349,7 +349,7 @@ start_e2 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-E3 criterion.
+#' @title Implement START-E3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E3.
@@ -447,7 +447,7 @@ start_e3 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-E4 criterion.
+#' @title Implement START-E4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E4.
@@ -526,7 +526,7 @@ start_e4 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement START-E5 criterion.
+#' @title Implement START-E5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E5.
@@ -606,7 +606,7 @@ start_e5 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-E6 criterion.
+#' @title Implement START-E6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E6.
@@ -684,7 +684,7 @@ start_e6 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-E7 criterion.
+#' @title Implement START-E7 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-E7.

@@ -1,7 +1,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement START-A1 criterion.
+#' @title Implement START-A1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A1.
@@ -86,7 +86,7 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-A3 criterion.
+#' @title Implement START-A3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A3.
@@ -178,7 +178,7 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-A4 criterion.
+#' @title Implement START-A4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A4.
@@ -271,7 +271,7 @@ start_a4 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-A5 criterion.
+#' @title Implement START-A5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A5.
@@ -359,7 +359,7 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement START-A6 criterion.
+#' @title Implement START-A6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A6.
@@ -439,7 +439,7 @@ start_a6 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-A7 criterion.
+#' @title Implement START-A7 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A7.
@@ -517,7 +517,7 @@ start_a7 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-A8 criterion.
+#' @title Implement START-A8 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-A8.

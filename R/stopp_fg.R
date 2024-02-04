@@ -1,4 +1,4 @@
-#' @title Function to implement STOPP-F1 criterion.
+#' @title Implement STOPP-F1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F1.
@@ -76,7 +76,7 @@ stopp_f1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-F2 criterion.
+#' @title Implement STOPP-F2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F2.
@@ -149,7 +149,7 @@ stopp_f2 <- function(df, ppi_column = "Full Dose PPI",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-F3 criterion.
+#' @title Implement STOPP-F3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F3.
@@ -252,7 +252,7 @@ stopp_f3 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-F4 criterion.
+#' @title Implement STOPP-F4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-F4.
@@ -325,7 +325,7 @@ stopp_f4 <- function(df, iron_column = "Elemental Iron >600mg",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-G1 criterion.
+#' @title Implement STOPP-G1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-G1.
@@ -400,7 +400,7 @@ stopp_g1 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-G2 criterion.
+#' @title Implement STOPP-G2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-G2.
@@ -491,7 +491,7 @@ stopp_g2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-G4 criterion.
+#' @title Implement STOPP-G4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-G4.

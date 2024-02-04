@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-H1 criterion.
+#' @title Implement STOPP-H1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H1.
@@ -93,7 +93,7 @@ stopp_h1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-H2 criterion.
+#' @title Implement STOPP-H2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H2.
@@ -173,7 +173,7 @@ stopp_h2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-H4 criterion.
+#' @title Implement STOPP-H4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H4.
@@ -265,7 +265,7 @@ stopp_h4 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-H5 criterion.
+#' @title Implement STOPP-H5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H5.
@@ -347,7 +347,7 @@ stopp_h5 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-H6 criterion.
+#' @title Implement STOPP-H6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H6.
@@ -428,7 +428,7 @@ stopp_h6 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-H7 criterion.
+#' @title Implement STOPP-H7 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H7.
@@ -510,7 +510,7 @@ stopp_h7 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-H8 criterion.
+#' @title Implement STOPP-H8 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H8.
@@ -595,7 +595,7 @@ stopp_h8 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-H9 criterion.
+#' @title Implement STOPP-H9 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-H9.

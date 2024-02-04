@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-G1 criterion.
+#' @title Implement START-G1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-G1.
@@ -87,7 +87,7 @@ start_g1 <- function(df, gender_column = "Gender",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-G2 criterion.
+#' @title Implement START-G2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-G2.
@@ -172,7 +172,7 @@ start_g2 <- function(df, gender_column = "Gender",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-G3 criterion.
+#' @title Implement START-G3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-G3.
@@ -257,7 +257,7 @@ start_g3 <- function(df, gender_column = "Gender",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement START-H2 criterion.
+#' @title Implement START-H2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining START-H2.

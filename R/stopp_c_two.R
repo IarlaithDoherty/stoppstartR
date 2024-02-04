@@ -1,5 +1,5 @@
 
-#' @title Function to implement STOPP-C7 criterion.
+#' @title Implement STOPP-C7 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C7.
@@ -55,7 +55,7 @@ stopp_c7 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement STOPP-C8 criterion.
+#' @title Implement STOPP-C8 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C8.
@@ -144,7 +144,7 @@ stopp_c8 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement STOPP-C9 criterion.
+#' @title Implement STOPP-C9 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C9.
@@ -233,7 +233,7 @@ stopp_c9 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-C10 criterion.
+#' @title Implement STOPP-C10 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C10.
@@ -309,7 +309,7 @@ stopp_c10 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement STOPP-C11 criterion.
+#' @title Implement STOPP-C11 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C11.

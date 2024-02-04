@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-C1 criterion.
+#' @title Implement STOPP-C1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C1.
@@ -76,7 +76,7 @@ stopp_c1 <- function(df, asa_column = "Aspirin dose >150mg",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement STOPP-C2 criterion.
+#' @title Implement STOPP-C2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C2.
@@ -169,7 +169,7 @@ stopp_c2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-C5 criterion.
+#' @title Implement STOPP-C5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-C5.

@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-I1 criterion.
+#' @title Implement STOPP-I1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-I1.
@@ -85,7 +85,7 @@ stopp_i1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-I2 criterion.
+#' @title Implement STOPP-I2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-I2.
@@ -166,7 +166,7 @@ stopp_i2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-J1 criterion.
+#' @title Implement STOPP-J1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J1.
@@ -220,7 +220,7 @@ stopp_j1 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-J2 criterion.
+#' @title Implement STOPP-J2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J2.
@@ -300,7 +300,7 @@ stopp_j2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-J4 criterion.
+#' @title Implement STOPP-J4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J4.
@@ -380,7 +380,7 @@ stopp_j4 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-J5 criterion.
+#' @title Implement STOPP-J5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J5.
@@ -477,7 +477,7 @@ stopp_j5 <- function(df, gender_column = "Gender",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-J6 criterion.
+#' @title Implement STOPP-J6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-J6.

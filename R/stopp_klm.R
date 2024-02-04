@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-K1 criterion.
+#' @title Implement STOPP-K1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K1.
@@ -56,7 +56,7 @@ stopp_k1 <- function(df,
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement STOPP-K2 criterion.
+#' @title Implement STOPP-K2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K2.
@@ -131,7 +131,7 @@ stopp_k2 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-K3 criterion.
+#' @title Implement STOPP-K3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K3.
@@ -211,7 +211,7 @@ stopp_k3 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-K4 criterion.
+#' @title Implement STOPP-K4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-K4.
@@ -264,7 +264,7 @@ stopp_k4 <- function(df,
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-L2 criterion.
+#' @title Implement STOPP-L2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-L2.
@@ -340,7 +340,7 @@ stopp_l2 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-L3 criterion.
+#' @title Implement STOPP-L3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-L3.
@@ -418,7 +418,7 @@ stopp_l3 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-M1 criterion.
+#' @title Implement STOPP-M1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-M1.

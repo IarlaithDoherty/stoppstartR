@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B1 criterion.
+#' @title Implement STOPP-B1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B1.
@@ -100,7 +100,7 @@ stopp_b1 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B2 criterion.
+#' @title Implement STOPP-B2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B2.
@@ -178,7 +178,7 @@ stopp_b2 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B3 criterion.
+#' @title Implement STOPP-B3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B3.
@@ -253,7 +253,7 @@ stopp_b3 <- function(df, drug_string = "Drug_") {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #'
-#' @title Function to implement STOPP-B4 criterion.
+#' @title Implement STOPP-B4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B4.
@@ -341,7 +341,7 @@ stopp_b4 <- function(df, hr_column = "Lab Values: Heart Rate",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B5 criterion.
+#' @title Implement STOPP-B5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B5.
@@ -431,7 +431,7 @@ stopp_b5 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement STOPP-B6 criterion.
+#' @title Implement STOPP-B6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B6.

@@ -1,7 +1,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-E1 criterion.
+#' @title Implement STOPP-E1 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E1.
@@ -84,7 +84,7 @@ stopp_e1 <- function(df, gfr_column = "Lab Values: eGFR",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-E2 criterion.
+#' @title Implement STOPP-E2 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E2.
@@ -154,7 +154,7 @@ stopp_e2 <- function(df, gfr_column = "Lab Values: eGFR",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-E3 criterion.
+#' @title Implement STOPP-E3 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E3.
@@ -224,7 +224,7 @@ stopp_e3 <- function(df, gfr_column = "Lab Values: eGFR",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-E4 criterion.
+#' @title Implement STOPP-E4 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E4.
@@ -294,7 +294,7 @@ stopp_e4 <- function(df, gfr_column = "Lab Values: eGFR",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-E5 criterion.
+#' @title Implement STOPP-E5 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E5.
@@ -364,7 +364,7 @@ stopp_e5 <- function(df, gfr_column = "Lab Values: eGFR",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-E6 criterion.
+#' @title Implement STOPP-E6 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-E6.

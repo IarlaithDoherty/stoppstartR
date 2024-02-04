@@ -2,7 +2,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B7 criterion.
+#' @title Implement STOPP-B7 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B7.
@@ -91,7 +91,7 @@ stopp_b7 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B8 criterion.
+#' @title Implement STOPP-B8 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B8.
@@ -203,7 +203,7 @@ stopp_b8 <- function(df, potassium_column = "Lab Values: K",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B9 criterion.
+#' @title Implement STOPP-B9 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B9.
@@ -303,7 +303,7 @@ stopp_b9 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B10 criterion.
+#' @title Implement STOPP-B10 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B10.
@@ -358,7 +358,7 @@ stopp_b10 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #'
-#' @title Function to implement STOPP-B11 criterion.
+#' @title Implement STOPP-B11 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B11.
@@ -445,7 +445,7 @@ stopp_b11 <- function(df, potassium_column = "Lab Values: K",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B13a criterion.
+#' @title Implement STOPP-B13a criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B13a.
@@ -531,7 +531,7 @@ stopp_b13a <- function(df, systolic_column = "Systolic_BP",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-B13b criterion.
+#' @title Implement STOPP-B13b criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-B13b.

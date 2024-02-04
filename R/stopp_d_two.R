@@ -1,7 +1,7 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-D10 criterion.
+#' @title Implement STOPP-D10 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D10.
@@ -96,7 +96,7 @@ stopp_d10 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-D11 criterion.
+#' @title Implement STOPP-D11 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D11.
@@ -197,7 +197,7 @@ stopp_d11 <- function(df, hr_column = "Lab Values: Heart Rate",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Function to implement STOPP-D12 criterion.
+#' @title Implement STOPP-D12 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D12.
@@ -249,7 +249,7 @@ stopp_d12 <- function(df,
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#' @title Function to implement STOPP-D13 criterion.
+#' @title Implement STOPP-D13 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D13.
@@ -337,7 +337,7 @@ stopp_d13 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#' @title Function to implement STOPP-D14 criterion.
+#' @title Implement STOPP-D14 criterion.
 #'
 #' @description
 #' Determine which patients triggered the conditions defining STOPP-D14.
