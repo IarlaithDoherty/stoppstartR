@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_fgh.R
 \name{start_h2}
 \alias{start_h2}
-\title{Function to implement START-H2 criterion.}
+\title{Implement START-H2 criterion.}
 \usage{
 start_h2(df, drug_string = "Drug_")
 }

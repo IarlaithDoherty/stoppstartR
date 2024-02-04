@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_fgh.R
 \name{start_g3}
 \alias{start_g3}
-\title{Function to implement START-G3 criterion.}
+\title{Implement START-G3 criterion.}
 \usage{
 start_g3(
   df,

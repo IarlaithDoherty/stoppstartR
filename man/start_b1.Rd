@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_bc.R
 \name{start_b1}
 \alias{start_b1}
-\title{Function to implement START-B1 criterion.}
+\title{Implement START-B1 criterion.}
 \usage{
 start_b1(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

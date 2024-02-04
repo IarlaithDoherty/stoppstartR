@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_ij.R
 \name{stopp_j6}
 \alias{stopp_j6}
-\title{Function to implement STOPP-J6 criterion.}
+\title{Implement STOPP-J6 criterion.}
 \usage{
 stopp_j6(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

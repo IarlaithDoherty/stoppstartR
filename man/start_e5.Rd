@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_de.R
 \name{start_e5}
 \alias{start_e5}
-\title{Function to implement START-E5 criterion.}
+\title{Implement START-E5 criterion.}
 \usage{
 start_e5(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

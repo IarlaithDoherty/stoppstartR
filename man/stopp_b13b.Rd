@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_b_two.R
 \name{stopp_b13b}
 \alias{stopp_b13b}
-\title{Function to implement STOPP-B13b criterion.}
+\title{Implement STOPP-B13b criterion.}
 \usage{
 stopp_b13b(df, drug_string = "Drug_")
 }

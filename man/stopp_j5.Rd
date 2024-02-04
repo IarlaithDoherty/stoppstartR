@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_ij.R
 \name{stopp_j5}
 \alias{stopp_j5}
-\title{Function to implement STOPP-J5 criterion.}
+\title{Implement STOPP-J5 criterion.}
 \usage{
 stopp_j5(
   df,

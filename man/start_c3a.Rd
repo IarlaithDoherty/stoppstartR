@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_bc.R
 \name{start_c3a}
 \alias{start_c3a}
-\title{Function to implement START-C3a criterion.}
+\title{Implement START-C3a criterion.}
 \usage{
 start_c3a(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

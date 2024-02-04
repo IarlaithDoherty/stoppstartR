@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_h.R
 \name{stopp_h8}
 \alias{stopp_h8}
-\title{Function to implement STOPP-H8 criterion.}
+\title{Implement STOPP-H8 criterion.}
 \usage{
 stopp_h8(df, drug_string = "Drug_")
 }

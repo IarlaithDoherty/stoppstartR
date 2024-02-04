@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_c_one.R
 \name{stopp_c1}
 \alias{stopp_c1}
-\title{Function to implement STOPP-C1 criterion.}
+\title{Implement STOPP-C1 criterion.}
 \usage{
 stopp_c1(df, asa_column = "Aspirin dose >150mg", drug_string = "Drug_")
 }

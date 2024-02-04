@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_e.R
 \name{stopp_e3}
 \alias{stopp_e3}
-\title{Function to implement STOPP-E3 criterion.}
+\title{Implement STOPP-E3 criterion.}
 \usage{
 stopp_e3(df, gfr_column = "Lab Values: eGFR", drug_string = "Drug_")
 }

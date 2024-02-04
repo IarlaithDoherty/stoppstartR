@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_b_two.R
 \name{stopp_b8}
 \alias{stopp_b8}
-\title{Function to implement STOPP-B8 criterion.}
+\title{Implement STOPP-B8 criterion.}
 \usage{
 stopp_b8(
   df,

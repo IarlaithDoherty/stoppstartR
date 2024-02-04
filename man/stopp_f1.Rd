@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_fg.R
 \name{stopp_f1}
 \alias{stopp_f1}
-\title{Function to implement STOPP-F1 criterion.}
+\title{Implement STOPP-F1 criterion.}
 \usage{
 stopp_f1(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

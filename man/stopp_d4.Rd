@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_d_one.R
 \name{stopp_d4}
 \alias{stopp_d4}
-\title{Function to implement STOPP-D4 criterion.}
+\title{Implement STOPP-D4 criterion.}
 \usage{
 stopp_d4(df, sodium_column = "Lab Values: Na", drug_string = "Drug_")
 }

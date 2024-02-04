@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_klm.R
 \name{stopp_k1}
 \alias{stopp_k1}
-\title{Function to implement STOPP-K1 criterion.}
+\title{Implement STOPP-K1 criterion.}
 \usage{
 stopp_k1(df, drug_string = "Drug_")
 }

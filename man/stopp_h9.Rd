@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_h.R
 \name{stopp_h9}
 \alias{stopp_h9}
-\title{Function to implement STOPP-H9 criterion.}
+\title{Implement STOPP-H9 criterion.}
 \usage{
 stopp_h9(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

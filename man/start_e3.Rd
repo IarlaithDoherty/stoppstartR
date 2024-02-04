@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_de.R
 \name{start_e3}
 \alias{start_e3}
-\title{Function to implement START-E3 criterion.}
+\title{Implement START-E3 criterion.}
 \usage{
 start_e3(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

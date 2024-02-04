@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_fg.R
 \name{stopp_f2}
 \alias{stopp_f2}
-\title{Function to implement STOPP-F2 criterion.}
+\title{Implement STOPP-F2 criterion.}
 \usage{
 stopp_f2(df, ppi_column = "Full Dose PPI", drug_string = "Drug_")
 }

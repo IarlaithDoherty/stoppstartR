@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_d_one.R
 \name{stopp_d1}
 \alias{stopp_d1}
-\title{Function to implement STOPP-D1 criterion.}
+\title{Implement STOPP-D1 criterion.}
 \usage{
 stopp_d1(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_b_one.R
 \name{stopp_b3}
 \alias{stopp_b3}
-\title{Function to implement STOPP-B3 criterion.}
+\title{Implement STOPP-B3 criterion.}
 \usage{
 stopp_b3(df, drug_string = "Drug_")
 }

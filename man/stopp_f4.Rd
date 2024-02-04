@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_fg.R
 \name{stopp_f4}
 \alias{stopp_f4}
-\title{Function to implement STOPP-F4 criterion.}
+\title{Implement STOPP-F4 criterion.}
 \usage{
 stopp_f4(df, iron_column = "Elemental Iron >600mg", drug_string = "Drug_")
 }

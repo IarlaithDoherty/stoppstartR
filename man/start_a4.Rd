@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a4}
 \alias{start_a4}
-\title{Function to implement START-A4 criterion.}
+\title{Implement START-A4 criterion.}
 \usage{
 start_a4(
   df,

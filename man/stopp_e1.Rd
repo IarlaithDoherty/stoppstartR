@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_e.R
 \name{stopp_e1}
 \alias{stopp_e1}
-\title{Function to implement STOPP-E1 criterion.}
+\title{Implement STOPP-E1 criterion.}
 \usage{
 stopp_e1(
   df,

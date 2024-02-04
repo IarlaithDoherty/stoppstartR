@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_fg.R
 \name{stopp_g1}
 \alias{stopp_g1}
-\title{Function to implement STOPP-G1 criterion.}
+\title{Implement STOPP-G1 criterion.}
 \usage{
 stopp_g1(df, drug_string = "Drug_")
 }

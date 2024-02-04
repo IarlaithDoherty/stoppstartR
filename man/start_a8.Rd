@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a8}
 \alias{start_a8}
-\title{Function to implement START-A8 criterion.}
+\title{Implement START-A8 criterion.}
 \usage{
 start_a8(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

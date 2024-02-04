@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_de.R
 \name{start_d2}
 \alias{start_d2}
-\title{Function to implement START-D2 criterion.}
+\title{Implement START-D2 criterion.}
 \usage{
 start_d2(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }

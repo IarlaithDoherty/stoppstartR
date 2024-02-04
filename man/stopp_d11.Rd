@@ -2,7 +2,7 @@
 % Please edit documentation in R/stopp_d_two.R
 \name{stopp_d11}
 \alias{stopp_d11}
-\title{Function to implement STOPP-D11 criterion.}
+\title{Implement STOPP-D11 criterion.}
 \usage{
 stopp_d11(
   df,

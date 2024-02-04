@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_bc.R
 \name{start_c6}
 \alias{start_c6}
-\title{Function to implement START-C6 criterion.}
+\title{Implement START-C6 criterion.}
 \usage{
 start_c6(
   df,

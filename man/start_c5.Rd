@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_bc.R
 \name{start_c5}
 \alias{start_c5}
-\title{Function to implement START-C5 criterion.}
+\title{Implement START-C5 criterion.}
 \usage{
 start_c5(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }
