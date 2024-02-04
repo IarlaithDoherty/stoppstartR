@@ -4,7 +4,7 @@
 \name{stoppstartR-package}
 \alias{stoppstartR}
 \alias{stoppstartR-package}
-\title{The stoppstartR package}
+\title{Information about the stoppstartR package}
 \description{
 Implement STOPP/START criteria (Version 2).
 }

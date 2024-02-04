@@ -4,7 +4,6 @@ author:
 - Iarlaith Doherty & Ultán Doherty
 date: "`r format(Sys.time(), '%d %B %Y')`"
 output: rmarkdown::html_vignette
-# output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{stoppstartR}
   %\VignetteEncoding{UTF-8}
