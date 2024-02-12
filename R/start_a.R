@@ -17,7 +17,7 @@
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @return `r write_return("START-A1")`
+#' @return `r write_return_start("START-A1")`
 #'
 #' @export
 start_a1 <- function(df, comorb_string = "Comorbidity_",
