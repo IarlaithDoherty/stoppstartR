@@ -7,12 +7,12 @@
 #'
 #' @details
 #'
-#' `r write_details_relevant("START-A1")`
-#' * They have been diagnosed with any of the following comorbidities:
+#' `r write_details_relevant("START-A1", "all")`
+#' * The patient has been diagnosed with any of the following comorbidities:
 #'    * I48.2.
 #'
 #' `r write_details_triggered("START-A1")`
-#' * They have not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following drugs:
 #'    * B01AA, B01AE, B01AF.
 #'
 #' @inheritParams all_stoppstart
@@ -72,35 +72,32 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Implement START-A3 criterion.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @title `r write_title("START-A3")`
 #'
-#' @description
-#' Determine which patients triggered the conditions defining START-A3.
+#' @description `r write_description("START-A3")`
 #'
 #' @details
 #'
-#' START-A3 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item None of the following comorbidities:
+#' `r write_details_relevant("START-A3", "all")`
+#' * The patient has not been diagnosed with any of the following comorbidities:
+#'    * I48.
+#' * The patient has been diagnosed with any of the following comorbidities:
+#'    * I20, I21, I22, I24, I25,
+#'      I63, I64, I65, I66,
+#'      I73.9, I74, G45,
+#'      Z95.1, Z95.5, Z95.8.
 #'
-#' I48.
-#' \item Any of the following comorbidities:
-#'
-#' I20, I21, I22, I24, I25,
-#' I63, I64, I65, I66, I73.9,
-#' I74, G45, Z95.1, Z95.5, or Z95.8.
-#' \item None of the following drugs:
-#'
-#' B01AC.
-#' }
+#' `r write_details_triggered("START-A3")`
+#' * The patient has not been prescribed any of the following drugs:
+#'    * B01A.
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @inherit start_a1 return
+#' @return `r write_return_start("START-A3")`
 #'
 #' @export
 start_a3 <- function(df, comorb_string = "Comorbidity_",
@@ -166,35 +163,30 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Implement START-A4 criterion.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @title `r write_title("START-A4")`
 #'
-#' @description
-#' Determine which patients triggered the conditions defining START-A4.
+#' @description `r write_description("START-A4")`
 #'
 #' @details
 #'
-#' START-A4 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item None of the following drugs:
+#' `r write_details_relevant("START-A4", "any")`
+#' * The patient has a Systolic Blood Pressure of greater than 160.
+#' * The patient has a Diastolic Blood Pressure of greater than 90.
+#' * The patient has a Systolic Blood Pressue of greater than 140 and they have
+#' been diagnosed with any of the following comorbidities:
+#'    * E10, E11, E12, E13, E14.
 #'
-#' C07, C08, C09, C03A, C03EA.
-#' \item Any of the following subconditions:
-#' \itemize{
-#' \item Systolic_BP > 160
-#' \item Diastolic_BP > 90
-#' \item Systolic_BP > 140 and any of the following comorbidities:
-#'
-#' E10, E11, E12, E13, E14
-#' }
-#' }
+#' `r write_details_triggered("START-A4")`
+#' * The patient has not been prescribed any of the following drugs:
+#'    * C07, C08, C09, C03A, C03EA.
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @inherit start_a1 return
+#' @return `r write_return_start("START-A4")`
 #'
 #' @export
 start_a4 <- function(df, comorb_string = "Comorbidity_",
@@ -261,33 +253,30 @@ start_a4 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Implement START-A5 criterion.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @title `r write_title("START-A5")`
 #'
-#' @description
-#' Determine which patients triggered the conditions defining START-A5.
+#' @description `r write_description("START-A5")`
 #'
 #' @details
 #'
-#' START-A5 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item Age less than 85 years.
-#' \item Any of the following comorbidities:
+#' `r write_details_relevant("START-A5", "all")`
+#' * The Age of the patient is less than 85 years.
+#' * The patient has been diagnosed with any of the following comorbidities:
+#'    * I20, I21, I22, I24, I25,
+#'      I63, I64, I65, I66, I73.9,
+#'      I74, G45, Z95.1, Z95.5, Z95.8.
 #'
-#' I20, I21, I22, I24, I25,
-#' I63, I64, I65, I66, I73.9,
-#' I74, G45, Z95.1, Z95.5, or Z95.8.
-#' \item None of the following drugs:
-#'
-#' C10AA.
-#' }
+#' `r write_details_triggered("START-A5")`
+#' * They have not been prescribed any of the following drugs:
+#'    * C10AA.
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @inherit start_a1 return
+#' @return `r write_return_start("START-A5")`
 #'
 #' @export
 start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
@@ -350,32 +339,29 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
 
   return(output)
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-#' @title Implement START-A6 criterion.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @title `r write_title("START-A6")`
 #'
-#' @description
-#' Determine which patients triggered the conditions defining START-A6.
+#' @description `r write_description("START-A6")`
 #'
 #' @details
 #'
-#' START-A6 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item Any of the following comorbidities:
+#' `r write_details_relevant("START-A6", "all")`
+#' * The patient has been diagnosed with any of the following comorbidities:
+#'    * I50, I11.0, I13.0, I13.2,
+#'      I20, I21, I22, I24, I25,
+#'      Z95.1, Z95.5.
 #'
-#' I50, I11.0, I13.0, I13.2, I20, I21, I22, I24, I25,
-#' Z95.1, or Z95.5.
-#' \item None of the following drugs:
-#'
-#' C09.
-#' }
+#' `r write_details_triggered("START-A6")`
+#' * They have not been prescribed any of the following drugs:
+#'    * C09.
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @inherit start_a1 return
+#' @return `r write_return_start("START-A6")`
 #'
 #' @export
 start_a6 <- function(df, comorb_string = "Comorbidity_",
@@ -436,28 +422,24 @@ start_a6 <- function(df, comorb_string = "Comorbidity_",
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-#' @title Implement START-A7 criterion.
+#' @title `r write_title("START-A7")`
 #'
-#' @description
-#' Determine which patients triggered the conditions defining START-A7.
+#' @description `r write_description("START-A7")`
 #'
 #' @details
 #'
-#' START-A7 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item Any of the following comorbidities:
+#' `r write_details_relevant("START-A7", "all")`
+#' * The patient has been diagnosed with any of the following comorbidities:
+#'    * I20, I21, I22, I24, I25,
+#'      Z95.1, Z95.5.
 #'
-#' I20, I21, I22, I24, I25,
-#' Z95.1, or Z95.5.
-#' \item None of the following drugs:
-#'
-#' C07.
-#' }
+#' `r write_details_triggered("START-A7")`
+#' * They have not been prescribed any of the following drugs:
+#'    * C07.
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @inherit start_a1 return
+#' @return `r write_return_start("START-A7")`
 #'
 #' @export
 start_a7 <- function(df, comorb_string = "Comorbidity_",
@@ -513,31 +495,31 @@ start_a7 <- function(df, comorb_string = "Comorbidity_",
 
   return(output)
 }
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#' @title Implement START-A8 criterion.
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#' @title `r write_title("START-A8")`
 #'
-#' @description
-#' Determine which patients triggered the conditions defining START-A8.
+#' @description `r write_description("START-A8")`
 #'
 #' @details
 #'
-#' START-A8 requires all of the following conditions to be satisfied:
-#' \itemize{
-#' \item Any of the following comorbidities:
+#' `r write_details_relevant("START-A8", "all")`
+#' * The patient has been diagnosed with any of the following comorbidities:
+#'    * I50, I11.0, I13.0, I13.2.
 #'
-#' I50, I11.0, I13.0, or I13.2.
-#' \item None of the following drugs:
-#'
-#' C07AB07, C07AB12, C07AB02, C07AG02, C07FB07, C07BB07,  C07FB12, C07BB12,
-#' C07FB02, C07CB02, C07BB02, or C07BB52.
-#' }
+#' `r write_details_triggered("START-A8")`
+#' * They have not been prescribed any of the following drugs:
+#'    * C07AB02, C07AB07, C07AB12,
+#'      C07AG02,
+#'      C07BB02, C07BB07, C07BB12, C07BB52,
+#'      C07CB02,
+#'      C07FB02, C07FB07, C07FB12.
 #'
 #' @inheritParams all_stoppstart
 #'
-#' @inherit start_a1 return
+#' @return `r write_return_start("START-A8")`
 #'
 #' @export
 start_a8 <- function(df, comorb_string = "Comorbidity_",

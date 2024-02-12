@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a3}
 \alias{start_a3}
-\title{Implement START-A3 criterion.}
+\title{Implement START-A3 criterion}
 \usage{
 start_a3(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }
@@ -20,25 +20,33 @@ A character vector with one entry per patient / row in \code{df}. Each entry tak
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
 \item "Appropriate" if the conditions are satisfied but the correct drugs have been prescribed.
-\item "START-A1" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A1 has been triggered.
+\item "START-A3" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A3 has been triggered.
 }
 }
 \description{
 Determine which patients triggered the conditions defining START-A3.
 }
 \details{
-START-A3 requires all of the following conditions to be satisfied:
+For the START-A3 criterion to be relevant for a patient, all of the following statements must be true.
 \itemize{
-\item None of the following comorbidities:
+\item The patient has not been diagnosed with any of the following comorbidities:
+\itemize{
+\item I48.
+}
+\item The patient has been diagnosed with any of the following comorbidities:
+\itemize{
+\item I20, I21, I22, I24, I25,
+I63, I64, I65, I66,
+I73.9, I74, G45,
+Z95.1, Z95.5, Z95.8.
+}
+}
 
-I48.
-\item Any of the following comorbidities:
-
-I20, I21, I22, I24, I25,
-I63, I64, I65, I66, I73.9,
-I74, G45, Z95.1, Z95.5, or Z95.8.
-\item None of the following drugs:
-
-B01AC.
+For the START-A3 criterion to be triggered for a patient, all of the following statements must also be true.
+\itemize{
+\item The patient has not been prescribed any of the following drugs:
+\itemize{
+\item B01A.
+}
 }
 }

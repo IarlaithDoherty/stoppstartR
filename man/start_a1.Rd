@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a1}
 \alias{start_a1}
-\title{Implement START-A1 criterion.}
+\title{Implement START-A1 criterion}
 \usage{
 start_a1(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }
@@ -24,12 +24,12 @@ A character vector with one entry per patient / row in \code{df}. Each entry tak
 }
 }
 \description{
-Determine which patients triggered the conditions defining START-A1
+Determine which patients triggered the conditions defining START-A1.
 }
 \details{
 For the START-A1 criterion to be relevant for a patient, all of the following statements must be true.
 \itemize{
-\item They have been diagnosed with any of the following comorbidities:
+\item The patient has been diagnosed with any of the following comorbidities:
 \itemize{
 \item I48.2.
 }
@@ -37,7 +37,7 @@ For the START-A1 criterion to be relevant for a patient, all of the following st
 
 For the START-A1 criterion to be triggered for a patient, all of the following statements must also be true.
 \itemize{
-\item They have not been prescribed any of the following drugs:
+\item The patient has not been prescribed any of the following drugs:
 \itemize{
 \item B01AA, B01AE, B01AF.
 }

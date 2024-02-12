@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a6}
 \alias{start_a6}
-\title{Implement START-A6 criterion.}
+\title{Implement START-A6 criterion}
 \usage{
 start_a6(df, comorb_string = "Comorbidity_", drug_string = "Drug_")
 }
@@ -20,21 +20,28 @@ A character vector with one entry per patient / row in \code{df}. Each entry tak
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
 \item "Appropriate" if the conditions are satisfied but the correct drugs have been prescribed.
-\item "START-A1" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A1 has been triggered.
+\item "START-A6" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A6 has been triggered.
 }
 }
 \description{
 Determine which patients triggered the conditions defining START-A6.
 }
 \details{
-START-A6 requires all of the following conditions to be satisfied:
+For the START-A6 criterion to be relevant for a patient, all of the following statements must be true.
 \itemize{
-\item Any of the following comorbidities:
+\item The patient has been diagnosed with any of the following comorbidities:
+\itemize{
+\item I50, I11.0, I13.0, I13.2,
+I20, I21, I22, I24, I25,
+Z95.1, Z95.5.
+}
+}
 
-I50, I11.0, I13.0, I13.2, I20, I21, I22, I24, I25,
-Z95.1, or Z95.5.
-\item None of the following drugs:
-
-C09.
+For the START-A6 criterion to be triggered for a patient, all of the following statements must also be true.
+\itemize{
+\item They have not been prescribed any of the following drugs:
+\itemize{
+\item C09.
+}
 }
 }

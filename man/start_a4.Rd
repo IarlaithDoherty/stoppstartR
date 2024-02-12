@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a4}
 \alias{start_a4}
-\title{Implement START-A4 criterion.}
+\title{Implement START-A4 criterion}
 \usage{
 start_a4(
   df,
@@ -30,25 +30,29 @@ A character vector with one entry per patient / row in \code{df}. Each entry tak
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
 \item "Appropriate" if the conditions are satisfied but the correct drugs have been prescribed.
-\item "START-A1" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A1 has been triggered.
+\item "START-A4" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A4 has been triggered.
 }
 }
 \description{
 Determine which patients triggered the conditions defining START-A4.
 }
 \details{
-START-A4 requires all of the following conditions to be satisfied:
+For the START-A4 criterion to be relevant for a patient, any of the following statements must be true.
 \itemize{
-\item None of the following drugs:
-
-C07, C08, C09, C03A, C03EA.
-\item Any of the following subconditions:
+\item The patient has a Systolic Blood Pressure of greater than 160.
+\item The patient has a Diastolic Blood Pressure of greater than 90.
+\item The patient has a Systolic Blood Pressue of greater than 140 and they have
+been diagnosed with any of the following comorbidities:
 \itemize{
-\item Systolic_BP > 160
-\item Diastolic_BP > 90
-\item Systolic_BP > 140 and any of the following comorbidities:
+\item E10, E11, E12, E13, E14.
+}
+}
 
-E10, E11, E12, E13, E14
+For the START-A4 criterion to be triggered for a patient, all of the following statements must also be true.
+\itemize{
+\item The patient has not been prescribed any of the following drugs:
+\itemize{
+\item C07, C08, C09, C03A, C03EA.
 }
 }
 }

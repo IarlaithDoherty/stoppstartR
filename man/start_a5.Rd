@@ -2,7 +2,7 @@
 % Please edit documentation in R/start_a.R
 \name{start_a5}
 \alias{start_a5}
-\title{Implement START-A5 criterion.}
+\title{Implement START-A5 criterion}
 \usage{
 start_a5(
   df,
@@ -27,23 +27,29 @@ A character vector with one entry per patient / row in \code{df}. Each entry tak
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
 \item "Appropriate" if the conditions are satisfied but the correct drugs have been prescribed.
-\item "START-A1" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A1 has been triggered.
+\item "START-A5" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A5 has been triggered.
 }
 }
 \description{
 Determine which patients triggered the conditions defining START-A5.
 }
 \details{
-START-A5 requires all of the following conditions to be satisfied:
+For the START-A5 criterion to be relevant for a patient, all of the following statements must be true.
 \itemize{
-\item Age less than 85 years.
-\item Any of the following comorbidities:
-
-I20, I21, I22, I24, I25,
+\item The Age of the patient is less than 85 years.
+\item The patient has been diagnosed with any of the following comorbidities:
+\itemize{
+\item I20, I21, I22, I24, I25,
 I63, I64, I65, I66, I73.9,
-I74, G45, Z95.1, Z95.5, or Z95.8.
-\item None of the following drugs:
+I74, G45, Z95.1, Z95.5, Z95.8.
+}
+}
 
-C10AA.
+For the START-A5 criterion to be triggered for a patient, all of the following statements must also be true.
+\itemize{
+\item They have not been prescribed any of the following drugs:
+\itemize{
+\item C10AA.
+}
 }
 }
