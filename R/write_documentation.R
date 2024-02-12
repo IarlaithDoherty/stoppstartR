@@ -1,13 +1,13 @@
 write_title <- function(criterion_name) {
   paste0(
-    "Implement ", criterion_name, " criterion."
+    "Implement ", criterion_name, " criterion"
   )
 }
 
 write_description <- function(criterion_name) {
   paste0(
     "Determine which patients triggered the conditions defining ",
-    criterion_name
+    criterion_name, "."
   )
 }
 

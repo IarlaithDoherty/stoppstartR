@@ -3,7 +3,8 @@ test_that("Not Relevant", {
     Comorbidity_1 = c("I48"),
     Comorbidity_2 = c(
       NA, "I20", "I21", "I22", "I24", "I25", "I63", "I64", "I65", "I66",
-      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"),
+      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"
+    ),
     Drug_1 = c(NA, "B01AC")
   )
 
@@ -27,7 +28,8 @@ test_that("Appropriate", {
     Comorbidity_1 = c(NA),
     Comorbidity_2 = c(
       "I20", "I21", "I22", "I24", "I25", "I63", "I64", "I65", "I66",
-      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"),
+      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"
+    ),
     Drug_1 = c("B01AC")
   )
 
@@ -43,7 +45,8 @@ test_that("Triggered", {
     Comorbidity_1 = c(NA),
     Comorbidity_2 = c(
       "I20", "I21", "I22", "I24", "I25", "I63", "I64", "I65", "I66",
-      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"),
+      "I73.9", "I74", "G45", "Z95.1", "Z95.5", "Z95.8"
+    ),
     Drug_1 = c(NA)
   )
 
@@ -53,4 +56,3 @@ test_that("Triggered", {
     "START-A3"
   )
 })
-

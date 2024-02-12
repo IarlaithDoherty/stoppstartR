@@ -53,4 +53,3 @@ test_that("Triggered", {
     "START-A5"
   )
 })
-
