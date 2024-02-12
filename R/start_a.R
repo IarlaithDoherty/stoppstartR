@@ -12,7 +12,7 @@
 #'    * I48.2.
 #'
 #' `r write_details_triggered("START-A1")`
-#' * The patient has not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following medications:
 #'    * B01AA, B01AE, B01AF.
 #'
 #' @inheritParams all_stoppstart
@@ -92,7 +92,7 @@ start_a1 <- function(df, comorb_string = "Comorbidity_",
 #'      Z95.1, Z95.5, Z95.8.
 #'
 #' `r write_details_triggered("START-A3")`
-#' * The patient has not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following medications:
 #'    * B01A.
 #'
 #' @inheritParams all_stoppstart
@@ -181,7 +181,7 @@ start_a3 <- function(df, comorb_string = "Comorbidity_",
 #'    * E10, E11, E12, E13, E14.
 #'
 #' `r write_details_triggered("START-A4")`
-#' * The patient has not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following medications:
 #'    * C07, C08, C09, C03A, C03EA.
 #'
 #' @inheritParams all_stoppstart
@@ -271,7 +271,7 @@ start_a4 <- function(df, comorb_string = "Comorbidity_",
 #'      I74, G45, Z95.1, Z95.5, Z95.8.
 #'
 #' `r write_details_triggered("START-A5")`
-#' * The patient has not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following medications:
 #'    * C10AA.
 #'
 #' @inheritParams all_stoppstart
@@ -356,7 +356,7 @@ start_a5 <- function(df, age_column = "Age", comorb_string = "Comorbidity_",
 #'      Z95.1, Z95.5.
 #'
 #' `r write_details_triggered("START-A6")`
-#' * The patient has not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following medications:
 #'    * C09.
 #'
 #' @inheritParams all_stoppstart
@@ -434,7 +434,7 @@ start_a6 <- function(df, comorb_string = "Comorbidity_",
 #'      Z95.1, Z95.5.
 #'
 #' `r write_details_triggered("START-A7")`
-#' * The patient has not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following medications:
 #'    * C07.
 #'
 #' @inheritParams all_stoppstart
@@ -510,7 +510,7 @@ start_a7 <- function(df, comorb_string = "Comorbidity_",
 #'    * I50, I11.0, I13.0, I13.2.
 #'
 #' `r write_details_triggered("START-A8")`
-#' * The patient has not been prescribed any of the following drugs:
+#' * The patient has not been prescribed any of the following medications:
 #'    * C07AB02, C07AB07, C07AB12,
 #'      C07AG02,
 #'      C07BB02, C07BB07, C07BB12, C07BB52,

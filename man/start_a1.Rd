@@ -19,8 +19,8 @@ each drug column which uniquely identifies them.}
 A character vector with one entry per patient / row in \code{df}. Each entry takes one of the following three values:
 \itemize{
 \item "Not Relevant" if the conditions are not satisfied.
-\item "Appropriate" if the conditions are satisfied but the correct drugs have been prescribed.
-\item "START-A1" if the conditions are satisfied and the correct drugs have not been prescribed. That is, if START-A1 has been triggered.
+\item "Appropriate" if the conditions are satisfied but the correct medications have been prescribed.
+\item "START-A1" if the conditions are satisfied and the correct medications have not been prescribed. That is, if START-A1 has been triggered.
 }
 }
 \description{
@@ -37,7 +37,7 @@ For the START-A1 criterion to be relevant for a patient, all of the following st
 
 For the START-A1 criterion to be triggered for a patient, all of the following statements must also be true.
 \itemize{
-\item The patient has not been prescribed any of the following drugs:
+\item The patient has not been prescribed any of the following medications:
 \itemize{
 \item B01AA, B01AE, B01AF.
 }
