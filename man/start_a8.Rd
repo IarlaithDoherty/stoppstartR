@@ -37,7 +37,7 @@ For the START-A8 criterion to be relevant for a patient, all of the following st
 
 For the START-A8 criterion to be triggered for a patient, all of the following statements must also be true.
 \itemize{
-\item They have not been prescribed any of the following drugs:
+\item The patient has not been prescribed any of the following drugs:
 \itemize{
 \item C07AB02, C07AB07, C07AB12,
 C07AG02,

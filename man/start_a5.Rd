@@ -47,7 +47,7 @@ I74, G45, Z95.1, Z95.5, Z95.8.
 
 For the START-A5 criterion to be triggered for a patient, all of the following statements must also be true.
 \itemize{
-\item They have not been prescribed any of the following drugs:
+\item The patient has not been prescribed any of the following drugs:
 \itemize{
 \item C10AA.
 }
