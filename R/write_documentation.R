@@ -27,26 +27,28 @@ write_details_triggered <- function(criterion_name) {
 
 write_return_start <- function(criterion_name) {
   paste0(
-    'A character vector with one entry per patient / row in `df`. ',
-    'Each entry takes one of the following three values:\n',
-    '* "Not Relevant" if the conditions are not satisfied.\n',
-    '* "Appropriate" if the conditions are satisfied but the correct drugs ',
-    'have been prescribed.\n',
-    '* "', criterion_name, '" if the conditions are satisfied and the correct ',
-    'drugs have not been prescribed. ',
-    'That is, if ', criterion_name, ' has been triggered.'
+    "A character vector with one entry per patient / row in `df`. ",
+    "Each entry takes one of the following three values:\n",
+    "* \"Not Relevant\" if the conditions are not satisfied.\n",
+    "* \"Appropriate\" if the conditions are satisfied but the correct ",
+    "drugs have been prescribed.\n",
+    "* \"", criterion_name,
+    "\" if the conditions are satisfied and the correct ",
+    "drugs have not been prescribed. ",
+    "That is, if ", criterion_name, " has been triggered."
   )
 }
 
 write_return_stopp <- function(criterion_name) {
   paste0(
-    'A character vector with one entry per patient / row in `df`. ',
-    'Each entry takes one of the following three values:\n',
-    '* "Not Relevant" if the conditions are not satisfied.\n',
-    '* "Appropriate" if the conditions are satisfied but the incorrect drugs ',
-    'have not been prescribed.\n',
-    '* "', criterion_name, '" if the conditions are satisfied and the incorrect ',
-    'drugs have been prescribed. ',
-    'That is, if ', criterion_name, ' has been triggered.'
+    "A character vector with one entry per patient / row in `df`. ",
+    "Each entry takes one of the following three values:\n",
+    "* \"Not Relevant\" if the conditions are not satisfied.\n",
+    "* \"Appropriate\" if the conditions are satisfied but the incorrect ",
+    "drugs have not been prescribed.\n",
+    "* \"", criterion_name,
+    "\" if the conditions are satisfied and the incorrect ",
+    "drugs have been prescribed. ",
+    "That is, if ", criterion_name, " has been triggered."
   )
 }
