@@ -11,10 +11,10 @@ write_description <- function(criterion_name) {
   )
 }
 
-write_details_relevant <- function(criterion_name) {
+write_details_relevant <- function(criterion_name, all_any_none) {
   paste0(
     "For the ", criterion_name, " criterion to be relevant for a patient,",
-    " all of the following statements must be true."
+    " ", all_any_none, " of the following statements must be true."
   )
 }
 
